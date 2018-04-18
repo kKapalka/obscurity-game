@@ -12,7 +12,7 @@ public class LocationSelectionScript : MonoBehaviour {
 		foreach (GameObject go in FightSelection) {
 			go.SetActive (false);
 		}
-		GameObject.Find ("Next Mission").SetActive (false);
+		GameObject.Find ("NextMissionPanel").SetActive (false);
 	}
 	
 	public void ZoneChosen(GameObject toActivate){
