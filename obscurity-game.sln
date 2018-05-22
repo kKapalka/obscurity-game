@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "obscurity-game", "Assembly-CSharp.csproj", "{F81FE287-2F0B-6282-6CF9-CE9320CB8E10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "obscurity-game", "Assembly-CSharp-firstpass.csproj", "{042240C2-AFBB-29FA-2FB8-4C4E4E9D1102}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{F81FE287-2F0B-6282-6CF9-CE9320CB8E10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F81FE287-2F0B-6282-6CF9-CE9320CB8E10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F81FE287-2F0B-6282-6CF9-CE9320CB8E10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{042240C2-AFBB-29FA-2FB8-4C4E4E9D1102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{042240C2-AFBB-29FA-2FB8-4C4E4E9D1102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{042240C2-AFBB-29FA-2FB8-4C4E4E9D1102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{042240C2-AFBB-29FA-2FB8-4C4E4E9D1102}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
