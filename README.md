@@ -3,6 +3,11 @@ Changelog:
 
 -Polaczono silnik walki z baza gry.
 
+-Stan panelu inwentarza oraz ekwipunku jest zapisywany nawet po wylaczeniu gry lub zmianie sceny na "Fight"
+
+-W scenie "FightSelection"(chyba) mozna wybrac sobie przeciwnikow. Po wybraniu oraz nacisnieciu "Embark" wybrany przeciwnik sie zaladuje
+
+
 #0.4.3(#18)(21.05.2018)
 -Teraz tooltip wyswietla sie po najechaniu na przedmiot, zamiast po kliknieciu, i znika po zdjeciu kursora
 
