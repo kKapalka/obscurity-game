@@ -51,12 +51,42 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\CreditsScript.cs" />
-     <Compile Include="Assets\Scripts\FightPanelScript.cs" />
-     <Compile Include="Assets\Scripts\LoadMenuScript.cs" />
-     <Compile Include="Assets\Scripts\LocationSelectionScript.cs" />
-     <Compile Include="Assets\Scripts\MainMenuScript.cs" />
-     <Compile Include="Assets\Scripts\StoryScript.cs" />
+     <Compile Include="Assets\Scripts\AlteredCandyInfo.cs" />
+     <Compile Include="Assets\Scripts\Constants.cs" />
+     <Compile Include="Assets\Scripts\DebugUtilities.cs" />
+     <Compile Include="Assets\Scripts\Enums.cs" />
+     <Compile Include="Assets\Scripts\Item.cs" />
+     <Compile Include="Assets\Scripts\MatchesInfo.cs" />
+     <Compile Include="Assets\Scripts\Menus\CreditsScript.cs" />
+     <Compile Include="Assets\Scripts\Menus\LoadMenuScript.cs" />
+     <Compile Include="Assets\Scripts\Menus\LocationSelectionScript.cs" />
+     <Compile Include="Assets\Scripts\Menus\MainMenuScript.cs" />
+     <Compile Include="Assets\Scripts\Menus\StoryScript.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\AIController.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\CharacterStats.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\EquipmentManager.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\InventoryManager.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\ItemManager.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\Modifier.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\MouseOverHandler.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\PopupText.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\PopupTextContoroller.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\SlotManager.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\Stat.cs" />
+     <Compile Include="Assets\Scripts\Shape.cs" />
+     <Compile Include="Assets\Scripts\ShapeInfo.cs" />
+     <Compile Include="Assets\Scripts\ShapesArray.cs" />
+     <Compile Include="Assets\Scripts\ShapesManager.cs" />
+     <Compile Include="Assets\Scripts\SoundManager.cs" />
+     <Compile Include="Assets\Scripts\Weapon Scripts\BasicWeaponScript.cs" />
+     <Compile Include="Assets\Scripts\Weapon Scripts\DoubleAttack.cs" />
+     <Compile Include="Assets\Scripts\Weapon Scripts\DragNDropScript.cs" />
+     <Compile Include="Assets\Scripts\Weapon Scripts\DragThroughScript.cs" />
+     <Compile Include="Assets\Scripts\Weapon Scripts\HammerScript.cs" />
+     <Compile Include="Assets\Scripts\Weapon Scripts\ScattershotScript.cs" />
+     <Compile Include="Assets\Scripts\Weapon Scripts\Weapon.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -174,32 +204,36 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="TextMeshPro-2017.3-1.0.56-Editor">
- <HintPath>C:/MOJE/PROGRAMOWANIE_GIER/obscurity_git/obscurity-game/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-1.0.56-Editor.dll</HintPath>
+ <HintPath>C:/Users/kkapa/Desktop/obscurity-game/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-1.0.56-Editor.dll</HintPath>
  </Reference>
  <Reference Include="TextMeshPro-2017.3-1.0.56-Runtime">
- <HintPath>C:/MOJE/PROGRAMOWANIE_GIER/obscurity_git/obscurity-game/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-1.0.56-Runtime.dll</HintPath>
+ <HintPath>C:/Users/kkapa/Desktop/obscurity-game/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-1.0.56-Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Users/Marcin/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
+ <HintPath>C:/Users/kkapa/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
- <HintPath>C:/Users/Marcin/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll</HintPath>
+ <HintPath>C:/Users/kkapa/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Users/Marcin/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>C:/Users/kkapa/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Analytics">
- <HintPath>C:/Users/Marcin/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll</HintPath>
+ <HintPath>C:/Users/kkapa/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Purchasing">
- <HintPath>C:/Users/Marcin/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
+ <HintPath>C:/Users/kkapa/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
- <HintPath>C:/Users/Marcin/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll</HintPath>
+ <HintPath>C:/Users/kkapa/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
- <HintPath>C:/Users/Marcin/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/kkapa/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{042240C2-AFBB-29FA-2FB8-4C4E4E9D1102}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
