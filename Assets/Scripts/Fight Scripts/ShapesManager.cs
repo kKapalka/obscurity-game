@@ -27,6 +27,8 @@ public class ShapesManager : MonoBehaviour
 
 	public GameObject[] EffectPrefabs;
 
+    public GameObject[] endfight;
+
 	/*static int[][][]damageData = new int[6][][];
 	static string[] attackTypes = { "basic", "hammer", "dragndrop", "dragthrough", "scattershot", "doubleattack" };
 	static string[] attackData= {"Count","Damage","Gravity"};
@@ -62,7 +64,9 @@ public class ShapesManager : MonoBehaviour
 					state = GameState.Defeat;
 				GameObject.Find ("Canvas").SetActive (false);
 				EndFightCanvas.SetActive (true);
+                Debug.Log(GameObject.Find("endFight").active);
 				DestroyAllCandy ();
+                
 			}
 			Debug.Log (state);
 		}
