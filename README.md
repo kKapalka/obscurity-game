@@ -1,7 +1,21 @@
 Changelog:
+
+#0.5.1(#10)(23.05.2018)
+
+-Wykryto i naprawiono buga zwiazanego z warunkowym ladowaniem przeciwnikow podczas przejscia ze sceny Location Selection do sceny Fight
+
+-Wykryto i naprawiono buga w algorytmie generujacym krysztaly na planszy. W pewnych przypadkach mozna bylo na planszy znalezc linie po 3 od razu po rozpoczeciu walki
+
+-Rozpoczeto prace nad ekranem zwyciestwa/porazki po ukonczonej walce
+
 #0.5.0(#19)(22.05.2018)
 
 -Polaczono silnik walki z baza gry.
+
+-Stan panelu inwentarza oraz ekwipunku jest zapisywany nawet po wylaczeniu gry lub zmianie sceny na "Fight"
+
+-W scenie "Location Selection" mozna wybrac sobie przeciwnikow. Po wybraniu oraz nacisnieciu "Embark" wybrany przeciwnik sie zaladuje
+
 
 #0.4.3(#18)(21.05.2018)
 -Teraz tooltip wyswietla sie po najechaniu na przedmiot, zamiast po kliknieciu, i znika po zdjeciu kursora
