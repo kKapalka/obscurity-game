@@ -9,7 +9,7 @@ public class AIController : PlayerScript {
 
 	// Update is called once per frame
 	void Update () {
-		if (sm.turntag.text == "Enemy Turn" && sm.getState () != GameState.Animating) {
+		if (sm.turntag.text == "Enemy Turn" && sm.getState () != GameState.Animating && !ShapesManager.gameOver) {
 			if (time < 1f){
 				time += Time.deltaTime;
 				selectedGem1 = null;

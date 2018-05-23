@@ -104,7 +104,7 @@ public class CharacterStats: MonoBehaviour {
 	}
 	public void Regenerate(){
 		currentHP = Mathf.Clamp ((currentHP + regeneration.getValue()), 0, maximumHP);
-		if (regeneration.getValue() != 0)
+		if (regeneration.getValue() != 0 && currentHP>0)
 			GetComponent<PopupTextContoroller>().CreatePopupText (((regeneration.getValue()>0?"+":"") + regeneration.getValue().ToString ()), transform);
 		UpdateHP ();
 	}

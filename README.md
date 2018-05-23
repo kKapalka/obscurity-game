@@ -6,6 +6,8 @@ Changelog:
 
 -Wykryto i naprawiono buga w algorytmie generujacym krysztaly na planszy. W pewnych przypadkach mozna bylo na planszy znalezc linie po 3 od razu po rozpoczeciu walki
 
+-Rozpoczeto prace nad ekranem zwyciestwa/porazki po ukonczonej walce
+
 #0.5.0(#19)(22.05.2018)
 
 -Polaczono silnik walki z baza gry.

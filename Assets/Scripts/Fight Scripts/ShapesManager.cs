@@ -39,15 +39,32 @@ public class ShapesManager : MonoBehaviour
 		"Select another gem on a chosen axis to confirm"
 	};
 	*/
+	public static bool gameOver=false;
 
+	int playerHP, enemyHP;
+	public GameObject EndFightCanvas;
 	public string[] GemTypes;
 
 	public GameState getState(){
 		return state;
 	}
 	void Update(){
+		
 		if (state == GameState.None) {
 			player.GetComponent<PlayerScript> ().RefreshSelection ();
+			playerHP= player.GetComponent<CharacterStats> ().currentHP;
+			enemyHP = enemy.GetComponent<CharacterStats> ().currentHP;
+			if (playerHP <= 0 || enemyHP<=0) {
+				gameOver = true;
+				if (playerHP >= enemyHP)
+					state = GameState.Victory;
+				else
+					state = GameState.Defeat;
+				GameObject.Find ("Canvas").SetActive (false);
+				EndFightCanvas.SetActive (true);
+				DestroyAllCandy ();
+			}
+			Debug.Log (state);
 		}
 		if(Input.GetKey(KeyCode.Escape)){
 			//onEscape();
