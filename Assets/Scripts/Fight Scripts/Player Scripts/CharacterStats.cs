@@ -19,16 +19,16 @@ public class CharacterStats: MonoBehaviour {
 	void Awake(){
 		GetComponent<PopupTextContoroller>().Initialize ();
 
-		currentHP = maximumHP;
-		PlayerHP.maxValue = maximumHP;
-		UpdateHP ();
+		ResetHP ();
 		if (strength.getValue () < 0)
 			strength.value = 0;
 	}
 
 	public void ResetHP(){
 		currentHP = maximumHP;
+		PlayerHP.maxValue = maximumHP;
 		UpdateHP ();
+		Debug.Log (maximumHP);
 	}
 	void UpdateHP(){
 		HPText.text = currentHP.ToString()+"/"+maximumHP;

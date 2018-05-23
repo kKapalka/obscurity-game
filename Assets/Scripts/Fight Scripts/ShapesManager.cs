@@ -65,25 +65,9 @@ public class ShapesManager : MonoBehaviour
         InitializeTypesOnPrefabShapesAndBonuses();
         InitializeCandyAndSpawnPositions();
 		turn = "Player";
-		//RandomizeCharacter (player);
-		EnemySelection.Instance.LoadIntoCharacter(enemy);
 
-		/*for (int j = 0; j < damageData.Length; j++) {
-			damageData [j] = new int[3][];
-			for (int k = 0; k < damageData [j].Length; k++) {
-				damageData [j] [k] = new int[2];
-			}
-		}
-		for (int i = 0; i < damageData.Length; i++) {
-			for (int j = 0; j < damageData [0].Length; j++) {
-				for (int k = 0; k < damageData [0] [0].Length; k++) {
-					if (PlayerPrefs.HasKey (attackTypes [i] + attackData [j]+attacker[k])) {
-						damageData [i] [j] [k] = PlayerPrefs.GetInt (attackTypes [i] + attackData [j]+attacker[k]);
-					} else
-						damageData [i] [j] [k] = 0;
-				}
-			}
-		}*/
+		if(EnemySelection.created)
+			EnemySelection.Instance.LoadIntoCharacter(enemy);
     }
 
     /// <summary>
@@ -98,12 +82,6 @@ public class ShapesManager : MonoBehaviour
 			item.GetComponent<Shape>().Type = item.name;
 			GemTypes [i++] = item.name;
 		}
-        //assign the name of the respective "normal" candy as the type of the Bonus
-        /*foreach (var item in BonusPrefabs)
-        {
-            item.GetComponent<Shape>().Type = CandyPrefabs.
-                Where(x => x.GetComponent<Shape>().Type.Contains(item.name.Split('_')[1].Trim())).Single().name;
-        }*/
     }
 
     public void InitializeCandyAndSpawnPositions()
@@ -121,17 +99,14 @@ public class ShapesManager : MonoBehaviour
 
                 GameObject newCandy = GetRandomCandy();
 				//check if two previous horizontal are of the same type
-                while (column >= 2 && shapes[row, column - 1].GetComponent<Shape>()
+                while ((column >= 2 && shapes[row, column - 1].GetComponent<Shape>()
                     .IsSameType(newCandy.GetComponent<Shape>())
                     && shapes[row, column - 2].GetComponent<Shape>().IsSameType(newCandy.GetComponent<Shape>()))
-                {
-                    newCandy = GetRandomCandy();
-                }
-
-                //check if two previous vertical are of the same type
-                while (row >= 2 && shapes[row - 1, column].GetComponent<Shape>()
-                    .IsSameType(newCandy.GetComponent<Shape>())
-                    && shapes[row - 2, column].GetComponent<Shape>().IsSameType(newCandy.GetComponent<Shape>()))
+					||
+					(row >= 2 && shapes[row - 1, column].GetComponent<Shape>()
+						.IsSameType(newCandy.GetComponent<Shape>())
+						&& shapes[row - 2, column].GetComponent<Shape>().IsSameType(newCandy.GetComponent<Shape>()))
+				)
                 {
                     newCandy = GetRandomCandy();
                 }
