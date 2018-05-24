@@ -474,8 +474,8 @@ MonoBehaviour:
   - {fileID: 1945461360}
   - {fileID: 1918748156}
   items:
-  - {fileID: 114150407624459926, guid: d37d2774ed26ac342b4c017ead1c0f18, type: 2}
-  - {fileID: 114337158558291982, guid: 9265b8494f1b0ef4ab3c42f3c7a35722, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   slotIcon: {fileID: 21300000, guid: 4a7457e6f88b6a2438d9db86dc62b2c0, type: 3}
@@ -2763,7 +2763,7 @@ MonoBehaviour:
   strength:
     value: 0
   regeneration:
-    value: 15
+    value: 5
 --- !u!114 &859722551
 MonoBehaviour:
   m_ObjectHideFlags: 0

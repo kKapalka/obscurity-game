@@ -66,6 +66,8 @@ public class ShapesManager : MonoBehaviour
 	// Use this for initialization
     void Start()
     {
+		state = GameState.None;
+		gameOver = false;
 		GemTypes = new string[CandyPrefabs.Length];
         InitializeTypesOnPrefabShapesAndBonuses();
         InitializeCandyAndSpawnPositions();
