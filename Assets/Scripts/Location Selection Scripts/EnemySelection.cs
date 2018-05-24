@@ -11,6 +11,7 @@ public class EnemySelection : MonoBehaviour {
 	public string infoAboutEnemy;
 
 	public int maximumHP;
+	public int experiencePoints;
 	public Stat[] resistances;
 	public Stat dodge;
 	public Stat damageMultiplier;
@@ -24,14 +25,7 @@ public class EnemySelection : MonoBehaviour {
 	}
 
 	void Start(){
-		BinaryFormatter bf = new BinaryFormatter ();
-		FileStream file;
-		List<string> encountersDefeated = new List<string>();
-		if (File.Exists (Application.persistentDataPath + "/Progress.dat")) {
-			file = File.Open (Application.persistentDataPath + "/Progress.dat", FileMode.Open);
-			encountersDefeated = (List<string>)bf.Deserialize (file);
-			file.Close ();
-		}
+		List<string> encountersDefeated = ReadScript.Read<List<string>>("Progress");
 		if(encountersDefeated.Contains(this.encounterName) && Application.loadedLevelName=="Location Selection"){
 			this.GetComponent<Image> ().color = Color.green;
 		}

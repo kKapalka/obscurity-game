@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class PlayerController : PlayerScript {
 	EquipmentManager em;
+	int[] XP = new int[2];
+
 	void Awake(){
 		em = GetComponent<EquipmentManager> ();
-		//em.Load (EquipmentManager.Instance);
+		XP = ReadScript.Read<int[]> ("PlayerXP");
+		if(XP==default (int[])){
+			XP = new int[2];
+			XP[0]=1;
+			XP[1]=0;
+		}
+		GetComponent<CharacterStats>().maximumHP = Mathf.RoundToInt((float)GetComponent<CharacterStats>().maximumHP*(1+(Mathf.Pow((float)XP [0]/4.0f,2))));
 		GetComponent<CharacterStats>().removeAllModifiers();
+		GetComponent<CharacterStats>().damageMultiplier.AddModifier(XP[0]*15);
 		em.AwakeOnFight ();
 	}
 

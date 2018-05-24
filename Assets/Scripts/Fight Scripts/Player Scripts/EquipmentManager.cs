@@ -120,22 +120,16 @@ public class EquipmentManager : ItemManager {
 	}*/
 
 	public void Load(string name){
+		string[] itemNames = ReadScript.Read<string[]> (name);
+		if(itemNames==default(string[])) return;
 
-		if (File.Exists(Application.persistentDataPath + "/"+name+".dat"))
-		{
-			BinaryFormatter bf = new BinaryFormatter();
-			FileStream file = File.Open(Application.persistentDataPath + "/"+name+".dat", FileMode.Open);
-			string[] itemNames = (string[])bf.Deserialize(file);
-			this.items = new Item[itemNames.Length];
-			for (int i = 0; i < itemNames.Length; i++) {
-				if (itemNames [i] != null) {
-					GameObject newItem = (GameObject)Instantiate (Resources.Load ("Items/" + itemNames [i]));
-					this.items [i] = newItem.GetComponent<Item> ();
-				}
+		this.items = new Item[itemNames.Length];
+		for (int i = 0; i < itemNames.Length; i++) {
+			if (itemNames [i] != null) {
+				GameObject newItem = (GameObject)Instantiate (Resources.Load ("Items/" + itemNames [i]));
+				this.items [i] = newItem.GetComponent<Item> ();
 			}
-			file.Close ();
 		}
-
 	}
 	public void Save(string name){
 		BinaryFormatter bf = new BinaryFormatter();

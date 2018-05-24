@@ -8,9 +8,11 @@ using System.IO;
 
 
 public class EndFightPanelScript : MonoBehaviour {
-	public Text title;
+	public Text title,levelUpText,XPText;
+	public Slider XPSlider;
 	public GameObject[] ItemPool;
 	public GameObject loot;
+	int[] playerStatus=new int[2];
 	LootManager lm;
 	public void EndOfFight(bool won){
 		GameObject.Find ("PlayerData").SetActive (false);
@@ -20,6 +22,7 @@ public class EndFightPanelScript : MonoBehaviour {
 		title.text=won?"VICTORY!":"DEFEAT!";
 
 		if (won) {
+			//Add loot
 			loot.SetActive (true);
 			lm = loot.GetComponent<LootManager> ();
 			lm.items [0] = ItemPool [Random.Range(0,ItemPool.Length)].GetComponent<Item> ();
@@ -31,14 +34,9 @@ public class EndFightPanelScript : MonoBehaviour {
 
 			BinaryFormatter bf = new BinaryFormatter ();
 			FileStream file;
-			string[] currentInv;
-			if (File.Exists (Application.persistentDataPath + "/Inventory.dat")) {
-				file = File.Open (Application.persistentDataPath + "/Inventory.dat", FileMode.Open);
-				currentInv = (string[])bf.Deserialize (file);
-				file.Close ();
-			} else {
+			string[] currentInv = ReadScript.Read<string[]> ("Inventory");
+			if (currentInv == default(string[]))
 				currentInv = new string[0];
-			}
 			string[] newInv = new string[currentInv.Length + lm.items.Length];
 			int i = 0;
 			foreach (string name in currentInv) {
@@ -50,7 +48,23 @@ public class EndFightPanelScript : MonoBehaviour {
 			file = File.Create(Application.persistentDataPath + "/Inventory.dat");
 			bf.Serialize (file, newInv);
 			file.Close ();
+			//Save progress
 			GameObject.Find ("ShapesManager").GetComponent<ShapesManager> ().SaveProgress ();
+
+			//Add experience points
+			int[] playerStatus = ReadScript.Read<int[]> ("PlayerXP");
+			if (playerStatus == default(int[])) {
+				playerStatus = new int[]{ 1, 0 };
+			}
+			if (playerStatus[1]+EnemySelection.Instance.experiencePoints >= 100*playerStatus[0]) {
+				levelUpText.text="level up! "+playerStatus[0]+" -> "+(playerStatus[0]+1);
+
+			}
+			StartCoroutine (AnimateXPBar ());
+
+			file = File.Create(Application.persistentDataPath + "/PlayerXP.dat");
+			bf.Serialize (file,playerStatus);
+			file.Close ();
 		} else {
 			loot.SetActive (false);
 		}
@@ -58,5 +72,27 @@ public class EndFightPanelScript : MonoBehaviour {
 
 	public void Continue(){
 		SceneManager.LoadScene ("Location Selection");
+	}
+
+
+	public IEnumerator AnimateXPBar(){
+		XPSlider.maxValue = (float)100 * playerStatus [0];
+		XPSlider.value = (float)playerStatus [1];
+		for (int i = 0; i <= EnemySelection.Instance.experiencePoints; i++,playerStatus[1]++) {
+			XPText.text = playerStatus[1] + "/" + XPSlider.maxValue;
+			XPSlider.value = playerStatus [1];
+			if (playerStatus[1] >= 100*playerStatus[0]) {
+				playerStatus [1] -= 100 * playerStatus [0];
+				playerStatus [0]++;
+				XPSlider.maxValue = (float)100 * playerStatus [0];
+			}
+			yield return new WaitForSeconds (0.002f);
+		}
+		BinaryFormatter bf = new BinaryFormatter ();
+		FileStream file;
+		file = File.Create(Application.persistentDataPath + "/PlayerXP.dat");
+		Debug.Log ("saved");
+		bf.Serialize (file,playerStatus);
+		file.Close ();
 	}
 }

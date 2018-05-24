@@ -601,6 +601,7 @@ MonoBehaviour:
   encounterName: Unkempt Lackey
   infoAboutEnemy: Just dispose of him. Really
   maximumHP: 100
+  experiencePoints: 120
   resistances: []
   dodge:
     value: 0

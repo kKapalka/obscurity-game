@@ -1,4 +1,11 @@
 Changelog:
+#0.5.3(#22)(24.05.2018)
+
+-Od teraz gracz moze uzyskiwac kolejne poziomy doswiadczenia po pokonywaniu przeciwnikow. Kazdy przeciwnik bedzie wart ustalona ilosc punktow doswiadczenia.
+
+
+-Za kazdy poziom poziom gracz bedzie mial zwiekszone punkty zycia (1+poziom/4)^2 razy oraz bedzie zadawal zwiekszone obrazenia o (poziom*15%)
+
 #0.5.2(#21)(24.05.2018)
 
 - Wyczyszczono czesc niepotrzebnych guzikow i okien ze sceny Main Menu

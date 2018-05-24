@@ -92,6 +92,7 @@
      <Compile Include="Assets\Scripts\Menus\LocationSelectionScript.cs" />
      <Compile Include="Assets\Scripts\Menus\MainMenuScript.cs" />
      <Compile Include="Assets\Scripts\Menus\StoryScript.cs" />
+     <Compile Include="Assets\Scripts\ReadScript.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

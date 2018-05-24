@@ -406,15 +406,12 @@ public class ShapesManager : MonoBehaviour
 	public void SaveProgress(){
 		BinaryFormatter bf = new BinaryFormatter ();
 		FileStream file;
-		List<string> encountersDefeated = new List<string>();
-		if (File.Exists (Application.persistentDataPath + "/Progress.dat")) {
-			file = File.Open (Application.persistentDataPath + "/Progress.dat", FileMode.Open);
-			encountersDefeated = (List<string>)bf.Deserialize (file);
-			file.Close ();
-		}
-		encountersDefeated.Add (EnemySelection.Instance.encounterName);
+		List<string> encountersDefeated = ReadScript.Read<List<string>> ("Progress");
+		if(EnemySelection.created)
+			encountersDefeated.Add (EnemySelection.Instance.encounterName);
 		file = File.Create(Application.persistentDataPath + "/Progress.dat");
 		bf.Serialize (file,encountersDefeated);
+
 		file.Close ();
 	}
 }
