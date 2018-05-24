@@ -50,7 +50,7 @@ public class EndFightPanelScript : MonoBehaviour {
 			file = File.Create(Application.persistentDataPath + "/Inventory.dat");
 			bf.Serialize (file, newInv);
 			file.Close ();
-
+			GameObject.Find ("ShapesManager").GetComponent<ShapesManager> ().SaveProgress ();
 		} else {
 			loot.SetActive (false);
 		}

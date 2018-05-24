@@ -13,6 +13,8 @@ Changelog:
 
 -Naprawiono buga gdzie inwentarz gracza nadpisywal stare przedmioty nowymi. Teraz laduje jak powinno
 
+-Wysprzatano i naprawiono wszystkie bledy powstale w wyniku naprawiania buga powyzej
+
 #0.5.1(#20)(23.05.2018)
 
 -Wykryto i naprawiono buga zwiazanego z warunkowym ladowaniem przeciwnikow podczas przejscia ze sceny Location Selection do sceny Fight
