@@ -32,7 +32,6 @@ public class CharacterStats: MonoBehaviour {
 		currentHP = maximumHP;
 		PlayerHP.maxValue = maximumHP;
 		UpdateHP ();
-		Debug.Log (maximumHP);
 	}
 	void UpdateHP(){
 		HPText.text = currentHP.ToString()+"/"+maximumHP;

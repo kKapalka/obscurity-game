@@ -106,5 +106,14 @@ public class InventoryManager : ItemManager{
 		file.Close();
 	}
 
+	public void addToInventory(Item[] loot){
+		Item[] newItems = new Item[this.items.Length + loot.Length];
+		int i = 0;
+		foreach (Item item in this.items)
+			newItems [i++] = item;
+		foreach (Item item in loot)
+			newItems [i++] = item;
+		Save ("Inventory");
+	}
 
 }

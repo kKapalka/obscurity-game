@@ -7,14 +7,28 @@ using UnityEngine.SceneManagement;
 
 public class EndFightPanelScript : MonoBehaviour {
 	public Text title;
-	public GameObject[] itemPool;
-
+	public GameObject[] ItemPool;
+	public GameObject loot;
+	LootManager lm;
+	InventoryManager im;
 	public void Load(bool won){
 		GameObject.Find ("PlayerData").SetActive (false);
 		GameObject.Find ("EnemyData").SetActive (false);
 		GameObject.Find ("CrystalsBG").SetActive (false);
 		GameObject.Find ("TurnTag").SetActive (false);
 		title.text=won?"VICTORY!":"DEFEAT!";
+
+		if (won) {
+			loot.SetActive (true);
+			lm = loot.GetComponent<LootManager> ();
+			lm.items [0] = ItemPool [0].GetComponent<Item> ();
+			lm.items [1] = ItemPool [1].GetComponent<Item> ();
+			lm.Initialize ();
+			im = GameObject.Find ("Player").GetComponent<InventoryManager> ();
+			//im.addToInventory (lm.items);
+		} else {
+			loot.SetActive (false);
+		}
 	}
 
 	public void Continue(){

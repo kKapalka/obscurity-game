@@ -52,7 +52,6 @@ public class ShapesManager : MonoBehaviour
 				DestroyAllCandy ();
                 
 			}
-			Debug.Log (state);
 		}
 		if(Input.GetKey(KeyCode.Escape)){
 			//onEscape();

@@ -492,6 +492,7 @@ GameObject:
   - component: {fileID: 1520708836}
   - component: {fileID: 1520708835}
   - component: {fileID: 1520708839}
+  - component: {fileID: 1520708840}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -586,3 +587,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3a60b34322d634fbbf1991054ee8f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1520708840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1520708834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f101ca28f629c4fbd4620a232a686b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  encounterName: Unkempt Lackey
+  infoAboutEnemy: Just dispose of him. Really
+  maximumHP: 100
+  resistances: []
+  dodge:
+    value: 0
+  damageMultiplier:
+    value: 0
+  strength:
+    value: 0
+  regeneration:
+    value: 0
+  weapon: basic

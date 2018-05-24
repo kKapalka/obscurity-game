@@ -1,6 +1,12 @@
 Changelog:
+#0.5.2(#21)(24.05.2018)
 
-#0.5.1(#10)(23.05.2018)
+- Wyczyszczono czesc niepotrzebnych guzikow i okien ze sceny Main Menu
+
+- Teraz ze sceny Fight mozna przejsc do sceny Location Selection poprzez okno zwyciestwa/porazki
+
+
+#0.5.1(#20)(23.05.2018)
 
 -Wykryto i naprawiono buga zwiazanego z warunkowym ladowaniem przeciwnikow podczas przejscia ze sceny Location Selection do sceny Fight
 

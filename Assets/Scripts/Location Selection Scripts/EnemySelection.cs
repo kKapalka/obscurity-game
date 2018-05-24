@@ -29,16 +29,16 @@ public class EnemySelection : MonoBehaviour {
 		stats.strength = strength;
 		stats.regeneration = regeneration;
 		stats.ResetHP ();
-		Debug.Log (maximumHP);
 		character.GetComponent<PlayerScript> ().LoadWeapon (weapon);
 	}
 	public void Display(){
 		GameObject sf =	GameObject.Find ("NextMissionPanel");
 		sf.GetComponent<SelectFight>().Load (this.GetComponent<EnemySelection>());
 		DontDestroyOnLoad (this.gameObject);
+		Create ();
+	}
+	public void Create(){
 		created = true;
 		Instance = this;
-		Debug.Log (maximumHP);
 	}
-
 }

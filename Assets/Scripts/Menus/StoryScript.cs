@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class StoryScript : MonoBehaviour {
 
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Escape))
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			GetComponent<EnemySelection> ().Create ();
 			SceneManager.LoadScene ("Fight");
+		}
 	}
 }
