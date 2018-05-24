@@ -34,14 +34,17 @@ public class InventoryManager : ItemManager{
 	}
 	public override void Initialize ()
 	{
+		currentPos = 0;
 		for (int i = 0; i < itemSlots.Length; i++) {
+			if (i + getShift () >= items.Length)
+				return;
 			if (items[i+getShift()]!=null)
 				itemSlots [i].GetComponent<Image> ().sprite = items [i+getShift()].icon;
 			else 
 				itemSlots [i].GetComponent<Image> ().sprite = slotIcon;
 
 		}
-		currentPos = 0;
+
 	}
 	public void onShift(){
 		for (int i = 0; i < itemSlots.Length; i++) {
@@ -83,7 +86,6 @@ public class InventoryManager : ItemManager{
 			this.items = new Item[itemNames.Length];
 			for (int i = 0; i < itemNames.Length; i++) {
 				if (itemNames [i] != null) {
-					Debug.Log (Resources.Load ("Items/" + itemNames [i]));
 					GameObject newItem = (GameObject)Instantiate (Resources.Load ("Items/" + itemNames [i]));
 					this.items [i] = newItem.GetComponent<Item> ();
 				}
@@ -96,11 +98,12 @@ public class InventoryManager : ItemManager{
 		BinaryFormatter bf = new BinaryFormatter();
 		FileStream file = File.Create(Application.persistentDataPath + "/"+name+".dat");
 		string[] itemNames = new string[items.Length];
-		for (int i = 0; i < items.Length; i++)
+		for (int i = 0; i < items.Length; i++) {
 			if (items [i] != null)
-				itemNames [i] = items [i].name.Replace("(Clone)","");
+				itemNames [i] = items [i].name.Replace ("(Clone)", "");
 			else
 				itemNames [i] = null;
+		}
 
 		bf.Serialize(file, itemNames);
 		file.Close();
@@ -113,6 +116,7 @@ public class InventoryManager : ItemManager{
 			newItems [i++] = item;
 		foreach (Item item in loot)
 			newItems [i++] = item;
+		this.items = newItems;
 		Save ("Inventory");
 	}
 

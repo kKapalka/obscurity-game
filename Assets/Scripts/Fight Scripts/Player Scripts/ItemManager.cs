@@ -20,6 +20,8 @@ public abstract class ItemManager : MonoBehaviour {
 	public abstract int getShift ();
 	public abstract Vector3 getRelocation();
 	public void ShowTooltip (int pos) {
+		if (pos + getShift () >= items.Length)
+			return;
 		if (items [pos+getShift()] != null) {
 			if (!tooltipPanel.activeSelf) {
 				tooltipPanel.SetActive (true);

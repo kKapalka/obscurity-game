@@ -2820,7 +2820,7 @@ MonoBehaviour:
   strength:
     value: 0
   regeneration:
-    value: 5
+    value: -20
 --- !u!114 &859722551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3675,18 +3675,7 @@ MonoBehaviour:
   - {fileID: 1018872258}
   - {fileID: 926425632}
   - {fileID: 286714103}
-  items:
-  - {fileID: 114337158558291982, guid: 9265b8494f1b0ef4ab3c42f3c7a35722, type: 2}
-  - {fileID: 114150407624459926, guid: d37d2774ed26ac342b4c017ead1c0f18, type: 2}
-  - {fileID: 114337158558291982, guid: 9265b8494f1b0ef4ab3c42f3c7a35722, type: 2}
-  - {fileID: 114150407624459926, guid: d37d2774ed26ac342b4c017ead1c0f18, type: 2}
-  - {fileID: 114337158558291982, guid: 9265b8494f1b0ef4ab3c42f3c7a35722, type: 2}
-  - {fileID: 114150407624459926, guid: d37d2774ed26ac342b4c017ead1c0f18, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  items: []
   slotIcon: {fileID: 21300000, guid: 9fc13096d4c7bb244866d63f47861a33, type: 3}
   tooltipPanel: {fileID: 228683419}
   currentPos: 0
@@ -4736,6 +4725,7 @@ MonoBehaviour:
   - {fileID: 1735188225570674, guid: 9265b8494f1b0ef4ab3c42f3c7a35722, type: 2}
   - {fileID: 1256966250122616, guid: d37d2774ed26ac342b4c017ead1c0f18, type: 2}
   loot: {fileID: 67272174}
+  Inventory: {fileID: 992690002}
 --- !u!1 &1143716989
 GameObject:
   m_ObjectHideFlags: 0

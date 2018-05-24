@@ -10,8 +10,8 @@ public class EndFightPanelScript : MonoBehaviour {
 	public GameObject[] ItemPool;
 	public GameObject loot;
 	LootManager lm;
-	InventoryManager im;
-	public void Load(bool won){
+	public GameObject Inventory;
+	public void EndOfFight(bool won){
 		GameObject.Find ("PlayerData").SetActive (false);
 		GameObject.Find ("EnemyData").SetActive (false);
 		GameObject.Find ("CrystalsBG").SetActive (false);
@@ -24,8 +24,7 @@ public class EndFightPanelScript : MonoBehaviour {
 			lm.items [0] = ItemPool [0].GetComponent<Item> ();
 			lm.items [1] = ItemPool [1].GetComponent<Item> ();
 			lm.Initialize ();
-			im = GameObject.Find ("Player").GetComponent<InventoryManager> ();
-			//im.addToInventory (lm.items);
+			Inventory.GetComponent<InventoryManager> ().addToInventory(lm.items);
 		} else {
 			loot.SetActive (false);
 		}

@@ -8586,18 +8586,7 @@ MonoBehaviour:
   - {fileID: 1632160748}
   - {fileID: 425626607}
   - {fileID: 2116886179}
-  items:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  items: []
   slotIcon: {fileID: 21300000, guid: 9fc13096d4c7bb244866d63f47861a33, type: 3}
   tooltipPanel: {fileID: 861335039}
   currentPos: 0

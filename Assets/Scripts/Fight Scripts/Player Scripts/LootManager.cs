@@ -9,7 +9,6 @@ public class LootManager : ItemManager {
 
 	public override void Initialize ()
 	{
-		Debug.Log ("Initializing");
 		for (int i = 0; i < itemSlots.Length; i++) {
 			if (items[i]!=null)
 				itemSlots [i].GetComponent<Image> ().sprite = items [i].icon;

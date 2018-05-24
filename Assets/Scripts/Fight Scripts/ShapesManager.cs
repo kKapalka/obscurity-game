@@ -47,7 +47,7 @@ public class ShapesManager : MonoBehaviour
 				gameOver = true;
 
 				EndFight.SetActive (true);
-				EndFight.GetComponent<EndFightPanelScript>().Load (playerHP >= enemyHP);
+				EndFight.GetComponent<EndFightPanelScript>().EndOfFight (playerHP >= enemyHP);
 
 				DestroyAllCandy ();
                 
