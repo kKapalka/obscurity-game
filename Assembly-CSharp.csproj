@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Fight Scripts\AlteredCandyInfo.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\Constants.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\DebugUtilities.cs" />
+     <Compile Include="Assets\Scripts\Fight Scripts\EndFightPanelScript.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\Enums.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\FightManager.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\Item.cs" />

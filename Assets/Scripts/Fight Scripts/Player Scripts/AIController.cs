@@ -15,7 +15,7 @@ public class AIController : PlayerScript {
 				selectedGem1 = null;
 			}
 			else {
-				if (selectedGem1==null) {
+				if (selectedGem1 == null) {
 					sm.setState (GameState.SelectionStarted);
 					var AISelectedGems=weapon.GetCandidateAI();
 					selectedGem1 = AISelectedGems [0];

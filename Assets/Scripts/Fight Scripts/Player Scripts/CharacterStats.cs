@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,8 +15,11 @@ public class CharacterStats: MonoBehaviour {
 	public Stat dodge;
 	public Stat damageMultiplier;
 	public Stat strength;
-	public Stat regeneration;		
+	public Stat regeneration;
 
+    
+
+    
 	void Awake(){
 		GetComponent<PopupTextContoroller>().Initialize ();
 
@@ -42,7 +46,7 @@ public class CharacterStats: MonoBehaviour {
 			damageTaken= Mathf.Clamp (damage, 0, maximumHP);
 		}
 		if (damageTaken > 0) {
-			if (Random.Range (0, 100) > dodge.getValue ()) {
+			if (UnityEngine.Random.Range (0, 100) > dodge.getValue ()) {
 				currentHP -= damageTaken;
 				GetComponent<PopupTextContoroller> ().CreatePopupText (("-" + damageTaken.ToString ()), transform);
 			}
@@ -118,4 +122,7 @@ public class CharacterStats: MonoBehaviour {
 		strength.RemoveAll ();
 
 	}
+
+    
+    
 }
