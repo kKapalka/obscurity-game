@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine.UI;
 
 public class EnemySelection : MonoBehaviour {
 
@@ -18,6 +21,20 @@ public class EnemySelection : MonoBehaviour {
 	public static EnemySelection Instance {
 		get;
 		set;
+	}
+
+	void Start(){
+		BinaryFormatter bf = new BinaryFormatter ();
+		FileStream file;
+		List<string> encountersDefeated = new List<string>();
+		if (File.Exists (Application.persistentDataPath + "/Progress.dat")) {
+			file = File.Open (Application.persistentDataPath + "/Progress.dat", FileMode.Open);
+			encountersDefeated = (List<string>)bf.Deserialize (file);
+			file.Close ();
+		}
+		if(encountersDefeated.Contains(this.encounterName) && Application.loadedLevelName=="Location Selection"){
+			this.GetComponent<Image> ().color = Color.green;
+		}
 	}
 
 	public void LoadIntoCharacter(GameObject character){

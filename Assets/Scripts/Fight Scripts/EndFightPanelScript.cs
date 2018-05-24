@@ -25,6 +25,7 @@ public class EndFightPanelScript : MonoBehaviour {
 			lm.items [1] = ItemPool [1].GetComponent<Item> ();
 			lm.Initialize ();
 			Inventory.GetComponent<InventoryManager> ().addToInventory(lm.items);
+			GameObject.Find ("ShapesManager").GetComponent<ShapesManager> ().SaveProgress ();
 		} else {
 			loot.SetActive (false);
 		}
