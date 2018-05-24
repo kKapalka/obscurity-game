@@ -4,6 +4,8 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 
 public class ShapesManager : MonoBehaviour
@@ -47,12 +49,11 @@ public class ShapesManager : MonoBehaviour
 				gameOver = true;
 
 				EndFight.SetActive (true);
-				EndFight.GetComponent<EndFightPanelScript>().Load (playerHP >= enemyHP);
+				EndFight.GetComponent<EndFightPanelScript>().EndOfFight (playerHP >= enemyHP);
 
 				DestroyAllCandy ();
                 
 			}
-			Debug.Log (state);
 		}
 		if(Input.GetKey(KeyCode.Escape)){
 			//onEscape();
@@ -400,5 +401,20 @@ public class ShapesManager : MonoBehaviour
 		stats.strength.value = UnityEngine.Random.Range (0, 15);
 
 		character.GetComponent<PlayerScript> ().LoadWeapon (weaponTypes [UnityEngine.Random.Range (0, weaponTypes.Length-1)]);
+	}
+
+	public void SaveProgress(){
+		BinaryFormatter bf = new BinaryFormatter ();
+		FileStream file;
+		List<string> encountersDefeated = new List<string>();
+		if (File.Exists (Application.persistentDataPath + "/Progress.dat")) {
+			file = File.Open (Application.persistentDataPath + "/Progress.dat", FileMode.Open);
+			encountersDefeated = (List<string>)bf.Deserialize (file);
+			file.Close ();
+		}
+		encountersDefeated.Add (EnemySelection.Instance.encounterName);
+		file = File.Create(Application.persistentDataPath + "/Progress.dat");
+		bf.Serialize (file,encountersDefeated);
+		file.Close ();
 	}
 }

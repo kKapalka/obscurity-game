@@ -1,6 +1,16 @@
 Changelog:
+#0.5.2(#21)(24.05.2018)
 
-#0.5.1(#10)(23.05.2018)
+- Wyczyszczono czesc niepotrzebnych guzikow i okien ze sceny Main Menu
+
+- Teraz ze sceny Fight mozna przejsc do sceny Location Selection poprzez okno zwyciestwa/porazki
+
+- Po pokonaniu przeciwnika gracz uzyskuje lup: dwa przedmioty, ktore automatycznie dodaja mu sie do ekwipunku. Gracz moze potem w scenie "Location Selection" ubrac te przedmioty i wybrac sie na kolejna misje
+
+-Progres gracza jest zapisywany.
+
+
+#0.5.1(#20)(23.05.2018)
 
 -Wykryto i naprawiono buga zwiazanego z warunkowym ladowaniem przeciwnikow podczas przejscia ze sceny Location Selection do sceny Fight
 

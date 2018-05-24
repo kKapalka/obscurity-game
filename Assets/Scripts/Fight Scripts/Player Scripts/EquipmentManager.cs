@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using System;
 
 public class EquipmentManager : ItemManager {
 
@@ -127,11 +126,9 @@ public class EquipmentManager : ItemManager {
 			BinaryFormatter bf = new BinaryFormatter();
 			FileStream file = File.Open(Application.persistentDataPath + "/"+name+".dat", FileMode.Open);
 			string[] itemNames = (string[])bf.Deserialize(file);
-			foreach(string iname in itemNames) Debug.Log(iname);
 			this.items = new Item[itemNames.Length];
 			for (int i = 0; i < itemNames.Length; i++) {
 				if (itemNames [i] != null) {
-					Debug.Log (Resources.Load ("Items/" + itemNames [i]));
 					GameObject newItem = (GameObject)Instantiate (Resources.Load ("Items/" + itemNames [i]));
 					this.items [i] = newItem.GetComponent<Item> ();
 				}

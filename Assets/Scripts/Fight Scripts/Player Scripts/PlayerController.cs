@@ -17,7 +17,6 @@ public class PlayerController : PlayerScript {
 		if (sm.turntag.text == "Player Turn" && sm.getState () != GameState.Animating && !ShapesManager.gameOver) {
 			if (Input.GetMouseButtonDown (0)) {
 				GameState state = sm.getState ();
-				Debug.Log (state);
 				if (state == GameState.None || selectedGem1 == null) {
 					sm.setState (GameState.SelectionStarted);
 					var hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);

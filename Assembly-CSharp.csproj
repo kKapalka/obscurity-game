@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\EquipmentManager.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\InventoryManager.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\ItemManager.cs" />
+     <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\LootManager.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\Modifier.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\MouseOverHandler.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\PlayerController.cs" />

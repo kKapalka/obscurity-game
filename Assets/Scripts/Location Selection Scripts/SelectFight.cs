@@ -7,7 +7,6 @@ public class SelectFight : MonoBehaviour {
 
 	public Text titleText;
 	public Text infoText;
-	bool loaded=false;
 	public GameObject enemyData;
 
 	public void Load(EnemySelection enemy){
