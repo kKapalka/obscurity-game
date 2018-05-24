@@ -122,7 +122,7 @@ public class DoubleAttack : Weapon
 
 	public override float getDamage (float matchedGems)
 	{
-		float match_damage = 7 * (matchedGems - 3) * (matchedGems / 2);
+		float match_damage = 7 * (matchedGems - 2) * (matchedGems / 3);
 		return match_damage + 3;
 	}
 }

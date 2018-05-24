@@ -9,6 +9,8 @@ Changelog:
 
 -Progres gracza jest zapisywany.
 
+-Utworzono 4 przedmioty i 4 przeciwnikow, na potrzeby demo 
+
 
 #0.5.1(#20)(23.05.2018)
 

@@ -21,8 +21,11 @@ public class EndFightPanelScript : MonoBehaviour {
 		if (won) {
 			loot.SetActive (true);
 			lm = loot.GetComponent<LootManager> ();
-			lm.items [0] = ItemPool [0].GetComponent<Item> ();
-			lm.items [1] = ItemPool [1].GetComponent<Item> ();
+			lm.items [0] = ItemPool [Random.Range(0,ItemPool.Length)].GetComponent<Item> ();
+			lm.items [1] = ItemPool [Random.Range(0,ItemPool.Length)].GetComponent<Item> ();
+			while (lm.items [1] == lm.items [0]) {
+				lm.items [1] = ItemPool [Random.Range (0, ItemPool.Length)].GetComponent<Item> ();
+			}
 			lm.Initialize ();
 			Inventory.GetComponent<InventoryManager> ().addToInventory(lm.items);
 			GameObject.Find ("ShapesManager").GetComponent<ShapesManager> ().SaveProgress ();

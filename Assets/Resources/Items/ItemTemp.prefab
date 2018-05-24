@@ -51,8 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0648021215a6f54ebce4954149ab7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Blacksmith Hammer
-  tooltip: -30% DMG taken from Red. 30% less damage dealt.+10 to strength. (Weapon
+  itemName: Sturdy Hammer
+  tooltip: -30% DMG taken from Red. -30% DMG taken from Purple.+5 to strength. (Weapon
     - Hammer)
   icon: {fileID: 21300000, guid: da79caf64c71059489cfb949f75a9737, type: 3}
   modifiers:
@@ -60,11 +60,11 @@ MonoBehaviour:
     stat: resistances[3]
     value: 30
   - modType: static
-    stat: damage
-    value: -30
+    stat: resistances[4]
+    value: 30
   - modType: static
     stat: weaponType
     value: hammer
   - modType: static
     stat: strength
-    value: 10
+    value: 5
