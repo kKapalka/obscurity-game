@@ -27,24 +27,11 @@ public class ShapesManager : MonoBehaviour
 
 	public GameObject[] EffectPrefabs;
 
-    public GameObject[] endfight;
-
-	/*static int[][][]damageData = new int[6][][];
-	static string[] attackTypes = { "basic", "hammer", "dragndrop", "dragthrough", "scattershot", "doubleattack" };
-	static string[] attackData= {"Count","Damage","Gravity"};
-	static string[] attacker = { "Player", "AI" };
-	/*static string[] hints = {"Select highlighted gem to swap places with",
-		"Click the gem again to confirm",
-		"Select another gem to swap places with",
-		"Select highlighted gem to drag towards and change places with",
-		"Click the gem again to confirm",
-		"Select another gem on a chosen axis to confirm"
-	};
-	*/
 	public static bool gameOver=false;
 
 	int playerHP, enemyHP;
-	public GameObject EndFightCanvas;
+	public GameObject EndFight;
+
 	public string[] GemTypes;
 
 	public GameState getState(){
@@ -52,19 +39,16 @@ public class ShapesManager : MonoBehaviour
 	}
 	void Update(){
 		
-		if (state == GameState.None) {
+		if (state == GameState.None && !gameOver) {
 			player.GetComponent<PlayerScript> ().RefreshSelection ();
 			playerHP= player.GetComponent<CharacterStats> ().currentHP;
 			enemyHP = enemy.GetComponent<CharacterStats> ().currentHP;
 			if (playerHP <= 0 || enemyHP<=0) {
 				gameOver = true;
-				if (playerHP >= enemyHP)
-					state = GameState.Victory;
-				else
-					state = GameState.Defeat;
-				GameObject.Find ("Canvas").SetActive (false);
-				EndFightCanvas.SetActive (true);
-                Debug.Log(GameObject.Find("endFight").active);
+
+				EndFight.SetActive (true);
+				EndFight.GetComponent<EndFightPanelScript>().Load (playerHP >= enemyHP);
+
 				DestroyAllCandy ();
                 
 			}
@@ -323,12 +307,13 @@ public class ShapesManager : MonoBehaviour
 		if (turn == "Enemy") {
 			turn = "Player";
 			player.GetComponent<EquipmentManager> ().AddModifiersOfType ("startofturn");
-			player.GetComponent<CharacterStats> ().Regenerate ();
+			if(playerHP>=0)
+				player.GetComponent<CharacterStats> ().Regenerate ();
 		}
 		else if (turn == "Player") {
 			turn = "Enemy";
-
-			enemy.GetComponent<CharacterStats> ().Regenerate ();
+			if(enemyHP>=0)
+				enemy.GetComponent<CharacterStats> ().Regenerate ();
 		}
 		turntag.text = turn + " Turn";
 	}
