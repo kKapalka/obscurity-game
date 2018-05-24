@@ -14,7 +14,7 @@ public class InventoryManager : ItemManager{
 	public Vector3 relocation;
 	public GameObject equipPanel;
 	// Use this for initialization
-	void Awake () {
+	void Start () {
 		Load("Inventory");
 		Initialize ();
 	}

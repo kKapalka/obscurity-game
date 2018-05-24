@@ -11,6 +11,7 @@ Changelog:
 
 -Utworzono 4 przedmioty i 4 przeciwnikow, na potrzeby demo 
 
+-Naprawiono buga gdzie inwentarz gracza nadpisywal stare przedmioty nowymi. Teraz laduje jak powinno
 
 #0.5.1(#20)(23.05.2018)
 

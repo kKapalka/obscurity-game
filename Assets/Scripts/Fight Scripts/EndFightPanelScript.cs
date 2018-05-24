@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 
 public class EndFightPanelScript : MonoBehaviour {
@@ -10,7 +12,6 @@ public class EndFightPanelScript : MonoBehaviour {
 	public GameObject[] ItemPool;
 	public GameObject loot;
 	LootManager lm;
-	public GameObject Inventory;
 	public void EndOfFight(bool won){
 		GameObject.Find ("PlayerData").SetActive (false);
 		GameObject.Find ("EnemyData").SetActive (false);
@@ -27,8 +28,29 @@ public class EndFightPanelScript : MonoBehaviour {
 				lm.items [1] = ItemPool [Random.Range (0, ItemPool.Length)].GetComponent<Item> ();
 			}
 			lm.Initialize ();
-			Inventory.GetComponent<InventoryManager> ().addToInventory(lm.items);
-			GameObject.Find ("ShapesManager").GetComponent<ShapesManager> ().SaveProgress ();
+
+			BinaryFormatter bf = new BinaryFormatter ();
+			FileStream file;
+			string[] currentInv;
+			if (File.Exists (Application.persistentDataPath + "/Inventory.dat")) {
+				file = File.Open (Application.persistentDataPath + "/Inventory.dat", FileMode.Open);
+				currentInv = (string[])bf.Deserialize (file);
+				file.Close ();
+			} else {
+				currentInv = new string[0];
+			}
+			string[] newInv = new string[currentInv.Length + lm.items.Length];
+			int i = 0;
+			foreach (string name in currentInv) {
+				newInv [i] = currentInv [i++];
+			}
+			foreach (Item item in lm.items) {
+				newInv [i++] = item.name.Replace("(Clone)","");
+			}
+			file = File.Create(Application.persistentDataPath + "/Inventory.dat");
+			bf.Serialize (file, newInv);
+			file.Close ();
+
 		} else {
 			loot.SetActive (false);
 		}
