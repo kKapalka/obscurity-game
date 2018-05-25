@@ -1,4 +1,12 @@
 Changelog:
+
+#0.6.0(#23)(25.05.3018)
+
+-Dokonano kompletnego redesignu okienek od wyswietlania statystyk gracza i przeciwnika
+
+-Wytropiono i usunieto bugi zwiazane z zapisywaniem i odczytem poziomu gracza, oraz inne
+
+
 #0.5.3(#22)(24.05.2018)
 
 -Od teraz gracz moze uzyskiwac kolejne poziomy doswiadczenia po pokonywaniu przeciwnikow. Kazdy przeciwnik bedzie wart ustalona ilosc punktow doswiadczenia.

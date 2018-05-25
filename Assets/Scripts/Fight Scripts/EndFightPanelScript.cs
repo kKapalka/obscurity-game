@@ -13,10 +13,13 @@ public class EndFightPanelScript : MonoBehaviour {
 	public GameObject[] ItemPool;
 	public GameObject loot;
 	int[] playerStatus=new int[2];
+	int XPGained;
 	LootManager lm;
+
+
 	public void EndOfFight(bool won){
-		GameObject.Find ("PlayerData").SetActive (false);
-		GameObject.Find ("EnemyData").SetActive (false);
+		//GameObject.Find ("PlayerData").SetActive (false);
+		//GameObject.Find ("EnemyData").SetActive (false);
 		GameObject.Find ("CrystalsBG").SetActive (false);
 		GameObject.Find ("TurnTag").SetActive (false);
 		title.text=won?"VICTORY!":"DEFEAT!";
@@ -52,19 +55,15 @@ public class EndFightPanelScript : MonoBehaviour {
 			GameObject.Find ("ShapesManager").GetComponent<ShapesManager> ().SaveProgress ();
 
 			//Add experience points
-			int[] playerStatus = ReadScript.Read<int[]> ("PlayerXP");
-			if (playerStatus == default(int[])) {
-				playerStatus = new int[]{ 1, 0 };
-			}
-			if (playerStatus[1]+EnemySelection.Instance.experiencePoints >= 100*playerStatus[0]) {
+			playerStatus = GameObject.Find("Player").GetComponent<PlayerController>().getXP();
+			XPGained = (EnemySelection.created ? EnemySelection.Instance.experiencePoints : 5);
+			if (playerStatus[1]+ XPGained>= 100*playerStatus[0]) {
 				levelUpText.text="level up! "+playerStatus[0]+" -> "+(playerStatus[0]+1);
 
 			}
+			Debug.Log ("test");
 			StartCoroutine (AnimateXPBar ());
 
-			file = File.Create(Application.persistentDataPath + "/PlayerXP.dat");
-			bf.Serialize (file,playerStatus);
-			file.Close ();
 		} else {
 			loot.SetActive (false);
 		}
@@ -78,7 +77,7 @@ public class EndFightPanelScript : MonoBehaviour {
 	public IEnumerator AnimateXPBar(){
 		XPSlider.maxValue = (float)100 * playerStatus [0];
 		XPSlider.value = (float)playerStatus [1];
-		for (int i = 0; i <= EnemySelection.Instance.experiencePoints; i++,playerStatus[1]++) {
+		for (int i = 0; i <= XPGained; i++,playerStatus[1]++) {
 			XPText.text = playerStatus[1] + "/" + XPSlider.maxValue;
 			XPSlider.value = playerStatus [1];
 			if (playerStatus[1] >= 100*playerStatus[0]) {

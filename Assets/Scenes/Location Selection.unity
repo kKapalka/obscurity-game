@@ -7908,6 +7908,11 @@ Prefab:
       propertyPath: weapon
       value: basic
       objectReference: {fileID: 0}
+    - target: {fileID: 114322552145323716, guid: c0f756b788b289246809de6992654ab2,
+        type: 2}
+      propertyPath: experiencePoints
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0f756b788b289246809de6992654ab2, type: 2}
   m_IsPrefabParent: 0

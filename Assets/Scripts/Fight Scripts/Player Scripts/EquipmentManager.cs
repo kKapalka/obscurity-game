@@ -10,12 +10,12 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class EquipmentManager : ItemManager {
 
-	//items = new Item[4];
+	public GameObject playerData;
 	CharacterStats stats;
 	//itemSlots = new Button[4];
 	public bool fight;
 	bool created;
-	//one item has to be a weapon, or else attack type i basic and damage dealt is lowered by additional 40%
+
 	bool locked;
 	public Vector3 relocation;
 
@@ -57,6 +57,11 @@ public class EquipmentManager : ItemManager {
 				}
 			}
 		}
+		if (type=="static" && !locked) {
+			GetComponent<PlayerScript> ().LoadWeapon ("basic");
+			locked = true;
+		}
+		playerData.GetComponent<PlayerDataScript>().Assign(stats,GetComponent<PlayerScript>().getWeapon());
 	}
 
 	public override bool isEquipPanelActive ()
@@ -86,11 +91,6 @@ public class EquipmentManager : ItemManager {
 		}
 		if (fight) {
 			AddModifiersOfType ("static");
-			if (!locked) {
-				stats.damageMultiplier.AddModifier (-40);
-				GetComponent<PlayerScript> ().LoadWeapon ("basic");
-				locked = true;
-			}
 		}
 		currentPos = 0;
 	}

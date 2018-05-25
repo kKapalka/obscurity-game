@@ -13,6 +13,7 @@ public class ShapesManager : MonoBehaviour
     public Text ScoreText;
     public ShapesArray shapes;
 	public GameObject player,enemy;
+	public GameObject enemyData;
     private int score;
 	private string turn;
     public Vector2 BottomRight = new Vector2(-2.67f, -2.27f);
@@ -76,6 +77,9 @@ public class ShapesManager : MonoBehaviour
 
 		if(EnemySelection.created)
 			EnemySelection.Instance.LoadIntoCharacter(enemy);
+		//playerData.GetComponent<PlayerDataScript> ().Assign (player.GetComponent<CharacterStats> (), player.GetComponent<PlayerScript> ().getWeapon ());
+		enemyData.GetComponent<PlayerDataScript> ().Assign (enemy.GetComponent<CharacterStats> (), enemy.GetComponent<PlayerScript> ().getWeapon ());
+
     }
 
     /// <summary>
@@ -407,8 +411,11 @@ public class ShapesManager : MonoBehaviour
 		BinaryFormatter bf = new BinaryFormatter ();
 		FileStream file;
 		List<string> encountersDefeated = ReadScript.Read<List<string>> ("Progress");
+		if (encountersDefeated == default(List<string>))
+			encountersDefeated = new List<string> ();
 		if(EnemySelection.created)
 			encountersDefeated.Add (EnemySelection.Instance.encounterName);
+			
 		file = File.Create(Application.persistentDataPath + "/Progress.dat");
 		bf.Serialize (file,encountersDefeated);
 

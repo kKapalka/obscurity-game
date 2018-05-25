@@ -26,9 +26,12 @@ public class EnemySelection : MonoBehaviour {
 
 	void Start(){
 		List<string> encountersDefeated = ReadScript.Read<List<string>>("Progress");
+		if (encountersDefeated == default (List<string>))
+			return;
 		if(encountersDefeated.Contains(this.encounterName) && Application.loadedLevelName=="Location Selection"){
 			this.GetComponent<Image> ().color = Color.green;
 		}
+
 	}
 
 	public void LoadIntoCharacter(GameObject character){

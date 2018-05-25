@@ -14,10 +14,15 @@ public class PlayerController : PlayerScript {
 			XP[0]=1;
 			XP[1]=0;
 		}
-		GetComponent<CharacterStats>().maximumHP = Mathf.RoundToInt((float)GetComponent<CharacterStats>().maximumHP*(1+(Mathf.Pow((float)XP [0]/4.0f,2))));
+		GetComponent<CharacterStats>().maximumHP = Mathf.RoundToInt((float)GetComponent<CharacterStats>().maximumHP*(Mathf.Pow(1+(float)(XP [0]-1)/4.0f,2)));
 		GetComponent<CharacterStats>().removeAllModifiers();
 		GetComponent<CharacterStats>().damageMultiplier.AddModifier(XP[0]*15);
 		em.AwakeOnFight ();
+
+	}
+
+	public int[] getXP(){
+		return XP;
 	}
 
 	void Update()
