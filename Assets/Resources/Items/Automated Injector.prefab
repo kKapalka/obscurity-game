@@ -52,9 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Automated Injector
-  tooltip: +15 Regeneration
+  tooltip: +10 Regeneration
   icon: {fileID: 21300000, guid: a10d04cf7e2e25a40b050a254f86d731, type: 3}
   modifiers:
   - modType: static
     stat: regeneration
-    value: 15
+    value: 10

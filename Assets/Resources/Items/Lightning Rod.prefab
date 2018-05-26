@@ -56,7 +56,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 8544d9e6e74379b4db6156f208eb9049, type: 3}
   modifiers:
   - modType: static
-    stat: resistance[4]
+    stat: resistances[4]
     value: -25
   - modType: combo
     stat: damage

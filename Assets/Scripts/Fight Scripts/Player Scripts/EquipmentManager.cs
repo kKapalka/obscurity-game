@@ -39,6 +39,7 @@ public class EquipmentManager : ItemManager {
 				foreach (Modifier mod in modifiers) {
 					if (mod.stat.Contains ("resistance")) {
 						int index = (int)Char.GetNumericValue (mod.stat.ToCharArray () [12]);
+						Debug.Log (index);
 						if (stats.resistances.Length > index)
 							stats.resistances [index].AddModifier (int.Parse(mod.value));
 					} else if (mod.stat.Contains ("dodge"))

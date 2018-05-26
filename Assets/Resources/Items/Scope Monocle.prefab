@@ -52,9 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Scope Monocle
-  tooltip: Increase strength by 9 after dealing 75 DMG or more with a single attack
+  tooltip: Increase strength by 5 after dealing 75 DMG or more with a single attack
   icon: {fileID: 21300000, guid: 9e9ab22cae5f7e74a99b2926d025127d, type: 3}
   modifiers:
   - modType: highdamage
     stat: strength
-    value: 9
+    value: 5
