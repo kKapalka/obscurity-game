@@ -26,7 +26,7 @@ public class InventoryManager : ItemManager{
 
 	public override int getShift ()
 	{
-		return Mathf.RoundToInt (scrollBar.value * scrollBar.numberOfSteps) * GetComponentInChildren<GridLayoutGroup>().constraintCount;
+		return Mathf.RoundToInt (scrollBar.value * (scrollBar.numberOfSteps-1)) * GetComponentInChildren<GridLayoutGroup>().constraintCount;
 	}
 	public override Vector3 getRelocation ()
 	{
@@ -36,8 +36,7 @@ public class InventoryManager : ItemManager{
 	{
 		Debug.Log ("Initialized");
 		currentPos = 0;
-		scrollBar.numberOfSteps = (items.Length-9)/ 3+1;
-		Debug.Log (scrollBar.numberOfSteps);
+		scrollBar.numberOfSteps = (items.Length/3)-1;
 		for (int i = 0; i < itemSlots.Length; i++) {
 			if (i + getShift () >= items.Length)
 				return;

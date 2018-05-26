@@ -10,6 +10,8 @@ Changelog:
 
 - Znaleziono i usunieto buga gdzie postac mogla uniknac obrazen posiadajac 0 szansy na unik
 
+-Ekwipunek samoczynnie sie powieksza
+
 #0.6.1(#24)(26.08.2018)
 
 - Wstawiono ikonki
