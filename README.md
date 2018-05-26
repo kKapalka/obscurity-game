@@ -14,6 +14,10 @@ Changelog:
 
 - Okno informacji o przeciwniku wyswietla wiecej informacji o nim
 
+- W scenie "Location Selection" dodano guzik "Return to Main Menu"
+
+- W scenie "Fight" dodano guzik "Escape" dzieki ktoremu gracz moze przedwczesnie skonczyc walke i uciec do sceny "Location Selection"
+
 #0.6.0(#23)(25.05.3018)
 
 - Dokonano kompletnego redesignu okienek od wyswietlania statystyk gracza i przeciwnika
