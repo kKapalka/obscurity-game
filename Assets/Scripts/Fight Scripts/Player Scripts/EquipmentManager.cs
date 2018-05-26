@@ -61,7 +61,7 @@ public class EquipmentManager : ItemManager {
 			GetComponent<PlayerScript> ().LoadWeapon ("basic");
 			locked = true;
 		}
-		playerData.GetComponent<PlayerDataScript>().Assign(stats,GetComponent<PlayerScript>().getWeapon());
+		playerData.GetComponent<PlayerDataScript>().Assign(stats,GetComponent<PlayerScript>().getWeapon(),GetComponent<PlayerScript>().weaponType);
 	}
 
 	public override bool isEquipPanelActive ()

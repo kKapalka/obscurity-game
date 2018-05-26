@@ -2,6 +2,8 @@ Changelog:
 
 #0.6.1(#24)(26.08.2018)
 
+- Wstawiono ikonki
+
 - Ustalono tytuly czlonkow zespolu na scenie Credits
 
 - Wysprzatano scene Main Menu
