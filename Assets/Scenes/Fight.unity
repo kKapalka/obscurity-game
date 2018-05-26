@@ -3530,7 +3530,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1d551cc5408ba2f4584a70defd77b586, type: 3}
   - {fileID: 21300000, guid: 46ae9bb3b08bd374d88d8717772bab47, type: 3}
   - {fileID: 21300000, guid: b20770055b6900549bc35c35478dd637, type: 3}
-  - {fileID: 21300000, guid: cc7cfbceb933c8344a950407d243976b, type: 3}
+  - {fileID: 21300000, guid: f79558ddd596af24abea650471991e4f, type: 3}
   - {fileID: 21300000, guid: b092868f237c3fb43aa60a76dda43a45, type: 3}
   weaponButton: {fileID: 1463266329}
 --- !u!1 &890130824
@@ -4928,10 +4928,20 @@ MonoBehaviour:
   XPText: {fileID: 484432095}
   XPSlider: {fileID: 727384791}
   ItemPool:
-  - {fileID: 1735188225570674, guid: 9265b8494f1b0ef4ab3c42f3c7a35722, type: 2}
-  - {fileID: 1256966250122616, guid: d37d2774ed26ac342b4c017ead1c0f18, type: 2}
-  - {fileID: 1888121746295366, guid: fab4cb261588c31439d05a849472df32, type: 2}
-  - {fileID: 1296928727547536, guid: f7d10aa85f1b79b4a991bd81495b0652, type: 2}
+  - {fileID: 1343504021263432, guid: 5b64dd4df503e8048b61045bb127e5b4, type: 2}
+  - {fileID: 1978956578164586, guid: 4cd01d563f99bd14b98b9db719e0995c, type: 2}
+  - {fileID: 1449897226809350, guid: 8ffc328d017afaa42a1f7ee283c1fc7d, type: 2}
+  - {fileID: 1274948661589574, guid: b138b54b6bb47af4fac5c91ffd4891e4, type: 2}
+  - {fileID: 1572094251831736, guid: 2640d201f2ee23e4e9ca9f7a59c0da28, type: 2}
+  - {fileID: 1479658677586066, guid: ba6b511c31cd78f4da39f9077a09d9de, type: 2}
+  - {fileID: 1455337541747366, guid: 998853595723f54449d314de183d13ff, type: 2}
+  - {fileID: 1259345692548500, guid: 579a0b3e9a3ef924c805b81707a5f15e, type: 2}
+  - {fileID: 1929025633707726, guid: b8fd9e3f112559f4ea576d0849b246a4, type: 2}
+  - {fileID: 1240256424405502, guid: 71eab741fca79994b9e2d3c189fc8746, type: 2}
+  - {fileID: 1708124727907114, guid: 1b2934efb76867341a4111d72ff87c15, type: 2}
+  - {fileID: 1611118124701602, guid: 6f4e023a66c81694d9e8c4022d7d5f98, type: 2}
+  - {fileID: 1663940943869334, guid: 23914988f13a2554fa750c811a09ee88, type: 2}
+  - {fileID: 1891853316801500, guid: 418c8eeae16757a4aba788b2fb39c84b, type: 2}
   loot: {fileID: 67272174}
 --- !u!1 &1143716989
 GameObject:
@@ -8922,7 +8932,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1d551cc5408ba2f4584a70defd77b586, type: 3}
   - {fileID: 21300000, guid: 46ae9bb3b08bd374d88d8717772bab47, type: 3}
   - {fileID: 21300000, guid: b20770055b6900549bc35c35478dd637, type: 3}
-  - {fileID: 21300000, guid: cc7cfbceb933c8344a950407d243976b, type: 3}
+  - {fileID: 21300000, guid: f79558ddd596af24abea650471991e4f, type: 3}
   - {fileID: 21300000, guid: b092868f237c3fb43aa60a76dda43a45, type: 3}
   weaponButton: {fileID: 677341185}
 --- !u!114 &1986102229

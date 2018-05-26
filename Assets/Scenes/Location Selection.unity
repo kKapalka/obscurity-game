@@ -10187,7 +10187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   encounterName: Shinobi
   infoAboutEnemy: Hits where it hurts. Hard to hit.
-  maximumHP: 150
+  maximumHP: 200
   experiencePoints: 0
   resistances:
   - value: 0
@@ -10196,9 +10196,9 @@ MonoBehaviour:
   - value: 0
   - value: 0
   dodge:
-    value: 25
+    value: 30
   damageMultiplier:
-    value: 50
+    value: 90
   strength:
     value: 0
   regeneration:

@@ -1,5 +1,11 @@
 Changelog:
 
+#0.6.2(#25)(26.08.2018)
+
+- Utworzono 9 nowych przedmiotow
+
+- Wprowadzono twarde limity (capy) na statystyki
+
 #0.6.1(#24)(26.08.2018)
 
 - Wstawiono ikonki

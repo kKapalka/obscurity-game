@@ -57,7 +57,7 @@ public abstract class PlayerScript : MonoBehaviour {
 			damage = 8 * (modifiedMatches-2);
 		
 		int totalDamage = Mathf.RoundToInt(damage * (1.0f+((float)stats.damageMultiplier.getValue()/100)));
-		if (totalDamage > 200 && sm.turntag.text == "Player Turn")
+		if (totalDamage > 75 && sm.turntag.text == "Player Turn")
 			GetComponent<EquipmentManager> ().AddModifiersOfType ("highdamage"); 
 		enemy.GetComponent<CharacterStats> ().TakeDamage (totalDamage, type);
 	}

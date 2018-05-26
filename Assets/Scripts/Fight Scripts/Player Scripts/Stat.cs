@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class Stat {
 
 	public int value;
+	int lowCap, highCap;
 	List<int> modifiers = new List<int> ();
 
 	public int getValue(){
@@ -13,7 +14,7 @@ public class Stat {
 		foreach (int modifier in modifiers) {
 			finalValue += modifier;
 		}
-		return finalValue;
+		return (finalValue<lowCap?lowCap:(finalValue>highCap?highCap:finalValue));
 	}
 
 	public void AddModifier(int modifier){
@@ -25,4 +26,10 @@ public class Stat {
 	public void RemoveAll(){
 		modifiers.Clear ();
 	}
+	public void setCap(int low, int high){
+		this.lowCap = low;
+		this.highCap = high;
+	}
+
+
 }

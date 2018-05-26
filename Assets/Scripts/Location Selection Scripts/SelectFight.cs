@@ -21,7 +21,7 @@ public class SelectFight : MonoBehaviour {
 		if (adjectives [Mathf.Clamp(enemy.strength.getValue() / 8,0,adjectives.Length-1)] != "")
 			infoText.text += adjectives [Mathf.Clamp(enemy.strength.getValue() / 6,0,adjectives.Length-1)] + " strong.\n";
 		if (adjectives [Mathf.Clamp(enemy.damageMultiplier.getValue() / 30,0,adjectives.Length-1)] != "")
-			infoText.text += adjectives [Mathf.Clamp(enemy.damageMultiplier.getValue() / 30,0,adjectives.Length-1)] + " lethal.\n";
+			infoText.text += adjectives [Mathf.Clamp(enemy.damageMultiplier.getValue() / 60,0,adjectives.Length-1)] + " lethal.\n";
 		for (int i = 0; i < enemy.resistances.Length; i++) {
 			if (adjectives [Mathf.Clamp(enemy.resistances[i].getValue() / 20,0,adjectives.Length-1)] != "")
 				infoText.text += adjectives [Mathf.Clamp(enemy.resistances[i].getValue() / 20,0,adjectives.Length-1)] + " resistant against "+types[i]+" gems.\n";

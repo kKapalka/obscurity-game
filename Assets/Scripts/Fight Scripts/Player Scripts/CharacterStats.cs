@@ -24,8 +24,12 @@ public class CharacterStats: MonoBehaviour {
 		GetComponent<PopupTextContoroller>().Initialize ();
 
 		ResetHP ();
-		if (strength.getValue () < 0)
-			strength.value = 0;
+		strength.setCap (0, 100);
+		dodge.setCap (0, 80);
+		damageMultiplier.setCap (-75, 500);
+		regeneration.setCap (-80, 80);
+		foreach (Stat res in resistances)
+			res.setCap (-500, 100);
 	}
 
 	public void ResetHP(){
