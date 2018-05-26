@@ -26,7 +26,7 @@ public class InventoryManager : ItemManager{
 
 	public override int getShift ()
 	{
-		return Mathf.RoundToInt (scrollBar.value * (scrollBar.numberOfSteps-1)) * GetComponentInChildren<GridLayoutGroup>().constraintCount;
+		return Mathf.RoundToInt (scrollBar.value * scrollBar.numberOfSteps) * GetComponentInChildren<GridLayoutGroup>().constraintCount;
 	}
 	public override Vector3 getRelocation ()
 	{
@@ -34,9 +34,7 @@ public class InventoryManager : ItemManager{
 	}
 	public override void Initialize ()
 	{
-		Debug.Log ("Initialized");
 		currentPos = 0;
-		scrollBar.numberOfSteps = (items.Length/3)-1;
 		for (int i = 0; i < itemSlots.Length; i++) {
 			if (i + getShift () >= items.Length)
 				return;
@@ -49,7 +47,6 @@ public class InventoryManager : ItemManager{
 
 	}
 	public void onShift(){
-		Debug.Log ("Shifted by "+getShift());
 		for (int i = 0; i < itemSlots.Length; i++) {
 			if (i+getShift()<items.Length && items[i+getShift()]!=null)
 				itemSlots [i].GetComponent<Image> ().sprite = items [i+getShift()].icon;
@@ -87,13 +84,17 @@ public class InventoryManager : ItemManager{
 			FileStream file = File.Open(Application.persistentDataPath + "/"+name+".dat", FileMode.Open);
 			string[] itemNames = (string[])bf.Deserialize(file);
 			this.items = new Item[itemNames.Length];
+			int slotIndex = 0;
 			for (int i = 0; i < itemNames.Length; i++) {
-				if (itemNames [i] != null) {
+				Debug.Log (itemNames [i]);
+				if (itemNames [i] != null && itemNames[i]!="Null") {
+					
 					GameObject newItem = (GameObject)Instantiate (Resources.Load ("Items/" + itemNames [i]));
-					this.items [i] = newItem.GetComponent<Item> ();
+					this.items [slotIndex++] = newItem.GetComponent<Item> ();
 				}
 			}
 			file.Close ();
+			scrollBar.numberOfSteps = (int)Mathf.Ceil(((float)slotIndex-9)/3f);
 		}
 
 	}

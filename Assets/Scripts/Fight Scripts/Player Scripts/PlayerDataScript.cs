@@ -14,7 +14,7 @@ public class PlayerDataScript : MonoBehaviour {
 		display [1].text = ((float)stats.strength.getValue ()/10f).ToString();
 		display [2].text = stats.regeneration.getValue ().ToString();
 		for (int i = 0; i < stats.resistances.Length; i++) {
-			display [3 + i].text = (stats.resistances [i].getValue ()*-1).ToString ();
+			display [3 + i].text = stats.resistances [i].getValue ().ToString ();
 		}
 		float matches = 3 + ((float)stats.strength.getValue () / 10);
 		display[8].text= Mathf.RoundToInt(weapon.getDamage(matches) * (1.0f+((float)stats.damageMultiplier.getValue()/100))).ToString();

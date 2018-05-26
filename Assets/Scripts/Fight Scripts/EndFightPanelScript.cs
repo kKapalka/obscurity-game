@@ -61,7 +61,8 @@ public class EndFightPanelScript : MonoBehaviour {
 				levelUpText.text="level up! "+playerStatus[0]+" -> "+(playerStatus[0]+1);
 
 			}
-			Debug.Log ("test");
+			XPSlider.maxValue = (float)100 * playerStatus [0];
+			XPSlider.value = (float)playerStatus [1];
 			StartCoroutine (AnimateXPBar ());
 
 		} else {
