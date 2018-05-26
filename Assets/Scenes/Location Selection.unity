@@ -743,15 +743,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f101ca28f629c4fbd4620a232a686b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encounterName: Shinobi
-  infoAboutEnemy: Hits where it hurts. Hard to hit.
-  maximumHP: 150
-  experiencePoints: 0
-  resistances: []
+  encounterName: Doc. von Hohenberg
+  infoAboutEnemy: He is very, very curious about you. In an unsettling way
+  maximumHP: 1750
+  experiencePoints: 160
+  resistances:
+  - value: 0
+  - value: 0
+  - value: 0
+  - value: 0
+  - value: 0
   dodge:
-    value: 25
+    value: 0
   damageMultiplier:
-    value: 50
+    value: 0
   strength:
     value: 0
   regeneration:
@@ -1628,20 +1633,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f101ca28f629c4fbd4620a232a686b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encounterName: Shinobi
-  infoAboutEnemy: Hits where it hurts. Hard to hit.
-  maximumHP: 150
-  experiencePoints: 0
-  resistances: []
+  encounterName: King of Clubs
+  infoAboutEnemy: 
+  maximumHP: 1500
+  experiencePoints: 300
+  resistances:
+  - value: 0
+  - value: 0
+  - value: 0
+  - value: 0
+  - value: 0
   dodge:
-    value: 25
-  damageMultiplier:
-    value: 50
-  strength:
     value: 0
+  damageMultiplier:
+    value: 0
+  strength:
+    value: 45
   regeneration:
     value: 0
-  weapon: scattershot
+  weapon: hammer
 --- !u!114 &321456374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2076,20 +2086,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f101ca28f629c4fbd4620a232a686b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encounterName: Unkempt Lackey
-  infoAboutEnemy: Pretty weak opponent. Should be no problem defeating this one.
-  maximumHP: 100
-  experiencePoints: 10
-  resistances: []
+  encounterName: Jack of Diamonds
+  infoAboutEnemy: 
+  maximumHP: 1250
+  experiencePoints: 240
+  resistances:
+  - value: 75
+  - value: 75
+  - value: 0
+  - value: 0
+  - value: 0
   dodge:
     value: 0
   damageMultiplier:
-    value: 0
+    value: 90
   strength:
     value: 0
   regeneration:
     value: 0
-  weapon: basic
+  weapon: doubleattack
 --- !u!114 &381709151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3797,20 +3812,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f101ca28f629c4fbd4620a232a686b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encounterName: Unkempt Lackey
-  infoAboutEnemy: Pretty weak opponent. Should be no problem defeating this one.
-  maximumHP: 100
-  experiencePoints: 10
-  resistances: []
+  encounterName: Sewer Clean-o-Bot
+  infoAboutEnemy: Don't worry. He's going to surely clean you up.
+  maximumHP: 650
+  experiencePoints: 100
+  resistances:
+  - value: 0
+  - value: 0
+  - value: 0
+  - value: 0
+  - value: 75
   dodge:
     value: 0
   damageMultiplier:
     value: 0
   strength:
-    value: 0
+    value: 10
   regeneration:
     value: 0
-  weapon: basic
+  weapon: dragthrough
 --- !u!1 &642402862
 GameObject:
   m_ObjectHideFlags: 0
@@ -4734,20 +4754,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f101ca28f629c4fbd4620a232a686b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encounterName: The Smith
-  infoAboutEnemy: Very strong. Like, seriously strong. Approach with caution.
-  maximumHP: 500
-  experiencePoints: 0
-  resistances: []
+  encounterName: Ace of Spades
+  infoAboutEnemy: So you made it here.
+  maximumHP: 2250
+  experiencePoints: 450
+  resistances:
+  - value: 0
+  - value: 0
+  - value: 0
+  - value: 0
+  - value: 0
   dodge:
-    value: 0
+    value: 50
   damageMultiplier:
-    value: 0
+    value: 250
   strength:
-    value: 60
+    value: 0
   regeneration:
     value: 0
-  weapon: hammer
+  weapon: basic
 --- !u!114 &807796009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4985,8 +5010,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   encounterName: Unkempt Lackey
   infoAboutEnemy: Pretty weak opponent. Should be no problem defeating this one.
-  maximumHP: 100
-  experiencePoints: 10
+  maximumHP: 200
+  experiencePoints: 35
   resistances:
   - value: 0
   - value: 0
@@ -5302,9 +5327,9 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 20
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -6364,7 +6389,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 9114700dde5618b46a86980ed24fc3bf, type: 3}
     m_FontSize: 80
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 80
     m_Alignment: 4
@@ -6486,20 +6511,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f101ca28f629c4fbd4620a232a686b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encounterName: The Smith
-  infoAboutEnemy: Very strong. Like, seriously strong. Approach with caution.
-  maximumHP: 500
-  experiencePoints: 0
-  resistances: []
+  encounterName: Caped Baldface
+  infoAboutEnemy: You just had to be in a bad place in a bad time
+  maximumHP: 600
+  experiencePoints: 225
+  resistances:
+  - value: 0
+  - value: 0
+  - value: 0
+  - value: 0
+  - value: 0
   dodge:
-    value: 0
+    value: 45
   damageMultiplier:
-    value: 0
+    value: 120
   strength:
-    value: 60
+    value: 15
   regeneration:
     value: 0
-  weapon: hammer
+  weapon: dragndrop
 --- !u!1 &1083383887
 GameObject:
   m_ObjectHideFlags: 0
@@ -7267,21 +7297,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f101ca28f629c4fbd4620a232a686b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encounterName: Wicked Gladiator
-  infoAboutEnemy: Loves swinging his sword and defeating unskilled fighters. Pretty
-    strong.
-  maximumHP: 250
-  experiencePoints: 0
-  resistances: []
+  encounterName: Failed Experiment X052F
+  infoAboutEnemy: Immense regenerative properties make him so difficult to deal with
+  maximumHP: 300
+  experiencePoints: 145
+  resistances:
+  - value: 0
+  - value: 0
+  - value: 0
+  - value: 0
+  - value: 0
   dodge:
     value: 0
   damageMultiplier:
     value: 0
   strength:
-    value: 20
-  regeneration:
     value: 0
-  weapon: doubleattack
+  regeneration:
+    value: 50
+  weapon: dragndrop
 --- !u!1 &1218645624
 GameObject:
   m_ObjectHideFlags: 0
@@ -8555,7 +8589,7 @@ MonoBehaviour:
   encounterName: The Smith
   infoAboutEnemy: Very strong. Like, seriously strong. Approach with caution.
   maximumHP: 500
-  experiencePoints: 0
+  experiencePoints: 100
   resistances:
   - value: 0
   - value: 0
@@ -10188,7 +10222,7 @@ MonoBehaviour:
   encounterName: Shinobi
   infoAboutEnemy: Hits where it hurts. Hard to hit.
   maximumHP: 200
-  experiencePoints: 0
+  experiencePoints: 70
   resistances:
   - value: 0
   - value: 0
@@ -10477,12 +10511,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f101ca28f629c4fbd4620a232a686b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encounterName: Wicked Gladiator
-  infoAboutEnemy: Loves swinging his sword and defeating unskilled fighters. Pretty
-    strong.
-  maximumHP: 250
-  experiencePoints: 0
-  resistances: []
+  encounterName: Queen of Hearts
+  infoAboutEnemy: 
+  maximumHP: 1000
+  experiencePoints: 275
+  resistances:
+  - value: 0
+  - value: 0
+  - value: 0
+  - value: 0
+  - value: 0
   dodge:
     value: 0
   damageMultiplier:
@@ -10490,8 +10528,8 @@ MonoBehaviour:
   strength:
     value: 20
   regeneration:
-    value: 0
-  weapon: doubleattack
+    value: 65
+  weapon: dragthrough
 --- !u!114 &1872830215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11137,8 +11175,8 @@ MonoBehaviour:
   encounterName: Wicked Gladiator
   infoAboutEnemy: Loves swinging his sword and defeating unskilled fighters. Pretty
     strong.
-  maximumHP: 250
-  experiencePoints: 0
+  maximumHP: 300
+  experiencePoints: 55
   resistances:
   - value: 0
   - value: 0
@@ -11150,7 +11188,7 @@ MonoBehaviour:
   damageMultiplier:
     value: 0
   strength:
-    value: 15
+    value: 12
   regeneration:
     value: 0
   weapon: doubleattack

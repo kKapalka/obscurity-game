@@ -12,11 +12,11 @@ public class EnemySelection : MonoBehaviour {
 
 	public int maximumHP;
 	public int experiencePoints;
-	public Stat[] resistances;
-	public Stat dodge;
-	public Stat damageMultiplier;
-	public Stat strength;
-	public Stat regeneration;		
+	public Stat[] resistances = new Stat[]{new Stat(-300,75),new Stat(-300,75),new Stat(-300,75),new Stat(-300,75),new Stat(-300,75)};
+	public Stat dodge = new Stat (0, 85);
+	public Stat damageMultiplier = new Stat (-75, 500);
+	public Stat strength = new Stat (0, 50);
+	public Stat regeneration = new Stat (-80, 80);	
 	public string weapon;
 	public static bool created=false;
 	public static EnemySelection Instance {
@@ -31,7 +31,6 @@ public class EnemySelection : MonoBehaviour {
 		if(encountersDefeated.Contains(this.encounterName) && Application.loadedLevelName=="Location Selection"){
 			this.GetComponent<Image> ().color = Color.green;
 		}
-
 	}
 
 	public void LoadIntoCharacter(GameObject character){

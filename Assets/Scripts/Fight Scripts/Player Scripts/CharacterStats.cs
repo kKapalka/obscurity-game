@@ -11,11 +11,11 @@ public class CharacterStats: MonoBehaviour {
 
 	public int maximumHP;
 	public int currentHP;
-	public Stat[] resistances;
-	public Stat dodge;
-	public Stat damageMultiplier;
-	public Stat strength;
-	public Stat regeneration;
+	public Stat[] resistances = new Stat[]{new Stat(-300,75),new Stat(-300,75),new Stat(-300,75),new Stat(-300,75),new Stat(-300,75)};
+	public Stat dodge = new Stat (0, 85);
+	public Stat damageMultiplier = new Stat (-75, 500);
+	public Stat strength = new Stat (0, 50);
+	public Stat regeneration = new Stat (-80, 80);
 
     
 
@@ -24,12 +24,6 @@ public class CharacterStats: MonoBehaviour {
 		GetComponent<PopupTextContoroller>().Initialize ();
 
 		ResetHP ();
-		strength.setCap (0, 100);
-		dodge.setCap (0, 80);
-		damageMultiplier.setCap (-75, 500);
-		regeneration.setCap (-80, 80);
-		foreach (Stat res in resistances)
-			res.setCap (-500, 100);
 	}
 
 	public void ResetHP(){
@@ -49,7 +43,7 @@ public class CharacterStats: MonoBehaviour {
 			damageTaken= Mathf.Clamp (damage, 0, maximumHP);
 		}
 		if (damageTaken > 0) {
-			if (UnityEngine.Random.Range (0, 100) > dodge.getValue ()) {
+			if (UnityEngine.Random.Range (1, 100) > dodge.getValue ()) {
 				currentHP -= damageTaken;
 				GetComponent<PopupTextContoroller> ().CreatePopupText (("-" + damageTaken.ToString ()), transform);
 			}

@@ -4,7 +4,11 @@ Changelog:
 
 - Utworzono 9 nowych przedmiotow
 
+- Przerobiono 4 istniejacych przeciwnikow i dodano 8 nowych
+
 - Wprowadzono twarde limity (capy) na statystyki
+
+- Znaleziono i usunieto buga gdzie postac mogla uniknac obrazen posiadajac 0 szansy na unik
 
 #0.6.1(#24)(26.08.2018)
 

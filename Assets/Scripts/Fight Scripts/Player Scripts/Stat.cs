@@ -9,12 +9,21 @@ public class Stat {
 	int lowCap, highCap;
 	List<int> modifiers = new List<int> ();
 
+	public Stat(int low, int high){
+		this.lowCap = low;
+		this.highCap = high;
+	}
+
 	public int getValue(){
 		int finalValue = value;
 		foreach (int modifier in modifiers) {
 			finalValue += modifier;
 		}
-		return (finalValue<lowCap?lowCap:(finalValue>highCap?highCap:finalValue));
+		if (finalValue < lowCap)
+			finalValue = lowCap;
+		if (finalValue > highCap)
+			finalValue = highCap;
+		return finalValue;
 	}
 
 	public void AddModifier(int modifier){
@@ -26,10 +35,4 @@ public class Stat {
 	public void RemoveAll(){
 		modifiers.Clear ();
 	}
-	public void setCap(int low, int high){
-		this.lowCap = low;
-		this.highCap = high;
-	}
-
-
 }

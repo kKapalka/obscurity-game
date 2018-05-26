@@ -52,12 +52,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Questionable Potion
-  tooltip: +35 Strength. Cannot dodge
+  tooltip: +20 Strength. -100% Green resistance. Cannot dodge
   icon: {fileID: 21300000, guid: 7f6071a2e2c16ac44bae725f536387cd, type: 3}
   modifiers:
   - modType: static
     stat: strength
-    value: 35
+    value: 20
   - modType: static
     stat: dodge
     value: -999
+  - modType: static
+    stat: resistance[2]
+    value: -100
