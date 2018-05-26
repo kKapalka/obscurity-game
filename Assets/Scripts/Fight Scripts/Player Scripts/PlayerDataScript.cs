@@ -10,7 +10,7 @@ public class PlayerDataScript : MonoBehaviour {
 
 	public void Assign(CharacterStats stats, Weapon weapon){
 		display [0].text = stats.dodge.getValue ().ToString();
-		display [1].text = stats.strength.getValue ().ToString();
+		display [1].text = ((float)stats.strength.getValue ()/10f).ToString();
 		display [2].text = stats.regeneration.getValue ().ToString();
 		for (int i = 0; i < stats.resistances.Length; i++) {
 			display [3 + i].text = (stats.resistances [i].getValue ()*-1).ToString ();

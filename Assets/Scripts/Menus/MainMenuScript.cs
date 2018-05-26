@@ -18,6 +18,10 @@ public class MainMenuScript : MonoBehaviour {
 			File.Delete (Application.persistentDataPath + "/Inventory.dat");
 		if (File.Exists (Application.persistentDataPath + "/Equipment.dat"))
 			File.Delete (Application.persistentDataPath + "/Equipment.dat");
+		if (File.Exists (Application.persistentDataPath + "/PlayerXP.dat"))
+			File.Delete (Application.persistentDataPath + "/PlayerXP.dat");
+		if (File.Exists (Application.persistentDataPath + "/Progress.dat"))
+			File.Delete (Application.persistentDataPath + "/Progress.dat");
 	}
 	public void QuitGame(){
 		Debug.Log ("Game has just quitted.");
@@ -30,6 +34,7 @@ public class MainMenuScript : MonoBehaviour {
 		SceneManager.LoadScene ("Location Selection");
 	}
 	public void StartNewGame(){
+		PlayerPrefs.SetInt ("Days", 1);
 		SceneManager.LoadScene ("Story");
 	}
 }
