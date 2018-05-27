@@ -2,6 +2,8 @@ Changelog:
 
 #0.6.3(#26)(27.08.2018)
 
+- Dodano fabule do sceny "Story"
+
 - Zmieniono przeliczniki zniszczonych klejnotow na obrazenia. Teraz obrazenia zadawane sa 0 -> 60% mniejsze, zaleznie od rodzaju wyprowadzonego ataku
 
 - Teraz sila daje stanowczo zwiekszony bonus do atakow typu Barrage (scattershot)
