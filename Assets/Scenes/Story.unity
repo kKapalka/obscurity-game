@@ -601,9 +601,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   encounterName: Unkempt Lackey
-  infoAboutEnemy: Just dispose of him. Really
+  infoAboutEnemy: 
   maximumHP: 200
-  experiencePoints: 35
+  experiencePoints: 65
   resistances:
   - value: 0
   - value: 0

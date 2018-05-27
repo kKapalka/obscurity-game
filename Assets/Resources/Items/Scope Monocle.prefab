@@ -52,9 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Scope Monocle
-  tooltip: Increase strength by 5 after dealing 75 DMG or more with a single attack
+  tooltip: Increase Strength by 2 for each gem matched above 3
   icon: {fileID: 21300000, guid: 9e9ab22cae5f7e74a99b2926d025127d, type: 3}
   modifiers:
-  - modType: highdamage
+  - modType: highmatch
     stat: strength
-    value: 5
+    value: 2

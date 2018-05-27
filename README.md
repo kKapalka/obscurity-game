@@ -8,6 +8,14 @@ Changelog:
 
 - Zmieniono atrybuty czesci przedmiotow
 
+- Zmieniono jeden typ modyfikatora przedmiotu: Po zadaniu minimum 75 punktow obrazen -> Za kazdy dopasowany klejnot w ataku powyzej 3
+
+- Zwiekszono liczbe punktow doswiadczenia dostarczanych przez przeciwnikow, ale zmniejszono wypadajacy z nich lup do 1 przedmiotu
+
+- Raz pokonani przeciwnicy juz nie rzucaja przedmiotow
+
+- Wszyscy przeciwnicy zadaja zwiekszone obrazenia w zaleznosci od poziomu, na ktorym sie znajduja
+
 #0.6.2(#25)(26.08.2018)
 
 - Utworzono 9 nowych przedmiotow

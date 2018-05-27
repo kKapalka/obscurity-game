@@ -12,6 +12,8 @@ public class SelectFight : MonoBehaviour {
 	string[] adjectives = new string[]{"", "Quite", "Pretty", "Very", "Insanely" };
 	string[] types = new string[]{ "blue","green","orange","red","purple" };
 	public void Load(EnemySelection enemy){
+		
+
 		titleText.text = enemy.encounterName;
 		infoText.text = enemy.infoAboutEnemy;
 		infoText.text += "\n\n\nHealth: " + enemy.maximumHP + "\nEXP gain: " + enemy.experiencePoints;
@@ -19,9 +21,9 @@ public class SelectFight : MonoBehaviour {
 		if (adjectives [Mathf.Clamp(enemy.dodge.getValue() / 20,0,adjectives.Length-1)] != "")
 			infoText.text += adjectives [Mathf.Clamp(enemy.dodge.getValue() / 20,0,adjectives.Length-1)] + " agile.\n";
 		if (adjectives [Mathf.Clamp(enemy.strength.getValue() / 8,0,adjectives.Length-1)] != "")
-			infoText.text += adjectives [Mathf.Clamp(enemy.strength.getValue() / 6,0,adjectives.Length-1)] + " strong.\n";
-		if (adjectives [Mathf.Clamp(enemy.damageMultiplier.getValue() / 30,0,adjectives.Length-1)] != "")
-			infoText.text += adjectives [Mathf.Clamp(enemy.damageMultiplier.getValue() / 60,0,adjectives.Length-1)] + " lethal.\n";
+			infoText.text += adjectives [Mathf.Clamp(enemy.strength.getValue() / 8,0,adjectives.Length-1)] + " strong.\n";
+		if (adjectives [Mathf.Clamp(enemy.damageMultiplier.getValue() / (20+(15*enemy.getLevel())),0,adjectives.Length-1)] != "")
+			infoText.text += adjectives [Mathf.Clamp(enemy.damageMultiplier.getValue() / (20+(15*enemy.getLevel())),0,adjectives.Length-1)] + " dangerous.\n";
 		if (adjectives [Mathf.Clamp(enemy.regeneration.getValue() / 15,0,adjectives.Length-1)] != "")
 			infoText.text += adjectives [Mathf.Clamp(enemy.regeneration.getValue() / 15,0,adjectives.Length-1)] + " self-restorative.\n";
 		for (int i = 0; i < enemy.resistances.Length; i++) {

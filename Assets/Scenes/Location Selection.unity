@@ -746,7 +746,7 @@ MonoBehaviour:
   encounterName: Doc. von Hohenberg
   infoAboutEnemy: He is very, very curious about you. In an unsettling way
   maximumHP: 1750
-  experiencePoints: 160
+  experiencePoints: 355
   resistances:
   - value: 0
   - value: 0
@@ -1636,7 +1636,7 @@ MonoBehaviour:
   encounterName: King of Clubs
   infoAboutEnemy: 
   maximumHP: 1500
-  experiencePoints: 300
+  experiencePoints: 800
   resistances:
   - value: 0
   - value: 0
@@ -2089,7 +2089,7 @@ MonoBehaviour:
   encounterName: Jack of Diamonds
   infoAboutEnemy: 
   maximumHP: 1250
-  experiencePoints: 240
+  experiencePoints: 450
   resistances:
   - value: 75
   - value: 75
@@ -3815,7 +3815,7 @@ MonoBehaviour:
   encounterName: Sewer Clean-o-Bot
   infoAboutEnemy: Don't worry. He's going to surely clean you up.
   maximumHP: 650
-  experiencePoints: 100
+  experiencePoints: 200
   resistances:
   - value: 0
   - value: 0
@@ -4757,7 +4757,7 @@ MonoBehaviour:
   encounterName: Ace of Spades
   infoAboutEnemy: So you made it here.
   maximumHP: 2250
-  experiencePoints: 450
+  experiencePoints: 1024
   resistances:
   - value: 0
   - value: 0
@@ -4765,7 +4765,7 @@ MonoBehaviour:
   - value: 0
   - value: 0
   dodge:
-    value: 50
+    value: 41
   damageMultiplier:
     value: 200
   strength:
@@ -5011,7 +5011,7 @@ MonoBehaviour:
   encounterName: Unkempt Lackey
   infoAboutEnemy: Pretty weak opponent. Should be no problem defeating this one.
   maximumHP: 200
-  experiencePoints: 35
+  experiencePoints: 65
   resistances:
   - value: 0
   - value: 0
@@ -6514,7 +6514,7 @@ MonoBehaviour:
   encounterName: Caped Baldface
   infoAboutEnemy: You just had to be in a bad place in a bad time
   maximumHP: 600
-  experiencePoints: 225
+  experiencePoints: 500
   resistances:
   - value: 0
   - value: 0
@@ -6522,7 +6522,7 @@ MonoBehaviour:
   - value: 0
   - value: 0
   dodge:
-    value: 45
+    value: 35
   damageMultiplier:
     value: 120
   strength:
@@ -7300,7 +7300,7 @@ MonoBehaviour:
   encounterName: Failed Experiment X052F
   infoAboutEnemy: Immense regenerative properties make him so difficult to deal with
   maximumHP: 300
-  experiencePoints: 145
+  experiencePoints: 275
   resistances:
   - value: 0
   - value: 0
@@ -8589,7 +8589,7 @@ MonoBehaviour:
   encounterName: The Smith
   infoAboutEnemy: Very strong. Like, seriously strong. Approach with caution.
   maximumHP: 500
-  experiencePoints: 100
+  experiencePoints: 200
   resistances:
   - value: 0
   - value: 0
@@ -10222,7 +10222,7 @@ MonoBehaviour:
   encounterName: Shinobi
   infoAboutEnemy: Hits where it hurts. Hard to hit.
   maximumHP: 200
-  experiencePoints: 70
+  experiencePoints: 125
   resistances:
   - value: 0
   - value: 0
@@ -10230,9 +10230,9 @@ MonoBehaviour:
   - value: 0
   - value: 0
   dodge:
-    value: 30
+    value: 20
   damageMultiplier:
-    value: 90
+    value: 75
   strength:
     value: 0
   regeneration:
@@ -10514,7 +10514,7 @@ MonoBehaviour:
   encounterName: Queen of Hearts
   infoAboutEnemy: 
   maximumHP: 1000
-  experiencePoints: 275
+  experiencePoints: 600
   resistances:
   - value: 0
   - value: 0
@@ -11176,7 +11176,7 @@ MonoBehaviour:
   infoAboutEnemy: Loves swinging his sword and defeating unskilled fighters. Pretty
     strong.
   maximumHP: 300
-  experiencePoints: 55
+  experiencePoints: 100
   resistances:
   - value: 0
   - value: 0

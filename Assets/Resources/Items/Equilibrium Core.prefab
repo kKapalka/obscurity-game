@@ -52,19 +52,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Equilibrium Core
-  tooltip: (Start of turn) -15 Regeneration, +5 Strength. Gain 60 Regenration and
-    lose 20 strength after dealing 75 or more damage
+  tooltip: (Start of turn) -10 Regeneration, +4 Strength. Gain 20 Regenration and
+    lose 8 strength for each gem matched above 3
   icon: {fileID: 21300000, guid: 7f6071a2e2c16ac44bae725f536387cd, type: 3}
   modifiers:
   - modType: startofturn
     stat: strength
-    value: 5
+    value: 4
   - modType: startofturn
     stat: regeneration
-    value: -15
-  - modType: highdamage
+    value: -10
+  - modType: highmatch
     stat: strength
-    value: -20
-  - modType: highdamage
+    value: -8
+  - modType: highmatch
     stat: regeneration
-    value: 60
+    value: 20

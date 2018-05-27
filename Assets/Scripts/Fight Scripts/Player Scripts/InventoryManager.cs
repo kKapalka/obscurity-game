@@ -86,9 +86,7 @@ public class InventoryManager : ItemManager{
 			this.items = new Item[itemNames.Length];
 			int slotIndex = 0;
 			for (int i = 0; i < itemNames.Length; i++) {
-				Debug.Log (itemNames [i]);
-				if (itemNames [i] != null && itemNames[i]!="Null") {
-					
+				if (itemNames [i] != null && itemNames[i]!="Null") {					
 					GameObject newItem = (GameObject)Instantiate (Resources.Load ("Items/" + itemNames [i]));
 					this.items [slotIndex++] = newItem.GetComponent<Item> ();
 				}

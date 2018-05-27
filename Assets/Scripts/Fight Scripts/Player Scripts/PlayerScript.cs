@@ -49,6 +49,11 @@ public abstract class PlayerScript : MonoBehaviour {
 		if (matches < weapon.getMinimumMatches())
 			return;
 		float damage = 0;
+		if (sm.turntag.text == "Player Turn") {
+			for (int i = 4; i <= matches; i++) {
+				GetComponent<EquipmentManager> ().AddModifiersOfType ("highmatch"); 
+			}
+		}
 		CharacterStats stats = this.GetComponent<CharacterStats> ();
 		float modifiedMatches = matches + ((float)stats.strength.getValue () / 10);
 		if (sequence == 1)
@@ -57,8 +62,7 @@ public abstract class PlayerScript : MonoBehaviour {
 			damage = 6 * Mathf.Pow (1.35f, (modifiedMatches - 2f)) - 1;
 		
 		int totalDamage = Mathf.RoundToInt(damage * (1.0f+((float)stats.damageMultiplier.getValue()/100)));
-		if (totalDamage > 75 && sm.turntag.text == "Player Turn")
-			GetComponent<EquipmentManager> ().AddModifiersOfType ("highdamage"); 
+
 		enemy.GetComponent<CharacterStats> ().TakeDamage (totalDamage, type);
 	}
 
