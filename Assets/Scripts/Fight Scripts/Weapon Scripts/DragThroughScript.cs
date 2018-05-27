@@ -207,8 +207,7 @@ public class DragThroughScript : Weapon {
 	}
 	public override float getDamage (float matchedGems)
 	{
-		float match_damage = 4 * (matchedGems - 2) * (matchedGems / 2);
-		return match_damage + 3;
+		return 8 * Mathf.Pow (1.35f, (matchedGems - 2f)) - 1;
 	}
 	public override void HighlightSelection (GameObject go)
 	{

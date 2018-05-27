@@ -82,8 +82,7 @@ public class HammerScript: Weapon{
 	}
 
 	public override float getDamage(float matchedGems){
-		float matchDamage = 6 * (matchedGems - 2) * (matchedGems / 2);
-		return matchDamage + 4;
+		return 10 * Mathf.Pow (1.25f, (matchedGems - 2f))+5;
 	}
 
 	int Correct(int value, int max){

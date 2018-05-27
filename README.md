@@ -1,5 +1,13 @@
 Changelog:
 
+#0.6.3(#26)(27.08.2018)
+
+- Zmieniono przeliczniki zniszczonych klejnotow na obrazenia. Teraz obrazenia zadawane sa 0 -> 60% mniejsze, zaleznie od rodzaju wyprowadzonego ataku
+
+- Teraz sila daje stanowczo zwiekszony bonus do atakow typu Barrage (scattershot)
+
+- Zmieniono atrybuty czesci przedmiotow
+
 #0.6.2(#25)(26.08.2018)
 
 - Utworzono 9 nowych przedmiotow

@@ -63,7 +63,7 @@ public class ScattershotScript :Weapon{
 	}
 	public override float getDamage (float matchedGems)
 	{
-		return 2*matchedGems+3;
+		return 6 * Mathf.Pow (1.6f, (matchedGems - 2f))+2;
 	}
 
 	public override void HighlightSelection (GameObject go)

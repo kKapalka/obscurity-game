@@ -236,8 +236,7 @@ public class BasicWeaponScript:Weapon{
 	}
 	public override float getDamage (float matchedGems)
 	{
-		float match_damage = 8 * (matchedGems - 2) * (matchedGems / 2);
-		return match_damage + 3;
+		return 12 * Mathf.Pow (1.25f, (matchedGems - 2f));
 	}
 	public override IEnumerator PerformAttack (GameObject go1, GameObject go2)
 	{

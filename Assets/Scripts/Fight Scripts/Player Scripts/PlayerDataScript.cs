@@ -18,7 +18,7 @@ public class PlayerDataScript : MonoBehaviour {
 		}
 		float matches = 3 + ((float)stats.strength.getValue () / 10);
 		display[8].text= Mathf.RoundToInt(weapon.getDamage(matches) * (1.0f+((float)stats.damageMultiplier.getValue()/100))).ToString();
-		display[8].text+=" / "+Mathf.RoundToInt(8*(matches-2) * (1.0f+((float)stats.damageMultiplier.getValue()/100))).ToString();
+		display[8].text+=" / "+Mathf.RoundToInt((6 * Mathf.Pow (1.35f, (matches - 2f)) - 1) * (1.0f+((float)stats.damageMultiplier.getValue()/100))).ToString();
 
 		for (int i = 0; i < weaponTypes.Length; i++) {
 			if (weaponType == weaponTypes [i]) {

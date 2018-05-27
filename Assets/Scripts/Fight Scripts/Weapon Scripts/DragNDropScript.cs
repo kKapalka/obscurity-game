@@ -179,8 +179,7 @@ public class DragNDropScript : Weapon {
 	}
 	public override float getDamage (float matchedGems)
 	{
-		float match_damage = 6 * (matchedGems - 2) * ((matchedGems - 1) / 2);
-		return match_damage + 5;
+		return 5 * Mathf.Pow (1.45f, (matchedGems - 2f)) +2;
 	}
 	public override void HighlightSelection (GameObject go)
 	{

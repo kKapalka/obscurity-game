@@ -54,7 +54,7 @@ public abstract class PlayerScript : MonoBehaviour {
 		if (sequence == 1)
 			damage = weapon.getDamage (modifiedMatches);
 		else
-			damage = 8 * (modifiedMatches-2);
+			damage = 6 * Mathf.Pow (1.35f, (modifiedMatches - 2f)) - 1;
 		
 		int totalDamage = Mathf.RoundToInt(damage * (1.0f+((float)stats.damageMultiplier.getValue()/100)));
 		if (totalDamage > 75 && sm.turntag.text == "Player Turn")

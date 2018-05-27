@@ -23,7 +23,8 @@ public class EndFightPanelScript : MonoBehaviour {
 		GameObject.Find ("CrystalsBG").SetActive (false);
 		GameObject.Find ("TurnTag").SetActive (false);
 		title.text=won?"VICTORY!":"DEFEAT!";
-
+		XPSlider.maxValue = (float)100 * playerStatus [0];
+		XPSlider.value = (float)playerStatus [1];
 		if (won) {
 			//Add loot
 			loot.SetActive (true);
@@ -61,8 +62,7 @@ public class EndFightPanelScript : MonoBehaviour {
 				levelUpText.text="level up! "+playerStatus[0]+" -> "+(playerStatus[0]+1);
 
 			}
-			XPSlider.maxValue = (float)100 * playerStatus [0];
-			XPSlider.value = (float)playerStatus [1];
+
 			StartCoroutine (AnimateXPBar ());
 
 		} else {
