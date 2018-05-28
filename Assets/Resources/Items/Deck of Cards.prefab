@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Stacked Deck
-  tooltip: +30% chance to dodge. (Start of turn)-3% chance to dodge
+  tooltip: +30% Dodge Chance. (Start of turn)-3% Dodge Chance
   icon: {fileID: 21300000, guid: ace6af8fffdb69e45a1e3a695af02050, type: 3}
   modifiers:
   - modType: static

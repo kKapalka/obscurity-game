@@ -52,8 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Sturdy Hammer
-  tooltip: -30% DMG taken from Red. -30% DMG taken from Purple.+5 to strength. (Attack
-    Type - Impact)
+  tooltip: 30% Red and Purple Resistance.+5 Strength. (Attack Type - Impact)
   icon: {fileID: 21300000, guid: 785c4384a0648a8448b333075fc131a2, type: 3}
   modifiers:
   - modType: static

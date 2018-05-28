@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Lumberjack's Axe
-  tooltip: +75% Green resistance. (Attack Type - Slashing)
+  tooltip: +75% Green Resistance. (Attack Type - Slashing)
   icon: {fileID: 21300000, guid: 2e3831154a5ec7446b2fd489c7b87c60, type: 3}
   modifiers:
   - modType: static

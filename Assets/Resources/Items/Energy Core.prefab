@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Energy Core
-  tooltip: 75% Purple resistance. 10% Dodge chance -8 Regeneration
+  tooltip: 75% Purple Resistance. 10% Dodge Chance. -10 Regeneration
   icon: {fileID: 21300000, guid: 2eaf96f488638954ea507dac49886682, type: 3}
   modifiers:
   - modType: static
@@ -63,4 +63,4 @@ MonoBehaviour:
     value: 10
   - modType: static
     stat: regeneration
-    value: -9
+    value: -10

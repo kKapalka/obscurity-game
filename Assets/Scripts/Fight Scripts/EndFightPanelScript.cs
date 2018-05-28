@@ -71,9 +71,11 @@ public class EndFightPanelScript : MonoBehaviour {
 	}
 
 	public void Continue(){
-		if (EnemySelection.Instance.getDefeated () && EnemySelection.Instance.encounterName == "Ace of Spades") {
-			SceneManager.LoadScene ("Game Over");
-		} else {
+		if (EnemySelection.Instance != null) {
+			if (EnemySelection.Instance.getDefeated () && EnemySelection.Instance.encounterName == "Ace of Spades") {
+				SceneManager.LoadScene ("Game Over");
+			}
+		}else {
 			SceneManager.LoadScene ("Location Selection");
 		}
 	}

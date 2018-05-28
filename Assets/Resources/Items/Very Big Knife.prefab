@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Very Big Knife
-  tooltip: +20% DMG dealt. (Attack Type - Slashing)
+  tooltip: +30% DMG. (Attack Type - Slashing)
   icon: {fileID: 21300000, guid: 0fed2633c443f7a44919fd4f8ac00bca, type: 3}
   modifiers:
   - modType: static
@@ -60,4 +60,4 @@ MonoBehaviour:
     value: doubleattack
   - modType: static
     stat: damage
-    value: 20
+    value: 30

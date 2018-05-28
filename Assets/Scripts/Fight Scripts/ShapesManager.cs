@@ -262,6 +262,9 @@ public class ShapesManager : MonoBehaviour
 		int sequence = 1;
 		while (totalMatches.Count () >= Constants.MinimumMatches) {
 
+			if (sequence > 2 && turn == "Player")
+				player.GetComponent<EquipmentManager> ().AddModifiersOfType ("combo");
+
 			int[] matches = new int[CandyPrefabs.Length];
 			for (int i = 0; i < matches.Length; i++) {
 				matches [i] = 0;
@@ -300,8 +303,7 @@ public class ShapesManager : MonoBehaviour
 			
 			sequence++;
 		}
-		if (sequence > 4 && turn == "Player")
-			player.GetComponent<EquipmentManager> ().AddModifiersOfType ("combo");
+
 	}
 
 	public void setState(GameState state){

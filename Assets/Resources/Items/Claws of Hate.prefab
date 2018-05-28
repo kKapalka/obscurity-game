@@ -52,8 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Claws of Hate
-  tooltip: '[Epic Class item] +150% DMG dealt.-100% to ALL resistances (Attack Type
-    - Direct)'
+  tooltip: '[Epic Class item] +150% DMG.-100% ALL resistances. (Attack Type - Direct)'
   icon: {fileID: 21300000, guid: d524f208b58d25f4cb607b0efe3f94b3, type: 3}
   modifiers:
   - modType: static

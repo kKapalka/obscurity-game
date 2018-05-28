@@ -2,6 +2,10 @@ Changelog:
 
 #0.6.4(#27)(28.05.2018)
 
+- Dodano 4 nowe przedmioty i zmieniono slownictwo w starych
+
+- Ulepszono typ modyfikatora: Po kazdej sekwencji powyzej 4 -> Po kazdej sekwencji powyzej 2
+
 - Dodano nowe tlo do sceny "Location Selection" i zmieniono wyglad guzikow lokacji
 
 - Dodano nowa scene "Game Over", ktora uruchomi sie po pokonaniu ostatniego przeciwnika. Wyswietli sie komunikat o przejsciu gry, ilosci 'dni' rozgrywki, a po nacisnieciu dowolnego guzika dane zapisane sie wykasuja i nastapi przejscie do sceny "Main Menu"
