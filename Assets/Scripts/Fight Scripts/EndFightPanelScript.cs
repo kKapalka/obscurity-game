@@ -29,7 +29,8 @@ public class EndFightPanelScript : MonoBehaviour {
 		XPText.text = playerStatus[1] + "/" + XPSlider.maxValue;
 		if (won) {
 			//Add loot
-			if(!EnemySelection.Instance.getDefeated()){
+			if(EnemySelection.created && !EnemySelection.Instance.getDefeated()){
+				EnemySelection.Instance.setDefeated (true);
 				//loot and progress should only be saved if selected enemy was not yet defeated
 				loot.SetActive (true);
 				lm = loot.GetComponent<LootManager> ();
@@ -70,7 +71,11 @@ public class EndFightPanelScript : MonoBehaviour {
 	}
 
 	public void Continue(){
-		SceneManager.LoadScene ("Location Selection");
+		if (EnemySelection.Instance.getDefeated () && EnemySelection.Instance.encounterName == "Ace of Spades") {
+			SceneManager.LoadScene ("Game Over");
+		} else {
+			SceneManager.LoadScene ("Location Selection");
+		}
 	}
 
 

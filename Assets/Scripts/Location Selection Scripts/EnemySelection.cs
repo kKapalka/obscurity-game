@@ -31,6 +31,9 @@ public class EnemySelection : MonoBehaviour {
 	public bool getDefeated(){
 		return defeated;
 	}
+	public void setDefeated(bool def){
+		this.defeated = def;
+	}
 	void Start(){
 		List<string> encountersDefeated = ReadScript.Read<List<string>>("Progress");
 		if (encountersDefeated == default (List<string>))

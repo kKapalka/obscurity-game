@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : PlayerScript {
 	EquipmentManager em;
+	public GameObject hintPanel;
+	Text hintText;
 	int[] XP = new int[2];
 
 	void Awake(){
+		hintText = hintPanel.GetComponentInChildren<Text> ();
 		em = GetComponent<EquipmentManager> ();
 		XP = ReadScript.Read<int[]> ("PlayerXP");
 		if(XP==default (int[])){
@@ -27,14 +31,27 @@ public class PlayerController : PlayerScript {
 
 	void Update()
 	{
+		switch (sm.getState()) {
+		case GameState.None:
+			hintText.text = weapon.getHint (0);
+			break;
+		case GameState.SelectionStarted:
+			hintText.text = weapon.getHint (1);
+			break;
+		default:
+			hintText.text = "";
+			break;
+		}
+
 
 		if (sm.turntag.text == "Player Turn" && sm.getState () != GameState.Animating && !ShapesManager.gameOver) {
 			if (Input.GetMouseButtonDown (0)) {
 				GameState state = sm.getState ();
-				if (state == GameState.None || selectedGem1 == null) {
-					sm.setState (GameState.SelectionStarted);
+				if (state == GameState.None || selectedGem1 == null ) {
+					
 					var hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
 					if (hit.collider != null && hit.collider.tag == "Gem") {
+						sm.setState (GameState.SelectionStarted);
 						selectedGem1 = hit.collider.gameObject;
 						weapon.HighlightSelection (selectedGem1);
 					} else {

@@ -1,6 +1,12 @@
 Changelog:
 
-#0.6.3(#26)(27.08.2018)
+#0.6.4(#27)(28.05.2018)
+
+- Dodano nowa scene "Game Over", ktora uruchomi sie po pokonaniu ostatniego przeciwnika. Wyswietli sie komunikat o przejsciu gry, ilosci 'dni' rozgrywki, a po nacisnieciu dowolnego guzika dane zapisane sie wykasuja i nastapi przejscie do sceny "Main Menu"
+
+- Wprowadzono z powrotem panel wskazowek dla gracza. Ponadto w scenie walki pojawil sie guzik "Show/Hide hints" ktory decyduje o wyswietlaniu panelu.
+
+#0.6.3(#26)(27.05.2018)
 
 - Dodano fabule do sceny "Story"
 
@@ -18,7 +24,7 @@ Changelog:
 
 - Wszyscy przeciwnicy zadaja zwiekszone obrazenia w zaleznosci od poziomu, na ktorym sie znajduja
 
-#0.6.2(#25)(26.08.2018)
+#0.6.2(#25)(26.05.2018)
 
 - Utworzono 9 nowych przedmiotow
 
@@ -30,7 +36,7 @@ Changelog:
 
 -Ekwipunek samoczynnie sie powieksza
 
-#0.6.1(#24)(26.08.2018)
+#0.6.1(#24)(26.05.2018)
 
 - Wstawiono ikonki
 

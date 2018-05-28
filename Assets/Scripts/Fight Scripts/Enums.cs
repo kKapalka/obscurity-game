@@ -36,6 +36,5 @@ public enum GameState
     None,
     SelectionStarted,
     Animating,
-	Victory,
-	Defeat
+	GameOver
 }

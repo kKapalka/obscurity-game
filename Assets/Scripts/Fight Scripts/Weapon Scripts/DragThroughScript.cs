@@ -5,6 +5,13 @@ using System.Linq;
 
 public class DragThroughScript : Weapon {
 
+	void Start(){
+		base.Start ();
+		hints = new string[] {"Select a gem to continue",
+			"Select another gem. First one will be pushed towards it, and all along the line will move to make place."
+		};
+	}
+
 	public override bool CheckConditions (GameObject go1, GameObject go2)
 	{
 		return go1!=go2 && (go1.GetComponent<Shape> ().Column == go2.GetComponent<Shape> ().Column ||

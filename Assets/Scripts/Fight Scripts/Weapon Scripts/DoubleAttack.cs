@@ -6,6 +6,13 @@ using UnityEngine;
 public class DoubleAttack : Weapon
 {
    
+	void Start(){
+		base.Start ();
+		hints = new string[] {"Select a gem to continue. Gems of this color will be destroyed.",
+			"Select a gem along an axis."
+		};
+	}
+
     public override GameObject[] GetCandidateAI()
     {
         var shapes = sm.shapes;

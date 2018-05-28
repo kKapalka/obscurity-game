@@ -5,6 +5,11 @@ using System.Linq;
 
 public class ScattershotScript :Weapon{
 
+	void Start(){
+		hints = new string[] {"Select a gem to continue. This gem, and two other random gems of this color will be destroyed.",
+			"Click again to confirm."
+		};
+	}
 
 	public override GameObject[] GetCandidateAI(){
 		var shapes = sm.shapes;

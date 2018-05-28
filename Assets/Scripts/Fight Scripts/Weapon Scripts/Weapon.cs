@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Weapon:MonoBehaviour{
-
+	
+	protected string[] hints;
 	int minimumMatches;
 	protected List<GameObject> markers;
 	protected ShapesManager sm;
@@ -12,6 +13,10 @@ public abstract class Weapon:MonoBehaviour{
 			sm = GameObject.Find ("ShapesManager").GetComponent<ShapesManager> ();
 		markers = new List<GameObject>();
 		minimumMatches = 3;
+	}
+
+	public string getHint(int i){
+		return hints [i];
 	}
 
 	public MatchesInfo getMatches(GameObject go1, GameObject go2){

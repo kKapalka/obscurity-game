@@ -71,7 +71,7 @@ public class StoryScript : MonoBehaviour {
 	IEnumerator Appear(string textToAppear){
 		story.text = "";
 		appearing = true;
-		yield return new WaitForSeconds (1f);
+		yield return new WaitForSeconds (.5f);
 		foreach (char c in textToAppear.ToCharArray()) {
 			if (interrupt) {
 				story.text = textToAppear;

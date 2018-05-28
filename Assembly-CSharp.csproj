@@ -62,11 +62,11 @@
      <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\AIController.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\CharacterStats.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\EquipmentManager.cs" />
+     <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\HintPanel.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\InventoryManager.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\ItemManager.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\LootManager.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\Modifier.cs" />
-     <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\MouseOverHandler.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\PlayerDataScript.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\Player Scripts\PlayerScript.cs" />
@@ -89,6 +89,7 @@
      <Compile Include="Assets\Scripts\Location Selection Scripts\EnemySelection.cs" />
      <Compile Include="Assets\Scripts\Location Selection Scripts\SelectFight.cs" />
      <Compile Include="Assets\Scripts\Menus\CreditsScript.cs" />
+     <Compile Include="Assets\Scripts\Menus\GameOverScreenScript.cs" />
      <Compile Include="Assets\Scripts\Menus\LoadMenuScript.cs" />
      <Compile Include="Assets\Scripts\Menus\LocationSelectionScript.cs" />
      <Compile Include="Assets\Scripts\Menus\MainMenuScript.cs" />

@@ -5,6 +5,15 @@ using System.Linq;
 
 public class BasicWeaponScript:Weapon{
 
+	void Start(){
+		base.Start ();
+		hints = new string[] {"Select a gem to continue",
+			"Select adjacent gem to swap places with."
+		};
+	}
+
+
+
 	public override GameObject[] GetCandidateAI(){
 		var shapes = sm.shapes;
 		List<GameObject[]> potentialHits=new List<GameObject[]>();

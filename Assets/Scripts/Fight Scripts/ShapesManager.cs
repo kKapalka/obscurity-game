@@ -48,7 +48,7 @@ public class ShapesManager : MonoBehaviour
 			enemyHP = enemy.GetComponent<CharacterStats> ().currentHP;
 			if (playerHP <= 0 || enemyHP<=0) {
 				gameOver = true;
-
+				state = GameState.GameOver;
 				EndFight.SetActive (true);
 				EndFight.GetComponent<EndFightPanelScript>().EndOfFight (playerHP >= enemyHP);
 
