@@ -9,11 +9,14 @@ public abstract class Weapon:MonoBehaviour{
 	protected List<GameObject> markers;
 	protected ShapesManager sm;
 	public void Start(){
+		setHints ();
 		while(sm==null)
 			sm = GameObject.Find ("ShapesManager").GetComponent<ShapesManager> ();
 		markers = new List<GameObject>();
 		minimumMatches = 3;
 	}
+
+	public abstract void setHints();
 
 	public string getHint(int i){
 		return hints [i];

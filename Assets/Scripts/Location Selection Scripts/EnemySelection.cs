@@ -17,7 +17,7 @@ public class EnemySelection : MonoBehaviour {
 	public Stat dodge = new Stat (0, 85);
 	public Stat damageMultiplier = new Stat (-75, 500);
 	public Stat strength = new Stat (0, 50);
-	public Stat regeneration = new Stat (-80, 80);	
+	public Stat regeneration = new Stat (-120, 120);	
 	public string weapon;
 	bool defeated;
 	public static bool created=false;

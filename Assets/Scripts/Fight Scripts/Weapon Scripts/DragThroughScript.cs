@@ -5,8 +5,8 @@ using System.Linq;
 
 public class DragThroughScript : Weapon {
 
-	void Start(){
-		base.Start ();
+	public override void setHints ()
+	{
 		hints = new string[] {"Select a gem to continue",
 			"Select another gem. First one will be pushed towards it, and all along the line will move to make place."
 		};

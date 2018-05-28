@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class HammerScript: Weapon{
 
-	void Start(){
-		base.Start ();
+	public override void setHints ()
+	{
 		hints = new string[] {"Select a gem to continue. Gems of this color will be destroyed.",
 			"Click once again to confirm."
-		};
+		};		
 	}
 
 	public override GameObject[] GetCandidateAI(){

@@ -6,6 +6,10 @@ Changelog:
 
 - Wprowadzono z powrotem panel wskazowek dla gracza. Ponadto w scenie walki pojawil sie guzik "Show/Hide hints" ktory decyduje o wyswietlaniu panelu.
 
+- Zmodyfikowano kilka przedmiotow
+
+- Od teraz postacie nie moga regenerowac/tracic wiecej niz 1/12 swoim punktow zdrowia co ture
+
 #0.6.3(#26)(27.05.2018)
 
 - Dodano fabule do sceny "Story"

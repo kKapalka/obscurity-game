@@ -8,6 +8,26 @@ public class PlayerController : PlayerScript {
 	public GameObject hintPanel;
 	Text hintText;
 	int[] XP = new int[2];
+	GameState savedState;
+
+	void onStateSwitch(){
+		if (sm.getState () != savedState) {
+			if (sm.turntag.text == "Player Turn") {
+				switch (sm.getState ()) {
+				case GameState.None:
+					hintText.text = weapon.getHint (0);
+					break;
+				case GameState.SelectionStarted:
+					hintText.text = weapon.getHint (1);
+					break;
+				default:
+					hintText.text = "";
+					break;
+				}
+			}
+			savedState = sm.getState ();
+		}
+	}
 
 	void Awake(){
 		hintText = hintPanel.GetComponentInChildren<Text> ();
@@ -31,18 +51,8 @@ public class PlayerController : PlayerScript {
 
 	void Update()
 	{
-		switch (sm.getState()) {
-		case GameState.None:
-			hintText.text = weapon.getHint (0);
-			break;
-		case GameState.SelectionStarted:
-			hintText.text = weapon.getHint (1);
-			break;
-		default:
-			hintText.text = "";
-			break;
-		}
-
+		
+		onStateSwitch ();
 
 		if (sm.turntag.text == "Player Turn" && sm.getState () != GameState.Animating && !ShapesManager.gameOver) {
 			if (Input.GetMouseButtonDown (0)) {

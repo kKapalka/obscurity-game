@@ -15,7 +15,7 @@ public class CharacterStats: MonoBehaviour {
 	public Stat dodge = new Stat (0, 85);
 	public Stat damageMultiplier = new Stat (-75, 500);
 	public Stat strength = new Stat (0, 50);
-	public Stat regeneration = new Stat (-80, 80);
+	public Stat regeneration = new Stat (-120, 120);
 
     
 
@@ -104,7 +104,8 @@ public class CharacterStats: MonoBehaviour {
 		GetComponentInChildren<Button> ().GetComponentInChildren<Text> ().text = fullText;
 	}
 	public void Regenerate(){
-		currentHP = Mathf.Clamp ((currentHP + regeneration.getValue()), 0, maximumHP);
+		int regenCap = Mathf.RoundToInt ((float)maximumHP / 12f);
+		currentHP = Mathf.Clamp ((currentHP + Mathf.Clamp(regeneration.getValue(),regenCap*-1,regenCap)), 0, maximumHP);
 		if (regeneration.getValue() != 0 && currentHP>0)
 			GetComponent<PopupTextContoroller>().CreatePopupText (((regeneration.getValue()>0?"+":"") + regeneration.getValue().ToString ()), transform);
 		UpdateHP ();
