@@ -2,6 +2,10 @@ Changelog:
 
 #0.6.4(#27)(28.05.2018)
 
+- Wylaczono okno do zmiany rozdzielczosci
+
+- Dodano tekst do sceny "Credits" informujacy o sposobie przejscia do MainMenu
+
 - Dodano 4 nowe przedmioty i zmieniono slownictwo w starych
 
 - Ulepszono typ modyfikatora: Po kazdej sekwencji powyzej 4 -> Po kazdej sekwencji powyzej 2
