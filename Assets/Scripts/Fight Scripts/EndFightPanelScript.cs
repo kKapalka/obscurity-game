@@ -60,13 +60,18 @@ public class EndFightPanelScript : MonoBehaviour {
 			//Add experience points
 
 			XPGained = (EnemySelection.created ? EnemySelection.Instance.experiencePoints : 5);
-			if (playerStatus[1]+ XPGained>= 100*playerStatus[0]) {
-				levelUpText.text="level up! "+playerStatus[0]+" -> "+(playerStatus[0]+1);
+			if (playerStatus [1] + XPGained >= 100 * playerStatus [0]) {
+				levelUpText.text = "level up! " + playerStatus [0] + " -> " + (playerStatus [0] + 1) + "\n" +
+				"Damage: " + Mathf.RoundToInt (100f * (float)Mathf.Pow (1.2f, playerStatus [0] - 1)) + "% ->" + Mathf.RoundToInt (100f * (float)Mathf.Pow (1.2f, playerStatus [0])) + "%\n" +
+				"HP: " + Mathf.RoundToInt (300f * (float)Mathf.Pow (1.2f, playerStatus [0] - 1)) + "->" + Mathf.RoundToInt (300f * (float)Mathf.Pow (1.2f, playerStatus [0]));
+			} else {
+				levelUpText.text = "";
 			}
 			StartCoroutine (AnimateXPBar ());
 
 		} else {
 			loot.SetActive (false);
+			levelUpText.text = "";
 		}
 	}
 

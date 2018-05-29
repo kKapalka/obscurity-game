@@ -52,13 +52,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Pneumo-Thruster
-  tooltip: +12 Strength. -15% Dodge Chance. (Attack Type - Thrusting)
+  tooltip: +12 Strength. -15% Base Dodge Chance. (Attack Type - Thrusting)
   icon: {fileID: 21300000, guid: 2e0fd05449e93584887c973e422fc999, type: 3}
   modifiers:
   - modType: static
     stat: strength
     value: 12
-  - modType: static
+  - modType: base
     stat: dodge
     value: -15
   - modType: static

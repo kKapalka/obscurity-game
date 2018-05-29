@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Weapon:MonoBehaviour{
 	
-	protected string[] hints;
+	protected string[] hints=new string[]{"temp","temp"};
 	int minimumMatches;
 	protected List<GameObject> markers;
 	protected ShapesManager sm;

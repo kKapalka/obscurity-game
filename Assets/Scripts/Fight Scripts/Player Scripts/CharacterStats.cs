@@ -11,11 +11,11 @@ public class CharacterStats: MonoBehaviour {
 
 	public int maximumHP;
 	public int currentHP;
-	public Stat[] resistances = new Stat[]{new Stat(-300,75),new Stat(-300,75),new Stat(-300,75),new Stat(-300,75),new Stat(-300,75)};
-	public Stat dodge = new Stat (0, 85);
-	public Stat damageMultiplier = new Stat (-75, 500);
-	public Stat strength = new Stat (0, 50);
-	public Stat regeneration = new Stat (-120, 120);
+	public Stat[] resistances = new Stat[]{new Stat(-300,60),new Stat(-300,60),new Stat(-300,60),new Stat(-300,60),new Stat(-300,60)};
+	public Stat dodge = new Stat (0, 50);
+	public Stat damageMultiplier = new Stat (-75, 400);
+	public Stat strength = new Stat (-40, 40);
+	public Stat regeneration = new Stat (-50, 50);
 
     
 
@@ -43,62 +43,23 @@ public class CharacterStats: MonoBehaviour {
 			damageTaken= Mathf.Clamp (damage, 0, maximumHP);
 		}
 		if (damageTaken > 0) {
-			if (UnityEngine.Random.Range (1, 100) > dodge.getValue ()) {
+			
+			if (UnityEngine.Random.Range (1, 100) > Mathf.Abs(dodge.getValue ())) {
 				currentHP -= damageTaken;
 				GetComponent<PopupTextContoroller> ().CreatePopupText (("-" + damageTaken.ToString ()), transform);
 			}
 			else {
-				GetComponent<PopupTextContoroller> ().CreatePopupText ("DODGE", transform);
+				if (dodge.getValue() > 0)
+					GetComponent<PopupTextContoroller> ().CreatePopupText ("DODGE", transform);
+				else {
+					currentHP -= damageTaken*2;
+					GetComponent<PopupTextContoroller> ().CreatePopupText (("-" + (damageTaken*2).ToString ()+"!!"), transform);
+				}
 			}
 		}
 		UpdateHP ();
 	}
 
-	public void DisplayCharacterStats(){
-		string fullText="";
-		for (int i=0;i<resistances.Length;i++) {
-			Stat resist = resistances [i];
-			if (resist.getValue () != 0) {
-				fullText +=(resist.getValue () > 0 ? "-" : "+") + Mathf.Abs (resist.getValue ()) + "% DMG taken from " + GameObject.Find ("ShapesManager").GetComponent<ShapesManager> ().GemTypes [i] + ".\n";
-			}
-		}
-		if (dodge.getValue () != 0) {
-			fullText +=Mathf.Abs (dodge.getValue ()) +"% chance to avoid damage.\n\n";
-		}
-		if (regeneration.getValue () != 0) {
-			fullText +=(regeneration.getValue () > 0 ? "Gains " : "Loses ")+Mathf.Abs (regeneration.getValue ()) +" HP at the start of the turn.\n\n";
-		}
-		if (damageMultiplier.getValue () != 0 ) {
-			if (damageMultiplier.getValue () != 0)
-				fullText += "Deals "+Mathf.Abs (damageMultiplier.getValue ())+(damageMultiplier.getValue()>0?"% more ":"% less ")+ "damage.\n";
-		}
-		if (strength.getValue () != 0) {
-			fullText += "Deals +" + (float)strength.getValue () / 10 + " gems worth of damage.\n";
-		}
-		fullText += "\nAttacks by: ";
-		string weaponType = GetComponent<PlayerScript> ().weaponType;
-		switch (weaponType) {
-		case "basic":
-			fullText += "swapping adjacent gems.\n";
-			break;
-		case "dragndrop":
-			fullText += "swapping any two gems.\n";
-			break;
-		case "dragthrough":
-			fullText += "dragging a gem along an axis.\n";
-			break;
-		case "hammer":
-			fullText += "breaking gems in a 3x3 square.\n";
-			break;
-		case "scattershot":
-			fullText += "breaking random gems of the same type.\n";
-			break;
-		case "doubleattack":
-			fullText += "breaking gems in a line.\n";
-			break;
-		}
-		GetComponentInChildren<Button> ().GetComponentInChildren<Text> ().text = fullText;
-	}
 	public void HideCharacterStats(){
 		string fullText = "";
 		GetComponentInChildren<Button> ().GetComponentInChildren<Text> ().text = fullText;
@@ -121,7 +82,15 @@ public class CharacterStats: MonoBehaviour {
 		strength.RemoveAll ();
 
 	}
+	public void ResetStats(){
+		for (int i = 0; i < resistances.Length; i++)
+			resistances [i].setValue (0);
+		dodge.setValue (0);
+		damageMultiplier.setValue (0);
+		regeneration.setValue (0);
+		strength.setValue (0);
 
+	}
     
     
 }

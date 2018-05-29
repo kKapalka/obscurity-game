@@ -17,5 +17,4 @@ public static class ReadScript{
 		}
 		return default(T);
 	}
-
 }

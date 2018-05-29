@@ -34,18 +34,19 @@ public class EnemySelection : MonoBehaviour {
 	public void setDefeated(bool def){
 		this.defeated = def;
 	}
-	void Start(){
+	void Awake(){
+		level = (GetComponentInChildren<Text>().name.Contains("Encounter")?int.Parse(GetComponentInChildren<Text>().text):1);
+		damageMultiplier.value += 20 * (level - 1);
 		List<string> encountersDefeated = ReadScript.Read<List<string>>("Progress");
 		if (encountersDefeated == default (List<string>))
 			return;
-		level = 1;
 		if(encountersDefeated.Contains(this.encounterName) && SceneManager.GetActiveScene().name=="Location Selection"){
 			this.GetComponent<Image> ().color = Color.green;
 			defeated = true;
-			level = int.Parse(GetComponentInChildren<Text>().text);
+
 		}
 
-		damageMultiplier.AddModifier (15 * (level-1));
+
 	}
 
 	public void LoadIntoCharacter(GameObject character){

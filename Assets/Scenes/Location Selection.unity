@@ -746,7 +746,7 @@ MonoBehaviour:
   encounterName: Doc. von Hohenberg
   infoAboutEnemy: He is very, very curious about you. In an unsettling way
   maximumHP: 1750
-  experiencePoints: 355
+  experiencePoints: 285
   resistances:
   - value: 0
   - value: 0
@@ -1231,7 +1231,7 @@ GameObject:
   - component: {fileID: 221491389}
   - component: {fileID: 221491388}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Encounter 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1305,7 +1305,7 @@ GameObject:
   - component: {fileID: 230841630}
   - component: {fileID: 230841629}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Encounter 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1635,8 +1635,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   encounterName: King of Clubs
   infoAboutEnemy: 
-  maximumHP: 1500
-  experiencePoints: 800
+  maximumHP: 1200
+  experiencePoints: 600
   resistances:
   - value: 0
   - value: 0
@@ -1919,6 +1919,7 @@ GameObject:
   - component: {fileID: 379451872}
   - component: {fileID: 379451871}
   - component: {fileID: 379451870}
+  - component: {fileID: 379451873}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -1969,7 +1970,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2012,7 +2013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.078431375}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.15686275}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2034,6 +2035,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 379451868}
+--- !u!114 &379451873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 379451868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5028aa0a91228845833a5a3b7959371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastBoss: {fileID: 0}
 --- !u!1 &381709148
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,8 +2101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   encounterName: Jack of Diamonds
   infoAboutEnemy: 
-  maximumHP: 1250
-  experiencePoints: 450
+  maximumHP: 1000
+  experiencePoints: 390
   resistances:
   - value: 75
   - value: 75
@@ -2765,7 +2778,7 @@ GameObject:
   - component: {fileID: 460457421}
   - component: {fileID: 460457420}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Encounter 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3071,7 +3084,7 @@ GameObject:
   - component: {fileID: 501520512}
   - component: {fileID: 501520511}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Encounter 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3288,6 +3301,7 @@ GameObject:
   - component: {fileID: 533519948}
   - component: {fileID: 533519947}
   - component: {fileID: 533519946}
+  - component: {fileID: 533519949}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -3338,7 +3352,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3381,7 +3395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.078431375}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.15686275}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3403,6 +3417,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 533519944}
+--- !u!114 &533519949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 533519944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5028aa0a91228845833a5a3b7959371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastBoss: {fileID: 1607258774}
 --- !u!1 &547333475
 GameObject:
   m_ObjectHideFlags: 0
@@ -3717,7 +3743,7 @@ GameObject:
   - component: {fileID: 622798682}
   - component: {fileID: 622798681}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Encounter 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3817,7 +3843,7 @@ MonoBehaviour:
   maximumHP: 650
   experiencePoints: 200
   resistances:
-  - value: 0
+  - value: 25
   - value: 0
   - value: 0
   - value: 0
@@ -3827,7 +3853,7 @@ MonoBehaviour:
   damageMultiplier:
     value: 0
   strength:
-    value: 10
+    value: 15
   regeneration:
     value: 0
   weapon: dragthrough
@@ -4410,7 +4436,7 @@ GameObject:
   - component: {fileID: 779658335}
   - component: {fileID: 779658334}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Encounter 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4756,8 +4782,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   encounterName: Ace of Spades
   infoAboutEnemy: So you made it here.
-  maximumHP: 2250
-  experiencePoints: 1024
+  maximumHP: 1450
+  experiencePoints: 700
   resistances:
   - value: 0
   - value: 0
@@ -5011,7 +5037,7 @@ MonoBehaviour:
   encounterName: Unkempt Lackey
   infoAboutEnemy: Pretty weak opponent. Should be no problem defeating this one.
   maximumHP: 200
-  experiencePoints: 65
+  experiencePoints: 50
   resistances:
   - value: 0
   - value: 0
@@ -5206,7 +5232,7 @@ GameObject:
   - component: {fileID: 873850303}
   - component: {fileID: 873850302}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Encounter 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5476,7 +5502,7 @@ GameObject:
   - component: {fileID: 887270783}
   - component: {fileID: 887270782}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Encounter 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6416,7 +6442,7 @@ GameObject:
   - component: {fileID: 1068868226}
   - component: {fileID: 1068868225}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Encounter 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6514,7 +6540,7 @@ MonoBehaviour:
   encounterName: Caped Baldface
   infoAboutEnemy: You just had to be in a bad place in a bad time
   maximumHP: 600
-  experiencePoints: 500
+  experiencePoints: 365
   resistances:
   - value: 0
   - value: 0
@@ -7299,8 +7325,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   encounterName: Failed Experiment X052F
   infoAboutEnemy: Immense regenerative properties make him so difficult to deal with
-  maximumHP: 300
-  experiencePoints: 275
+  maximumHP: 400
+  experiencePoints: 230
   resistances:
   - value: 0
   - value: 0
@@ -7314,7 +7340,7 @@ MonoBehaviour:
   strength:
     value: 0
   regeneration:
-    value: 50
+    value: 35
   weapon: dragndrop
 --- !u!1 &1218645624
 GameObject:
@@ -8589,7 +8615,7 @@ MonoBehaviour:
   encounterName: The Smith
   infoAboutEnemy: Very strong. Like, seriously strong. Approach with caution.
   maximumHP: 500
-  experiencePoints: 200
+  experiencePoints: 175
   resistances:
   - value: 0
   - value: 0
@@ -8939,6 +8965,7 @@ GameObject:
   - component: {fileID: 1544545845}
   - component: {fileID: 1544545844}
   - component: {fileID: 1544545843}
+  - component: {fileID: 1544545846}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -8989,7 +9016,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -9032,7 +9059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.078431375}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.15686275}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -9054,6 +9081,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1544545841}
+--- !u!114 &1544545846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1544545841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5028aa0a91228845833a5a3b7959371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastBoss: {fileID: 1494721169}
 --- !u!1 &1546211359
 GameObject:
   m_ObjectHideFlags: 0
@@ -9879,7 +9918,7 @@ GameObject:
   - component: {fileID: 1718829758}
   - component: {fileID: 1718829757}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Encounter 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10072,7 +10111,7 @@ GameObject:
   - component: {fileID: 1778570917}
   - component: {fileID: 1778570916}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Encounter 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10221,8 +10260,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   encounterName: Shinobi
   infoAboutEnemy: Hits where it hurts. Hard to hit.
-  maximumHP: 200
-  experiencePoints: 125
+  maximumHP: 350
+  experiencePoints: 110
   resistances:
   - value: 0
   - value: 0
@@ -10513,8 +10552,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   encounterName: Queen of Hearts
   infoAboutEnemy: 
-  maximumHP: 1000
-  experiencePoints: 600
+  maximumHP: 850
+  experiencePoints: 470
   resistances:
   - value: 0
   - value: 0
@@ -10528,7 +10567,7 @@ MonoBehaviour:
   strength:
     value: 20
   regeneration:
-    value: 65
+    value: 50
   weapon: dragthrough
 --- !u!114 &1872830215
 MonoBehaviour:
@@ -10757,7 +10796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9862069, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.9843137, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -10797,7 +10836,7 @@ GameObject:
   - component: {fileID: 1933062549}
   - component: {fileID: 1933062548}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Encounter 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11176,7 +11215,7 @@ MonoBehaviour:
   infoAboutEnemy: Loves swinging his sword and defeating unskilled fighters. Pretty
     strong.
   maximumHP: 300
-  experiencePoints: 100
+  experiencePoints: 85
   resistances:
   - value: 0
   - value: 0

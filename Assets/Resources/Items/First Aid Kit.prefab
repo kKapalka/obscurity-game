@@ -52,9 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: First Aid Kit
-  tooltip: (Start of Turn) +2 Regeneration
+  tooltip: (Start of Turn) +1 Regeneration
   icon: {fileID: 21300000, guid: 7c81805ce311ba34eb19c2503a403af4, type: 3}
   modifiers:
   - modType: startofturn
     stat: regeneration
-    value: 2
+    value: 1

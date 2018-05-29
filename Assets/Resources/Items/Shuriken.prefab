@@ -52,13 +52,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Shuriken
-  tooltip: -30% DMG. (Start of Turn) +10% DMG. (Attack Type - Barrage)
+  tooltip: -30% Base DMG. (Start of Turn) +10% DMG. (Attack Type - Barrage)
   icon: {fileID: 21300000, guid: 72b9b5507170c64489c899c550f777a5, type: 3}
   modifiers:
   - modType: startofturn
     stat: damage
     value: 10
-  - modType: static
+  - modType: base
     stat: damage
     value: -30
   - modType: static

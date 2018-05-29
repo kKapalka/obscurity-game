@@ -68,7 +68,6 @@ public class ShapesManager : MonoBehaviour
 	// Use this for initialization
     void Start()
     {
-		state = GameState.None;
 		gameOver = false;
 		GemTypes = new string[CandyPrefabs.Length];
         InitializeTypesOnPrefabShapesAndBonuses();
@@ -315,12 +314,14 @@ public class ShapesManager : MonoBehaviour
 		state=GameState.None;
 		if (turn == "Enemy") {
 			turn = "Player";
+			turntag.color = Color.white;
 			player.GetComponent<EquipmentManager> ().AddModifiersOfType ("startofturn");
 			if(playerHP>=0)
 				player.GetComponent<CharacterStats> ().Regenerate ();
 		}
 		else if (turn == "Player") {
 			turn = "Enemy";
+			turntag.color = Color.yellow;
 			if(enemyHP>=0)
 				enemy.GetComponent<CharacterStats> ().Regenerate ();
 		}

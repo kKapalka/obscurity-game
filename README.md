@@ -1,5 +1,36 @@
 Changelog:
 
+#0.6.5(#28)(29.05.2018)
+
+- Usunieto buga zwiazanego z brakiem wskazowek dla gracza podczas pierwszej tury rozgrywki
+- Usunieto buga, gdzie gracz mogl dowolnie przesuwac paski zdrowia (nie mialo to wplywu na rozgrywke)
+- Zablokowano rozdzielczosc na 1366x768
+- W scenie "Location Selection" nie da sie juz nacisnac na guziki od poziomu jezeli sie nie pokonalo ostatniego przeciwnika z poprzedniego poziomu
+- Dodano informacje do tooltipow statystyk: unik - istnieje mozliwosc ujemnego uniku, to wtedy powoduje otrzymanie podwojnych obrazen; regeneracja: jest ograniczona do 1/12 punktow zdrowia
+- Gracz podczas level-upa widzi, co uzyskuje - 20% bonus HP i DMG
+- Podczas walki tekst oznajmiajacy o turze ma inny kolor podczas tury przeciwnika.
+- W scenie "Story" dodano wskazowke jak przejsc do nastepnej sceny wprowadzenia fabularnego
+- Dodano nowy modyfikator przedmiotow: 'base' - modyfikuje statystyki omijajac przy tym blokady nalozone na statystyke
+- Zmieniono statystyki przedmiotow i przeciwnikow:
+
+
+- Boots of Much Dodge: 15% Dodge Chance -> 15% Base Dodge Chance
+- Energy Core: +50% Purple Resistance. +15% Dodge Chance (-> +10% Base Dodge Chance). -15% (->-15% Base) Regeneration
+- First Aid Kit: (Start of Turn) +2(->+1) Regeneration
+- Golden Wrench: +50% Orange and Blue Resist (-> +25% Orange and Blue Resist. +10% Base Orange and Blue Resist.) (Weapon Type - Close Combat)
+- Lumberjack's Axe: +75% (->+60%) Green Resistance. (Weapon Type - Slashing). Tooltip teraz dobrze pokazuje
+- Pneumo Thruster: +12 Strength. -15% (->-15% Base) Dodge Chance. (Weapon Type -> Thrusting)
+- Prototype Injector: +15 (-> +10 Base) Regeneration. -40% Red Resistance. Tooltip teraz dobrze pokazuje
+- Shuriken: -30% (-> -30% Base) DMG. Reszta tak samo
+- Sturdy Hammer: +30% (-> +25%) Red and Purple Resistance. +5 (-> +5 Base) Strength. (Weapon Type - Impact)
+- Unidentified Liquid: +15 (-> +15 Base) Strength. -20 (-> -20 Base) Regeneration
+
+- Rownoczesnie z wprowadzeniem modyfikatora 'base' zaostrzono limity na reszte statystyk:
+- Regeneracja: -120:120 ->-50:50
+- Unik: 0:85 -> 0:50
+- Sila: 0:50 -> -40:40
+- Odpornosci: -300:75 -> -300:60
+
 #0.6.4(#27)(28.05.2018)
 
 - Wylaczono okno do zmiany rozdzielczosci

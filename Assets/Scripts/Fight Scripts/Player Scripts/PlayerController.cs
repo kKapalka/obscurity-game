@@ -8,7 +8,7 @@ public class PlayerController : PlayerScript {
 	public GameObject hintPanel;
 	Text hintText;
 	int[] XP = new int[2];
-	GameState savedState;
+	GameState savedState=GameState.GameOver;
 
 	void onStateSwitch(){
 		if (sm.getState () != savedState) {
@@ -38,9 +38,9 @@ public class PlayerController : PlayerScript {
 			XP[0]=1;
 			XP[1]=0;
 		}
-		GetComponent<CharacterStats>().maximumHP = Mathf.RoundToInt((float)GetComponent<CharacterStats>().maximumHP*(Mathf.Pow(1+(float)(XP [0]-1)/4.0f,2)));
+		GetComponent<CharacterStats>().maximumHP = Mathf.RoundToInt(300f*(float)Mathf.Pow(1.2f,XP[0]-1));
 		GetComponent<CharacterStats>().removeAllModifiers();
-		GetComponent<CharacterStats>().damageMultiplier.AddModifier(XP[0]*15);
+		GetComponent<CharacterStats>().damageMultiplier.setValue(Mathf.RoundToInt(100f*(float)Mathf.Pow(1.2f,XP[0]-1))-100);
 		em.AwakeOnFight ();
 
 	}
@@ -77,6 +77,7 @@ public class PlayerController : PlayerScript {
 			} else if (Input.GetMouseButtonDown (1) && sm.getState () == GameState.SelectionStarted) {
 				weapon.RemoveSelection (selectedGem1);
 				selectedGem1 = null;
+				sm.setState (GameState.None);
 			}
 		}
 	}

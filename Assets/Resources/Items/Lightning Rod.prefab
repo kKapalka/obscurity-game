@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Lightning Rod
-  tooltip: -33% Purple Resistance.+15% DMG for each sequence of matches above 2. (Attack
+  tooltip: -33% Purple Resistance.+10% DMG for each sequence of matches above 2. (Attack
     Type - Direct)
   icon: {fileID: 21300000, guid: 8544d9e6e74379b4db6156f208eb9049, type: 3}
   modifiers:
@@ -61,7 +61,7 @@ MonoBehaviour:
     value: -33
   - modType: combo
     stat: damage
-    value: 15
+    value: 10
   - modType: static
     stat: weaponType
     value: dragndrop

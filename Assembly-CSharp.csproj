@@ -87,6 +87,7 @@
      <Compile Include="Assets\Scripts\Fight Scripts\Weapon Scripts\ScattershotScript.cs" />
      <Compile Include="Assets\Scripts\Fight Scripts\Weapon Scripts\Weapon.cs" />
      <Compile Include="Assets\Scripts\Location Selection Scripts\EnemySelection.cs" />
+     <Compile Include="Assets\Scripts\Location Selection Scripts\LevelButton.cs" />
      <Compile Include="Assets\Scripts\Location Selection Scripts\SelectFight.cs" />
      <Compile Include="Assets\Scripts\Menus\CreditsScript.cs" />
      <Compile Include="Assets\Scripts\Menus\GameOverScreenScript.cs" />

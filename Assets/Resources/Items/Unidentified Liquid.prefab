@@ -52,12 +52,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Unidentified Liquid
-  tooltip: +15 Strength. -20 Regeneration
+  tooltip: +15 Base Strength. -20 Base Regeneration
   icon: {fileID: 21300000, guid: 8eb183988e429834986d3175e644b268, type: 3}
   modifiers:
-  - modType: static
+  - modType: base
     stat: strength
     value: 15
-  - modType: static
+  - modType: base
     stat: regeneration
     value: -20

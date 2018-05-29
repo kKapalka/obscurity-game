@@ -5,7 +5,7 @@ using System.Collections.Generic;
 [System.Serializable]
 public class Stat {
 
-	public int value;
+	public int value = 0;
 	int lowCap, highCap;
 	List<int> modifiers = new List<int> ();
 
@@ -13,17 +13,15 @@ public class Stat {
 		this.lowCap = low;
 		this.highCap = high;
 	}
-
+	public void setValue(int value){
+		this.value = this.value+ value;
+	}
 	public int getValue(){
 		int finalValue = value;
 		foreach (int modifier in modifiers) {
 			finalValue += modifier;
 		}
-		if (finalValue < lowCap)
-			finalValue = lowCap;
-		if (finalValue > highCap)
-			finalValue = highCap;
-		return finalValue;
+		return Mathf.Clamp (finalValue, value + lowCap, value + highCap);
 	}
 
 	public void AddModifier(int modifier){

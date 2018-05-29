@@ -52,9 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Boots of Much Dodge
-  tooltip: +15% Dodge Chance
+  tooltip: +15% Base Dodge Chance
   icon: {fileID: 21300000, guid: 7ef351667a709194fb80b5faf0c0c055, type: 3}
   modifiers:
-  - modType: static
+  - modType: base
     stat: dodge
     value: 15

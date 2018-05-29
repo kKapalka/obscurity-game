@@ -52,10 +52,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Prototype Injector
-  tooltip: +15 Regeneration. -40% Red resistance
+  tooltip: +10 Base Regeneration. -40% Red resistance
   icon: {fileID: 21300000, guid: a10d04cf7e2e25a40b050a254f86d731, type: 3}
   modifiers:
-  - modType: static
+  - modType: base
     stat: regeneration
     value: 10
   - modType: static
