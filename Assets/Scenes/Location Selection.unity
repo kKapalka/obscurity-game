@@ -745,7 +745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   encounterName: Doc. von Hohenberg
   infoAboutEnemy: He is very, very curious about you. In an unsettling way
-  maximumHP: 1750
+  maximumHP: 1350
   experiencePoints: 285
   resistances:
   - value: 0

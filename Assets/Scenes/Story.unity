@@ -605,7 +605,7 @@ MonoBehaviour:
   encounterName: Unkempt Lackey
   infoAboutEnemy: 
   maximumHP: 200
-  experiencePoints: 65
+  experiencePoints: 50
   resistances:
   - value: 0
   - value: 0

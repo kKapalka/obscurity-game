@@ -31,6 +31,8 @@ Changelog:
 - Sila: 0:50 -> -40:40
 - Odpornosci: -300:75 -> -300:60
 
+- Zmodyfikowano przeciwnikow, i zmniejszono punkty doswiadczenia otrzymywane od nich
+
 #0.6.4(#27)(28.05.2018)
 
 - Wylaczono okno do zmiany rozdzielczosci
