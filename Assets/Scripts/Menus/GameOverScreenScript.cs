@@ -9,7 +9,12 @@ public class GameOverScreenScript : MonoBehaviour {
 	public Text statText;
 	// Use this for initialization
 	void Start () {
-		statText.text = "You completed the game in " + PlayerPrefs.GetInt ("Days") + " days.";
+		statText.text = "Number of days: " + PlayerPrefs.GetInt ("Days") + "1.\n";
+		statText.text += "Equipment used to defeat Ace of Spades: ";
+			foreach(string item in ReadScript.Read<string[]>("Equipment"))
+			statText.text+=(item!=null?(item+"\n "):"");
+		int[] level = ReadScript.Read<int[]> ("PlayerXP");
+		statText.text += "\n Final level acquired: " + (level==default(int[])?1:level [0]) + ".\n";
 	}
 	
 	// Update is called once per frame

@@ -1,5 +1,15 @@
 Changelog:
 
+#0.6.6(#29)(29.05.2018)
+
+- Zmieniono przedmiot:
+
+- Claws of Hate: +150 DMG, -100% to ALL Resistances (-> -100% Dodge Chance). (Attack Type - Direct)
+
+- Wykryto i usunieto buga powodujacego brak zakonczenia gry po pokonaniu ostatniego przeciwnika
+
+- Wykryto buga gdzie uzyskane przez gracza punkty doswiadczenia nie zapisuja sie odpowiednio jesli gracz nacisnie "Continue" przed zakonczeniem dodawania punktow doswiadczenia do paska
+
 #0.6.5(#28)(29.05.2018)
 
 - Usunieto buga zwiazanego z brakiem wskazowek dla gracza podczas pierwszej tury rozgrywki

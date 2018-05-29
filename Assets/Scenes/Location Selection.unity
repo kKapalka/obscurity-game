@@ -3373,7 +3373,7 @@ MonoBehaviour:
         m_MethodName: ZoneChosen
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1993675885}
+          m_ObjectArgument: {fileID: 1607258774}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3428,7 +3428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5028aa0a91228845833a5a3b7959371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastBoss: {fileID: 1607258774}
+  lastBoss: {fileID: 0}
 --- !u!1 &547333475
 GameObject:
   m_ObjectHideFlags: 0

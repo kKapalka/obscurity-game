@@ -18,8 +18,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Story.unity
     guid: 7e80abd630e5d564d923c49883396d02
   - enabled: 0
-    path: Assets/Fight.unity
+    path: 
     guid: 7f77846c426bf8b4abaf01dbedcf5ed3
   - enabled: 1
     path: Assets/Scenes/Fight.unity
     guid: bfdc8879bc0cfd245867e8790941daff
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: 8da48eccf9d0cf4458d3f9cc4e4ebf9a

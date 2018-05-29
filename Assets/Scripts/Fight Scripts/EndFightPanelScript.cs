@@ -15,9 +15,10 @@ public class EndFightPanelScript : MonoBehaviour {
 	int[] playerStatus=new int[2];
 	int XPGained;
 	LootManager lm;
-
+	bool won;
 
 	public void EndOfFight(bool won){
+		this.won = won;
 		//GameObject.Find ("PlayerData").SetActive (false);
 		//GameObject.Find ("EnemyData").SetActive (false);
 		GameObject.Find ("CrystalsBG").SetActive (false);
@@ -76,10 +77,10 @@ public class EndFightPanelScript : MonoBehaviour {
 	}
 
 	public void Continue(){
-		if (EnemySelection.Instance != null) {
-			if (EnemySelection.Instance.getDefeated () && EnemySelection.Instance.encounterName == "Ace of Spades") {
+		
+			if (won && EnemySelection.Instance.encounterName == "Ace of Spades") {
 				SceneManager.LoadScene ("Game Over");
-			}
+
 		}else {
 			SceneManager.LoadScene ("Location Selection");
 		}
