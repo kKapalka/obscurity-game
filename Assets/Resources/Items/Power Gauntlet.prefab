@@ -52,12 +52,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Power Gauntlet
-  tooltip: +8% DMG, +2 Strength for each sequence of matches above 2
+  tooltip: +5% DMG, +1 Strength for each sequence of matches above 2
   icon: {fileID: 21300000, guid: 5153a11980955984facb72895b7beaea, type: 3}
   modifiers:
   - modType: combo
     stat: damage
-    value: 8
+    value: 5
   - modType: combo
     stat: strength
     value: 2

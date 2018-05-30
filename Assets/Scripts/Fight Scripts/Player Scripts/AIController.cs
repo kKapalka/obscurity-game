@@ -9,7 +9,9 @@ public class AIController : PlayerScript {
 
 	// Update is called once per frame
 	void Update () {
+		
 		if (sm.turntag.text == "Enemy Turn" && sm.getState () != GameState.Animating && !ShapesManager.gameOver) {
+			Debug.Log (time);
 			if (time < 1f){
 				time += Time.deltaTime;
 				selectedGem1 = null;
@@ -26,7 +28,6 @@ public class AIController : PlayerScript {
 					time += Time.deltaTime;
 				} else {
 					Attack ();
-					time = 0;
 					//selectedGem1 = null;
 				}
 			}
@@ -42,7 +43,9 @@ public class AIController : PlayerScript {
 				sm.setState (GameState.Animating);
 				sm.FixSortingLayer (selectedGem1, selectedGem2);
 				StartCoroutine (weapon.PerformAttack (selectedGem1, selectedGem2));
+				;
 			}
+		time = 0;
 	}
 
 }

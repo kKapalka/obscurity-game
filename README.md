@@ -8,6 +8,21 @@ Changelog:
 
 - Usunieto bug gdzie regeneracja zdrowia mogla 'przywrocic z martwych'
 
+- Usunieto buga w scenie "Location Selection"
+
+- Zmodyfikowano przedmioty:
+- Unstable Battery: [Unique Item] Your attacks deal random damage between 1 and 200% DMG (->250%) dealt
+
+- Pneumo Thruster: +12 Strength. -15% Base Dodge Chance. (Attack Type - Thrusting) ->  +15 Base Strength. -12% Base Dodge Chance. (Attack Type - Thrusting)
+
+- Power Gauntlet: +8% DMG, +2 Strength for each sequence of matches above 2 -> +5% DMG, +2 Strength for each sequence of matches above 2
+
+- Shuriken: -30% Base DMG. (Start of Turn) +10% DMG. (Attack Type - Barrage) -> -25% Base DMG. (Start of Turn) +10% DMG. (Attack Type - Barrage)
+
+- Very Big Knife: +30% DMG. (Attack Type - Slashing) -> +40% DMG. (Attack Type - Slashing)
+
+- Wykryto buga gdzie, z jakiegos powodu, bot z atakiem typu 'scattershot' zawiesil gre. Wciaz pracujemy nad wykryciem powodu
+
 #0.6.7(#30)(30.05.2018)
 
 - Dodano zabezpieczenie przed sytuacja gdzie zadna strona nie moglaby wykonac ruchu z powodu ulozenia klejnotow na planszy
