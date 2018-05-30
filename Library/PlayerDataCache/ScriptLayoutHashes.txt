@@ -5,6 +5,7 @@ Assets/Scenes/Credits.unity
 Assets/Scenes/Location Selection.unity
 Assets/Scenes/Story.unity
 Assets/Scenes/Fight.unity
+Assets/Scenes/Game Over.unity
 SceneListEnd?
 37223fb7b7d93376201c4af6107910bf Assembly-CSharp.dll:.PlayerController
 75cd0c6c744b9733ef29aa6c59ece2b1 Assembly-CSharp.dll:TMPro.Examples.VertexZoom
@@ -154,7 +155,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 619dcaacd871b4294d9d384702330a1a Assembly-CSharp.dll:.EndFightPanelScript
-2ebf748c51a55db88f858f98d022fc86 Assembly-CSharp.dll:.ShapesManager
+b56aadbffdd323a4c8c3b2bcaf7c31bf Assembly-CSharp.dll:.ShapesManager
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LoadMenuScript
 50a0fa002cfc67638c87a901e46b763e Assembly-CSharp.dll:TMPro.Examples.TMP_TextSelector_B
 3babdf1b73f65d5a6f182ebe20805bab Assembly-CSharp.dll:.GameOverScreenScript
@@ -251,6 +252,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 afc52d27c3ec0bd47909e81bd45fbffa Assembly-CSharp.dll:TMPro.TMP_TextEventHandler
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DragNDropScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.VertexColorCycler
+7d5fe7cfe44899f26fd7bdf31bad4b78 Assembly-CSharp.dll:.UnequipScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Shape
 e1ff970319fa33ba4daa3ef83c5282a8 Assembly-CSharp.dll:.PopupText
 020550babdb991365f61c5bffe1f4f52 Assembly-CSharp.dll:TMPro.Examples.TextMeshSpawner

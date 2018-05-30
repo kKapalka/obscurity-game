@@ -75,8 +75,7 @@ public class ShapesManager : MonoBehaviour
         InitializeCandyAndSpawnPositions();
 		if(EnemySelection.created)
 			EnemySelection.Instance.LoadIntoCharacter(enemy);
-		//playerData.GetComponent<PlayerDataScript> ().Assign (player.GetComponent<CharacterStats> (), player.GetComponent<PlayerScript> ().getWeapon ());
-		enemyData.GetComponent<PlayerDataScript> ().Assign (enemy.GetComponent<CharacterStats> (), enemy.GetComponent<PlayerScript> ().getWeapon (),enemy.GetComponent<PlayerScript>().weaponType);
+		enemyData.GetComponent<PlayerDataScript> ().Assign (enemy);
 		PreventDeadlock ();
 		turn = "Player";
     }

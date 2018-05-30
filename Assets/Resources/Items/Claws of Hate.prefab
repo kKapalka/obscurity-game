@@ -52,15 +52,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Claws of Hate
-  tooltip: '[Epic Class item] +150% DMG.-100% Base Dodge Chance. (Attack Type - Direct)'
+  tooltip: '[Unique Item] Doubles all damage dealt and taken. (Attack Type - Direct)'
   icon: {fileID: 21300000, guid: d524f208b58d25f4cb607b0efe3f94b3, type: 3}
   modifiers:
   - modType: static
     stat: weaponType
     value: dragndrop
-  - modType: static
-    stat: damage
-    value: 150
-  - modType: base
-    stat: dodge
-    value: -100
+  - modType: unique
+    stat: claws of hate
+    value: 

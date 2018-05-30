@@ -17,6 +17,13 @@ public abstract class PlayerScript : MonoBehaviour {
 		sm = (ShapesManager)GameObject.Find ("ShapesManager").GetComponent ("ShapesManager");
 
 	}
+
+	List<string> uniqueModifiers=new List<string>();
+
+	public List<string> getUniqueMods(){
+		return uniqueModifiers;
+	}
+
 	// Update is called once per frame
 
 
@@ -62,6 +69,11 @@ public abstract class PlayerScript : MonoBehaviour {
 			damage = 6 * Mathf.Pow (1.35f, (modifiedMatches - 2f)) - 1;
 		
 		int totalDamage = Mathf.RoundToInt(damage * (1.0f+((float)stats.damageMultiplier.getValue()/100)));
+
+		if(uniqueModifiers.Contains("claws of hate"))
+			totalDamage*=2;
+		if (uniqueModifiers.Contains ("unstable battery"))
+			totalDamage = Random.Range (1, totalDamage * 2);
 
 		enemy.GetComponent<CharacterStats> ().TakeDamage (totalDamage, type);
 	}

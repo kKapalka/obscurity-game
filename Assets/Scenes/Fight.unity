@@ -5159,6 +5159,7 @@ MonoBehaviour:
   - {fileID: 1165813030391812, guid: 975490f250550c34c8cea2d7fc572cc0, type: 2}
   - {fileID: 1479658677586066, guid: ba6b511c31cd78f4da39f9077a09d9de, type: 2}
   - {fileID: 1372497489572718, guid: c62558ddf6e781340be9c7e0c74b3ba2, type: 2}
+  - {fileID: 1405667275780638, guid: 34cde080ea1637b4bbba33ed13b42251, type: 2}
   loot: {fileID: 67272174}
 --- !u!1 &1143716989
 GameObject:

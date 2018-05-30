@@ -42,6 +42,8 @@ public class CharacterStats: MonoBehaviour {
 		} else {
 			damageTaken= Mathf.Clamp (damage, 0, maximumHP);
 		}
+		if(GetComponent<PlayerScript>().getUniqueMods().Contains("claws of hate"))
+			damageTaken*=2;
 		if (damageTaken > 0) {
 			
 			if (UnityEngine.Random.Range (1, 100) > Mathf.Abs(dodge.getValue ())) {

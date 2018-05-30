@@ -5,6 +5,13 @@ Changelog:
 - Dodano zabezpieczenie przed sytuacja gdzie zadna strona nie moglaby wykonac ruchu z powodu ulozenia klejnotow na planszy
 - Dodano mozliwosc zdjecia przedmiotu z ekwipunku
 - Dodano mozliwosc zamkniecia okna ubrania przedmiotu
+- Wprowadzono nowy rodzaj modyfikatora: 'unique' - jest przypisany do nazwy przedmiotu, i gracz moze go uzyskac tylko raz, nawet jesli ma kilka takich samych przedmiotow
+
+- Zmodyfikowano przedmiot: Claws of Hate: +150% DMG. -100% Base Dodge Chance -> [Unique Item] Doubles all damage dealt and taken
+
+- Dodano nowy przedmiot: Unstable Battery: [Unique Item] Your attacks deal random damage between 1 and 200% DMG dealt
+
+- Zmieniono tekst wprowadzenia fabularnego
 
 #0.6.6(#29)(29.05.2018)
 
