@@ -1720,7 +1720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   encounterName: King of Clubs
   infoAboutEnemy: 
-  maximumHP: 1200
+  maximumHP: 900
   experiencePoints: 600
   resistances:
   - value: 0
@@ -4107,7 +4107,7 @@ MonoBehaviour:
   damageMultiplier:
     value: 0
   strength:
-    value: 15
+    value: 10
   regeneration:
     value: 0
   weapon: dragthrough
@@ -5167,9 +5167,9 @@ MonoBehaviour:
   - value: 0
   - value: 0
   dodge:
-    value: 41
+    value: 33
   damageMultiplier:
-    value: 200
+    value: 160
   strength:
     value: 10
   regeneration:
@@ -6924,9 +6924,9 @@ MonoBehaviour:
   - value: 0
   - value: 0
   dodge:
-    value: 35
+    value: 30
   damageMultiplier:
-    value: 120
+    value: 100
   strength:
     value: 15
   regeneration:
@@ -9258,7 +9258,7 @@ MonoBehaviour:
   damageMultiplier:
     value: 0
   strength:
-    value: 30
+    value: 20
   regeneration:
     value: 0
   weapon: hammer
@@ -10903,7 +10903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   encounterName: Shinobi
   infoAboutEnemy: Hits where it hurts. Hard to hit.
-  maximumHP: 350
+  maximumHP: 275
   experiencePoints: 110
   resistances:
   - value: 0
@@ -10914,7 +10914,7 @@ MonoBehaviour:
   dodge:
     value: 20
   damageMultiplier:
-    value: 75
+    value: 50
   strength:
     value: 0
   regeneration:
@@ -11208,7 +11208,7 @@ MonoBehaviour:
   damageMultiplier:
     value: 0
   strength:
-    value: 20
+    value: 15
   regeneration:
     value: 50
   weapon: dragthrough
@@ -11870,7 +11870,7 @@ MonoBehaviour:
   damageMultiplier:
     value: 0
   strength:
-    value: 12
+    value: 10
   regeneration:
     value: 0
   weapon: doubleattack

@@ -36,27 +36,12 @@ public class EndFightPanelScript : MonoBehaviour {
 				loot.SetActive (true);
 				lm = loot.GetComponent<LootManager> ();
 				lm.items [0] = ItemPool [Random.Range(0,ItemPool.Length)].GetComponent<Item> ();
-
+				lm.items [1] = ItemPool [Random.Range(0,ItemPool.Length)].GetComponent<Item> ();
+				while(lm.items[0]==lm.items[1])
+					lm.items [1] = ItemPool [Random.Range(0,ItemPool.Length)].GetComponent<Item> ();
 				lm.Initialize ();
 
-				BinaryFormatter bf = new BinaryFormatter ();
-				FileStream file;
-				string[] currentInv = ReadScript.Read<string[]> ("Inventory");
-				if (currentInv == default(string[]))
-					currentInv = new string[0];
-				string[] newInv = new string[currentInv.Length + lm.items.Length];
-				int i = 0;
-				foreach (string name in currentInv) {
-					newInv [i] = currentInv [i++];
-				}
-				foreach (Item item in lm.items) {
-					newInv [i++] = item.name.Replace("(Clone)","");
-				}
-				file = File.Create(Application.persistentDataPath + "/Inventory.dat");
-				bf.Serialize (file, newInv);
-				file.Close ();
-				//Save progress
-				GameObject.Find ("ShapesManager").GetComponent<ShapesManager> ().SaveProgress ();
+
 			}
 			//Add experience points
 
@@ -78,7 +63,7 @@ public class EndFightPanelScript : MonoBehaviour {
 
 	public void Continue(){
 		
-			if (won && EnemySelection.Instance.encounterName == "Ace of Spades") {
+		if (won && EnemySelection.Instance!=null && EnemySelection.Instance.encounterName == "Ace of Spades") {
 				SceneManager.LoadScene ("Game Over");
 
 		}else {
@@ -106,5 +91,31 @@ public class EndFightPanelScript : MonoBehaviour {
 		file = File.Create(Application.persistentDataPath + "/PlayerXP.dat");
 		bf.Serialize (file,playerStatus);
 		file.Close ();
+	}
+
+	public void chooseItem(int index){
+		BinaryFormatter bf = new BinaryFormatter ();
+		FileStream file;
+		string[] currentInv = ReadScript.Read<string[]> ("Inventory");
+		if (currentInv == default(string[]))
+			currentInv = new string[0];
+		string[] newInv = new string[currentInv.Length + lm.items.Length];
+		int i = 0;
+		foreach (string name in currentInv) {
+			newInv [i] = currentInv [i++];
+		}
+		newInv [i++] = lm.items[index].name.Replace("(Clone)","");
+
+		foreach (Button button in lm.itemSlots) {
+			button.gameObject.SetActive (false);
+		}
+		lm.lootText.text = lm.items [index].itemName + " added to Inventory.";
+		lm.HideTooltip ();
+
+		file = File.Create(Application.persistentDataPath + "/Inventory.dat");
+		bf.Serialize (file, newInv);
+		file.Close ();
+		//Save progress
+		GameObject.Find ("ShapesManager").GetComponent<ShapesManager> ().SaveProgress ();
 	}
 }

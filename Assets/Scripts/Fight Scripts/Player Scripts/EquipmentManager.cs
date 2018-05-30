@@ -39,6 +39,12 @@ public class EquipmentManager : ItemManager {
 		foreach (Item item in items) {
 			if (item != null) {
 				List<Modifier> modifiers = item.getModifiersOfType (type);
+				if (type == "unique") {
+					foreach (Modifier mod in modifiers) {
+						GetComponent<PlayerController> ().addToUniqueMods (mod.stat);
+						Debug.Log (mod.stat);
+					}
+				}
 				foreach (Modifier mod in modifiers) {
 					if (mod.stat.Contains ("resistance")) {
 						int index = (int)Char.GetNumericValue (mod.stat.ToCharArray () [12]);
@@ -71,9 +77,7 @@ public class EquipmentManager : ItemManager {
 						GetComponent<PlayerScript> ().weaponType = mod.value;
 						GetComponent<PlayerScript> ().LoadWeapon (mod.value);
 						locked = true;
-					} else if (type == "unique") {
-						GetComponent<PlayerController> ().getUniqueMods ().Add (mod.stat);
-					}
+					} 
 				}
 			}
 		}
@@ -112,6 +116,7 @@ public class EquipmentManager : ItemManager {
 		if (fight) {
 			AddModifiersOfType ("static");
 			AddModifiersOfType ("base");
+			AddModifiersOfType ("unique");
 		}
 		currentPos = 0;
 	}

@@ -69,9 +69,11 @@ public class CharacterStats: MonoBehaviour {
 	public void Regenerate(){
 		int regenCap = Mathf.RoundToInt ((float)maximumHP / 12f);
 		int regenHP = Mathf.Clamp (regeneration.getValue (), regenCap * -1, regenCap);
-		currentHP = Mathf.Clamp ((currentHP + regenHP), 0, maximumHP);
-		if (regeneration.getValue() != 0 && currentHP>0)
-			GetComponent<PopupTextContoroller>().CreatePopupText (((regenHP>0?"+":"") + regenHP.ToString ()), transform);
+
+		if (regeneration.getValue () != 0 && currentHP > 0) {
+			currentHP = Mathf.Clamp ((currentHP + regenHP), 0, maximumHP);
+			GetComponent<PopupTextContoroller> ().CreatePopupText (((regenHP > 0 ? "+" : "") + regenHP.ToString ()), transform);
+		}
 		UpdateHP ();
 	}
 

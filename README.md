@@ -1,5 +1,13 @@
 Changelog:
 
+#0.6.8(#31)(30.05.2018)
+
+- Od teraz gracz moze wybrac jeden z dwoch przedmiotow po pokonaniu przeciwnika
+
+- Usunieto bug gdzie modyfikatory typu 'unique' nie ladowaly sie odpowiednio
+
+- Usunieto bug gdzie regeneracja zdrowia mogla 'przywrocic z martwych'
+
 #0.6.7(#30)(30.05.2018)
 
 - Dodano zabezpieczenie przed sytuacja gdzie zadna strona nie moglaby wykonac ruchu z powodu ulozenia klejnotow na planszy

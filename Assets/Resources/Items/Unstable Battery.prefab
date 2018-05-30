@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Unstable Battery
-  tooltip: '[Unique Item] Your attacks deal random damage between 1 and 200% DMG dealt'
+  tooltip: '[Unique Item] Your attacks deal random damage between 1 and 250% DMG dealt'
   icon: {fileID: 21300000, guid: affef3c692fe82144b75d6b5a2ec42e7, type: 3}
   modifiers:
   - modType: unique

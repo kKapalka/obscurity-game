@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LootManager : ItemManager {
 
 	public Vector3 relocation;
-
+	public Text lootText;
 	public override void Initialize ()
 	{
 		for (int i = 0; i < itemSlots.Length; i++) {
