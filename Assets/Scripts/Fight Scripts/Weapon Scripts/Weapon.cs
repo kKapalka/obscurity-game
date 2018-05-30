@@ -8,7 +8,7 @@ public abstract class Weapon:MonoBehaviour{
 	int minimumMatches;
 	protected List<GameObject> markers;
 	protected ShapesManager sm;
-	public void Start(){
+	public void Awake(){
 		setHints ();
 		while(sm==null)
 			sm = GameObject.Find ("ShapesManager").GetComponent<ShapesManager> ();

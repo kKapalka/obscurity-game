@@ -1,5 +1,11 @@
 Changelog:
 
+#0.6.7(#30)(30.05.2018)
+
+- Dodano zabezpieczenie przed sytuacja gdzie zadna strona nie moglaby wykonac ruchu z powodu ulozenia klejnotow na planszy
+- Dodano mozliwosc zdjecia przedmiotu z ekwipunku
+- Dodano mozliwosc zamkniecia okna ubrania przedmiotu
+
 #0.6.6(#29)(29.05.2018)
 
 - Zmieniono przedmiot:

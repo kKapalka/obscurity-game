@@ -14,6 +14,7 @@ public class ShapesManager : MonoBehaviour
     public ShapesArray shapes;
 	public GameObject player,enemy;
 	public GameObject enemyData;
+
     private int score;
 	private string turn;
     public Vector2 BottomRight = new Vector2(-2.67f, -2.27f);
@@ -34,7 +35,7 @@ public class ShapesManager : MonoBehaviour
 
 	int playerHP, enemyHP;
 	public GameObject EndFight;
-
+	public GameObject reshufflePanel;
 	public string[] GemTypes;
 
 	public GameState getState(){
@@ -72,13 +73,12 @@ public class ShapesManager : MonoBehaviour
 		GemTypes = new string[CandyPrefabs.Length];
         InitializeTypesOnPrefabShapesAndBonuses();
         InitializeCandyAndSpawnPositions();
-		turn = "Player";
-
 		if(EnemySelection.created)
 			EnemySelection.Instance.LoadIntoCharacter(enemy);
 		//playerData.GetComponent<PlayerDataScript> ().Assign (player.GetComponent<CharacterStats> (), player.GetComponent<PlayerScript> ().getWeapon ());
 		enemyData.GetComponent<PlayerDataScript> ().Assign (enemy.GetComponent<CharacterStats> (), enemy.GetComponent<PlayerScript> ().getWeapon (),enemy.GetComponent<PlayerScript>().weaponType);
-
+		PreventDeadlock ();
+		turn = "Player";
     }
 
     /// <summary>
@@ -313,13 +313,15 @@ public class ShapesManager : MonoBehaviour
 		StartCoroutine(WaitForEnemyAttack());
 		state=GameState.None;
 		if (turn == "Enemy") {
+			PreventDeadlock ();
 			turn = "Player";
 			turntag.color = Color.white;
-			player.GetComponent<EquipmentManager> ().AddModifiersOfType ("startofturn");
 			if(playerHP>=0)
 				player.GetComponent<CharacterStats> ().Regenerate ();
+			player.GetComponent<EquipmentManager> ().AddModifiersOfType ("startofturn");
 		}
 		else if (turn == "Player") {
+			PreventDeadlock ();
 			turn = "Enemy";
 			turntag.color = Color.yellow;
 			if(enemyHP>=0)
@@ -423,5 +425,17 @@ public class ShapesManager : MonoBehaviour
 		bf.Serialize (file,encountersDefeated);
 
 		file.Close ();
+	}
+	void PreventDeadlock(){
+		while (player.GetComponent<PlayerScript> ().getWeapon ().GetCandidateAI () == null || enemy.GetComponent<PlayerScript> ().getWeapon ().GetCandidateAI () == null) {
+			state = GameState.Animating;
+			reshufflePanel.SetActive (true);
+			StartCoroutine (WaitAndRecreate ());
+		}
+	}
+	IEnumerator WaitAndRecreate(){
+		yield return new WaitForSeconds (1.0f);
+		InitializeCandyAndSpawnPositions ();
+		state = GameState.None;
 	}
 }

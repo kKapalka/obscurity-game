@@ -26,7 +26,7 @@ public class InventoryManager : ItemManager{
 
 	public override int getShift ()
 	{
-		return Mathf.RoundToInt (scrollBar.value * scrollBar.numberOfSteps) * GetComponentInChildren<GridLayoutGroup>().constraintCount;
+		return Mathf.Clamp(Mathf.RoundToInt (scrollBar.value * scrollBar.numberOfSteps) * GetComponentInChildren<GridLayoutGroup>().constraintCount,0,65535);
 	}
 	public override Vector3 getRelocation ()
 	{
@@ -86,7 +86,8 @@ public class InventoryManager : ItemManager{
 			this.items = new Item[itemNames.Length];
 			int slotIndex = 0;
 			for (int i = 0; i < itemNames.Length; i++) {
-				if (itemNames [i] != null && itemNames[i]!="Null") {					
+				if (itemNames [i] != null && itemNames[i]!="Null") {
+					Debug.Log (itemNames [i]);
 					GameObject newItem = (GameObject)Instantiate (Resources.Load ("Items/" + itemNames [i]));
 					this.items [slotIndex++] = newItem.GetComponent<Item> ();
 				}
@@ -112,10 +113,16 @@ public class InventoryManager : ItemManager{
 	}
 
 	public void addToInventory(Item[] loot){
-		Item[] newItems = new Item[this.items.Length + loot.Length];
+		int allItems = 0;
+		foreach (Item item in this.items) {
+			if (item != null)
+				allItems++;
+		}
+		Item[] newItems = new Item[allItems + loot.Length];
 		int i = 0;
 		foreach (Item item in this.items)
-			newItems [i++] = item;
+			if(item!=null)
+				newItems [i++] = item;
 		foreach (Item item in loot)
 			newItems [i++] = item;
 		this.items = newItems;

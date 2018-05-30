@@ -134,10 +134,16 @@ public class EquipmentManager : ItemManager {
 		}
 	}
 
-	/*public void Load(EquipmentManager eqman){
-		fight = true;
-		items = eqman.items;
-	}*/
+	public void Unequip(int slot,GameObject Inventory){
+		InventoryManager im = Inventory.GetComponent<InventoryManager> ();
+		im.Load ("Inventory");
+		im.addToInventory (new Item[]{ GameObject.Instantiate (items [slot]) as Item });
+		im.Initialize ();
+		items [slot] = null;
+		Initialize ();
+		Save ("Equipment");
+		Instance = this;
+	}
 
 	public void Load(string name){
 		string[] itemNames = ReadScript.Read<string[]> (name);
