@@ -22,6 +22,7 @@ using System.Text;
 
         public static readonly int Match3Score = 60;
         public static readonly int SubsequentMatchScore = 1000;
+		public static UnityEngine.Vector3 boardLossyScale;
     }
 
    

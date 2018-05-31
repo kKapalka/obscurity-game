@@ -78,10 +78,12 @@ public class ScattershotScript :Weapon{
 		GameObject marker;
 		foreach (GameObject target in targets) {
 			marker = Instantiate (sm.MarkerPrefabs [1], target.transform.position, Quaternion.identity) as GameObject;
+			marker.transform.localScale = Constants.boardLossyScale;
 			markers.Add (marker);
 		}
 		marker = Instantiate (sm.MarkerPrefabs [0], go.transform.position, Quaternion.identity) as GameObject;
 		markers.Add (marker);
+		marker.transform.localScale = Constants.boardLossyScale;
 		Color c = go.GetComponent<SpriteRenderer> ().color;
 		c.a = 0.6f;
 		go.GetComponent<SpriteRenderer> ().color = c;

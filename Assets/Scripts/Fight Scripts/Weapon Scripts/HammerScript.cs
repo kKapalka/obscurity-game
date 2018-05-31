@@ -61,11 +61,11 @@ public class HammerScript: Weapon{
 		int posX = Correct(go.GetComponent<Shape>().Column,Constants.Columns-1);
 		int posY = Correct(go.GetComponent<Shape> ().Row,Constants.Rows-1);
 		GameObject marker = Instantiate (sm.MarkerPrefabs [1], sm.shapes [posY, posX].transform.position, Quaternion.identity) as GameObject;
-		marker.transform.localScale *= 3;
+		marker.transform.localScale = 3*Constants.boardLossyScale;
 		markers.Add (marker);
 		marker = Instantiate (sm.MarkerPrefabs [0], go.transform.position, Quaternion.identity) as GameObject;
 		markers.Add (marker);
-
+		marker.transform.localScale = Constants.boardLossyScale;
 		Color c = go.GetComponent<SpriteRenderer> ().color;
 		c.a = 0.6f;
 		go.GetComponent<SpriteRenderer> ().color = c;

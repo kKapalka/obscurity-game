@@ -18,7 +18,7 @@ public class ShapesManager : MonoBehaviour
     private int score;
 	private string turn;
     public Vector2 BottomRight = new Vector2(-2.67f, -2.27f);
-    public readonly Vector2 CandySize = new Vector2(0.7f, 0.7f);
+    Vector2 CandySize = new Vector2(0.7f, 0.7f);
 	public Text turntag,hintText;
     private GameState state = GameState.None;
 
@@ -65,10 +65,25 @@ public class ShapesManager : MonoBehaviour
 		}
 	}
 
+	void Awake(){
+		float ratio = (float)Screen.width / (float)Screen.height;
+		if (ratio<1.26)
+			this.transform.localScale = new Vector3 (0.7f, 0.7f, 1.0f);
+		else if (ratio<1.35)
+			this.transform.localScale = new Vector3 (0.75f, 0.75f, 1.0f);
+		else if (ratio<1.52)
+			this.transform.localScale = new Vector3 (0.85f, 0.85f, 1.0f);
+		else if (ratio<1.7)
+			this.transform.localScale = new Vector3 (0.95f, 0.95f, 1.0f);
+		
+		Constants.boardLossyScale = this.transform.localScale;
+	}
 
 	// Use this for initialization
     void Start()
     {
+		CandySize = new Vector2(CandySize.x*Constants.boardLossyScale.x,CandySize.y*Constants.boardLossyScale.y);
+		BottomRight= new Vector2(BottomRight.x*Constants.boardLossyScale.x,BottomRight.y*Constants.boardLossyScale.y);
 		gameOver = false;
 		GemTypes = new string[CandyPrefabs.Length];
         InitializeTypesOnPrefabShapesAndBonuses();
@@ -137,6 +152,7 @@ public class ShapesManager : MonoBehaviour
 			BottomRight + new Vector2((column * CandySize.x), ((row * CandySize.y))), Quaternion.identity)
             as GameObject;
 		go.transform.parent = transform;
+		go.transform.localScale = new Vector3 (1.0f, 1.0f, 1.0f);
         //assign the specific properties
         go.GetComponent<Shape>().Assign(newCandy.GetComponent<Shape>().Type, row, column);
         shapes[row, column] = go;

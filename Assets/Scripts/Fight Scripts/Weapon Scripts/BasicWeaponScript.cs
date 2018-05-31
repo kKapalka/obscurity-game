@@ -237,6 +237,7 @@ public class BasicWeaponScript:Weapon{
 		foreach (Vector3 position in positions) {
 			marker = Instantiate (sm.MarkerPrefabs [0], position, Quaternion.identity) as GameObject;
 			markers.Add (marker);
+			marker.transform.localScale = Constants.boardLossyScale;
 		}
 		Color c = go.GetComponent<SpriteRenderer> ().color;
 		c.a = 0.6f;

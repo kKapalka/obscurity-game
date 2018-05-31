@@ -1,5 +1,9 @@
 Changelog:
 
+#0.6.9(#32)(31.05.2018)
+
+- Od teraz scena "Fight" wspiera rozne wymiary ekranu
+
 #0.6.8(#31)(30.05.2018)
 
 - Od teraz gracz moze wybrac jeden z dwoch przedmiotow po pokonaniu przeciwnika

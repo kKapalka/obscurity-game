@@ -93,12 +93,13 @@ public class DoubleAttack : Weapon
 		Vector3 sc = marker.transform.localScale;
 		marker.transform.localScale = new Vector3 (sc.x, sc.y * 8, sc.z);
 		markers.Add (marker);
-
+		marker.transform.localScale = Constants.boardLossyScale;
 		Vector3 Y = new Vector3 (middle.x, posit.y, posit.z);
 		marker = Instantiate (sm.MarkerPrefabs [1], Y, Quaternion.identity) as GameObject;
 		sc = marker.transform.localScale;
 		marker.transform.localScale = new Vector3 (sc.x * 8, sc.y, sc.z);
 		markers.Add (marker);
+		marker.transform.localScale = Constants.boardLossyScale;
 		Color c = go.GetComponent<SpriteRenderer> ().color;
 		c.a = 0.6f;
 		go.GetComponent<SpriteRenderer> ().color = c;

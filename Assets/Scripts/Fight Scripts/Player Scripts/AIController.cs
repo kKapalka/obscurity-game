@@ -43,7 +43,7 @@ public class AIController : PlayerScript {
 				sm.setState (GameState.Animating);
 				sm.FixSortingLayer (selectedGem1, selectedGem2);
 				StartCoroutine (weapon.PerformAttack (selectedGem1, selectedGem2));
-				;
+				
 			}
 		time = 0;
 	}

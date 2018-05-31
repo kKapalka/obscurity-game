@@ -17,6 +17,14 @@ public class EndFightPanelScript : MonoBehaviour {
 	LootManager lm;
 	bool won;
 
+	void Awake(){
+		float ratio = (float)Screen.width / (float)Screen.height;
+		if (ratio<1.52)
+			this.transform.localScale = new Vector3 (1.3f, 1.3f, 1.0f);
+		else if (ratio<1.6)
+			this.transform.localScale = new Vector3 (1.1f, 1.1f, 1.0f);
+	}
+
 	public void EndOfFight(bool won){
 		this.won = won;
 		//GameObject.Find ("PlayerData").SetActive (false);
