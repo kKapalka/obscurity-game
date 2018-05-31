@@ -6,6 +6,10 @@ Changelog:
 
 - Zmieniono opisy przeciwnikow w scenie "Location Selection"
 
+- Naprawiono bledne wyswietlanie markerow podczas ataku 'doubleattack'
+
+- Od teraz guzik 'Continue' jest zablokowany jezeli gracz nie wybierze lupu
+
 #0.6.8(#31)(30.05.2018)
 
 - Od teraz gracz moze wybrac jeden z dwoch przedmiotow po pokonaniu przeciwnika

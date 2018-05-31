@@ -4608,7 +4608,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1064754383}
   m_OnClick:
     m_PersistentCalls:
@@ -5332,6 +5332,7 @@ MonoBehaviour:
   - {fileID: 1372497489572718, guid: c62558ddf6e781340be9c7e0c74b3ba2, type: 2}
   - {fileID: 1405667275780638, guid: 34cde080ea1637b4bbba33ed13b42251, type: 2}
   loot: {fileID: 67272174}
+  ContinueButton: {fileID: 1064754382}
 --- !u!1 &1143716989
 GameObject:
   m_ObjectHideFlags: 0

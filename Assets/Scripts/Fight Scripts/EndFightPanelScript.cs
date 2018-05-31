@@ -12,6 +12,7 @@ public class EndFightPanelScript : MonoBehaviour {
 	public Slider XPSlider;
 	public GameObject[] ItemPool;
 	public GameObject loot;
+	public Button ContinueButton;
 	int[] playerStatus=new int[2];
 	int XPGained;
 	LootManager lm;
@@ -38,18 +39,20 @@ public class EndFightPanelScript : MonoBehaviour {
 		XPText.text = playerStatus[1] + "/" + XPSlider.maxValue;
 		if (won) {
 			//Add loot
-			if(EnemySelection.created && !EnemySelection.Instance.getDefeated()){
+			if (EnemySelection.created && !EnemySelection.Instance.getDefeated ()) {
 				EnemySelection.Instance.setDefeated (true);
 				//loot and progress should only be saved if selected enemy was not yet defeated
 				loot.SetActive (true);
 				lm = loot.GetComponent<LootManager> ();
-				lm.items [0] = ItemPool [Random.Range(0,ItemPool.Length)].GetComponent<Item> ();
-				lm.items [1] = ItemPool [Random.Range(0,ItemPool.Length)].GetComponent<Item> ();
-				while(lm.items[0]==lm.items[1])
-					lm.items [1] = ItemPool [Random.Range(0,ItemPool.Length)].GetComponent<Item> ();
+				lm.items [0] = ItemPool [Random.Range (0, ItemPool.Length)].GetComponent<Item> ();
+				lm.items [1] = ItemPool [Random.Range (0, ItemPool.Length)].GetComponent<Item> ();
+				while (lm.items [0] == lm.items [1])
+					lm.items [1] = ItemPool [Random.Range (0, ItemPool.Length)].GetComponent<Item> ();
 				lm.Initialize ();
 
 
+			} else {
+				ContinueButton.interactable = true;
 			}
 			//Add experience points
 
@@ -66,6 +69,7 @@ public class EndFightPanelScript : MonoBehaviour {
 		} else {
 			loot.SetActive (false);
 			levelUpText.text = "";
+			ContinueButton.interactable = true;
 		}
 	}
 
@@ -125,5 +129,6 @@ public class EndFightPanelScript : MonoBehaviour {
 		file.Close ();
 		//Save progress
 		GameObject.Find ("ShapesManager").GetComponent<ShapesManager> ().SaveProgress ();
+		ContinueButton.interactable = true;
 	}
 }

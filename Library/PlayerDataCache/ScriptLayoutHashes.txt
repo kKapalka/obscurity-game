@@ -154,7 +154,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
-619dcaacd871b4294d9d384702330a1a Assembly-CSharp.dll:.EndFightPanelScript
+f02261082722c27f741977b62e526461 Assembly-CSharp.dll:.EndFightPanelScript
 b56aadbffdd323a4c8c3b2bcaf7c31bf Assembly-CSharp.dll:.ShapesManager
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LoadMenuScript
 50a0fa002cfc67638c87a901e46b763e Assembly-CSharp.dll:TMPro.Examples.TMP_TextSelector_B
