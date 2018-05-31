@@ -818,7 +818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   encounterName: Doc. von Hohenberg
-  infoAboutEnemy: He is very, very curious about you. In an unsettling way
+  infoAboutEnemy: German science if the world's finest!
   maximumHP: 1350
   experiencePoints: 285
   resistances:
@@ -1719,7 +1719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   encounterName: King of Clubs
-  infoAboutEnemy: 
+  infoAboutEnemy: It's not a man. It's a demolition machine.
   maximumHP: 900
   experiencePoints: 600
   resistances:
@@ -1867,7 +1867,7 @@ Transform:
   - {fileID: 2091967904}
   - {fileID: 1812216172}
   - {fileID: 1494721170}
-  m_Father: {fileID: 817330613}
+  m_Father: {fileID: 934840247}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &354285738
@@ -2024,7 +2024,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1904076866}
-  m_Father: {fileID: 817330613}
+  m_Father: {fileID: 934840247}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2185,7 +2185,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   encounterName: Jack of Diamonds
-  infoAboutEnemy: 
+  infoAboutEnemy: Who would have guessed that the House of Cards has Imperial Guards
+    on their payroll?
   maximumHP: 1000
   experiencePoints: 390
   resistances:
@@ -2202,7 +2203,7 @@ MonoBehaviour:
     value: 0
   regeneration:
     value: 0
-  weapon: doubleattack
+  weapon: dragthrough
 --- !u!114 &381709151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3341,9 +3342,9 @@ RectTransform:
   m_Father: {fileID: 458335955}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -40}
+  m_AnchorMin: {x: 0.5, y: 0.8}
+  m_AnchorMax: {x: 0.5, y: 0.8}
+  m_AnchoredPosition: {x: 0, y: 113}
   m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &518181692
@@ -4092,8 +4093,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f101ca28f629c4fbd4620a232a686b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encounterName: Sewer Clean-o-Bot
-  infoAboutEnemy: Don't worry. He's going to surely clean you up.
+  encounterName: Clean-o-Bot 3000
+  infoAboutEnemy: Built in order to take care of sewage, pollution, scraps, and -
+    occassionally - corpses.
   maximumHP: 650
   experiencePoints: 200
   resistances:
@@ -5157,7 +5159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   encounterName: Ace of Spades
-  infoAboutEnemy: So you made it here.
+  infoAboutEnemy: Kingpin of the House of Cards. Defeat him and everything will fall
+    into place.
   maximumHP: 1450
   experiencePoints: 700
   resistances:
@@ -5274,22 +5277,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 807796006}
---- !u!4 &817330613
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4876378506160672, guid: 850cb13b4d1482247ad75e3da6da2ff8,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 934840246}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -410, y: 134, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 379451869}
-  - {fileID: 336258817}
-  m_Father: {fileID: 1961068767}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &823723448
 GameObject:
   m_ObjectHideFlags: 0
@@ -5777,9 +5764,9 @@ RectTransform:
   m_Father: {fileID: 458335955}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -40, y: -40}
+  m_AnchorMin: {x: 1, y: 0.6}
+  m_AnchorMax: {x: 1, y: 0.6}
+  m_AnchoredPosition: {x: -40, y: 268}
   m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &886123100
@@ -6303,7 +6290,7 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 817330613}
+  - component: {fileID: 934840247}
   m_Layer: 0
   m_Name: Zone 1
   m_TagString: Untagged
@@ -6311,6 +6298,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!224 &934840247
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 934840246}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 379451869}
+  - {fileID: 336258817}
+  m_Father: {fileID: 1961068767}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.2, y: 0}
+  m_AnchorMax: {x: 0.2, y: 0}
+  m_AnchoredPosition: {x: -408, y: 121}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &987413602
 GameObject:
   m_ObjectHideFlags: 0
@@ -6913,8 +6920,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f101ca28f629c4fbd4620a232a686b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encounterName: Caped Baldface
-  infoAboutEnemy: You just had to be in a bad place in a bad time
+  encounterName: The Needle
+  infoAboutEnemy: He's been waiting for you ever since you defeated his disciple.
   maximumHP: 600
   experiencePoints: 365
   resistances:
@@ -7700,7 +7707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   encounterName: Failed Experiment X052F
-  infoAboutEnemy: Immense regenerative properties make him so difficult to deal with
+  infoAboutEnemy: Immense regenerative properties make him so difficult to deal with.
   maximumHP: 400
   experiencePoints: 230
   resistances:
@@ -9244,7 +9251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   encounterName: The Smith
-  infoAboutEnemy: Very strong. Like, seriously strong. Approach with caution.
+  infoAboutEnemy: House of Cards' personal weaponcrafter. Approach with caution.
   maximumHP: 500
   experiencePoints: 175
   resistances:
@@ -10902,7 +10909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   encounterName: Shinobi
-  infoAboutEnemy: Hits where it hurts. Hard to hit.
+  infoAboutEnemy: There are rumors about his sensei hiding in the sewers.
   maximumHP: 275
   experiencePoints: 110
   resistances:
@@ -11194,7 +11201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   encounterName: Queen of Hearts
-  infoAboutEnemy: 
+  infoAboutEnemy: Her rapier will pierce your heart like a Cupid's Arrow.
   maximumHP: 850
   experiencePoints: 470
   resistances:
@@ -11211,7 +11218,7 @@ MonoBehaviour:
     value: 15
   regeneration:
     value: 50
-  weapon: dragthrough
+  weapon: doubleattack
 --- !u!114 &1872830215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11422,9 +11429,9 @@ RectTransform:
   m_Father: {fileID: 379451869}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 35}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1904076867
@@ -11567,7 +11574,7 @@ Transform:
   m_LocalPosition: {x: -0.58529663, y: 43.256012, z: -9.217477}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 817330613}
+  - {fileID: 934840247}
   - {fileID: 765398861}
   - {fileID: 1796910565}
   m_Father: {fileID: 2582424}
@@ -11763,9 +11770,9 @@ RectTransform:
   m_Father: {fileID: 458335955}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -1114.6666, y: 424}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -1114.6666, y: 39}
   m_SizeDelta: {x: 300, y: 280}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2028323334
@@ -11854,9 +11861,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f101ca28f629c4fbd4620a232a686b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encounterName: Wicked Gladiator
-  infoAboutEnemy: Loves swinging his sword and defeating unskilled fighters. Pretty
-    strong.
+  encounterName: Gym Rat Vadim
+  infoAboutEnemy: Biggest bully in town.
   maximumHP: 300
   experiencePoints: 85
   resistances:

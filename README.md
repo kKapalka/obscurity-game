@@ -2,7 +2,9 @@ Changelog:
 
 #0.6.9(#32)(31.05.2018)
 
-- Od teraz scena "Fight" wspiera rozne wymiary ekranu
+- ~~Od teraz scena "Fight" wspiera rozne wymiary ekranu~~ Dodano wsparcie roznych wymiarow ekranu dla kazdej sceny gry
+
+- Zmieniono opisy przeciwnikow w scenie "Location Selection"
 
 #0.6.8(#31)(30.05.2018)
 
