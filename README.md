@@ -1,5 +1,9 @@
 Changelog:
 
+Projekt zakonczony. Jezeli podczas testow wyjda jakies bugi uniemozliwiajace gre, to one zostana usuniete. (do 10.06.2018)
+
+
+
 #0.6.9(#32)(31.05.2018)
 
 - ~~Od teraz scena "Fight" wspiera rozne wymiary ekranu~~ Dodano wsparcie roznych wymiarow ekranu dla kazdej sceny gry

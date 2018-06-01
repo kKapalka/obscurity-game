@@ -1,20 +1,20 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Fight Scripts\Weapon Scripts\DragThroughScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Fight Scripts\EndFightPanelScript.cs">
     <Files>
       <File FileName="Assets\Scripts\Fight Scripts\Player Scripts\EquipmentManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Location Selection Scripts\LevelButton.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Fight Scripts\EndFightPanelScript.cs" Line="130" Column="38" />
+      <File FileName="Assets\Scripts\Fight Scripts\EndFightPanelScript.cs" Line="55" Column="40" />
       <File FileName="Assets\Scripts\Menus\GameOverScreenScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Fight Scripts\Player Scripts\ItemManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Fight Scripts\Player Scripts\PlayerController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Fight Scripts\Player Scripts\PlayerScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Fight Scripts\Player Scripts\CharacterStats.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Fight Scripts\Player Scripts\PlayerDataScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Fight Scripts\ShapesManager.cs" Line="69" Column="60" />
+      <File FileName="Assets\Scripts\Fight Scripts\ShapesManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Fight Scripts\Player Scripts\LootManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Fight Scripts\Weapon Scripts\DoubleAttack.cs" Line="95" Column="24" />
-      <File FileName="Assets\Scripts\Fight Scripts\Weapon Scripts\DragThroughScript.cs" Line="232" Column="60" />
+      <File FileName="Assets\Scripts\Fight Scripts\Weapon Scripts\DoubleAttack.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Fight Scripts\Weapon Scripts\DragThroughScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
