@@ -1,8 +1,16 @@
 Changelog:
 
+Update: Projekt tymczasowo wznowiony - do momentu kiedy uda siê wyprowadziæ grywaln¹ wersjê
+
+
+#0.6.10(#33)(16.11.2020)
+- Przekopiowano repozytorium z BitBucketa na GitHuba
+- podjêto decyzjê o aktualizacji u¿ytych assetów - w tym momencie assety s¹ przedawnione, i przez to nie da siê ani graæ, ani zbudowaæ gry
+- Podczas ostatecznej prezentacji na uczelni wykryto buga, gdzie po pokonaniu ostatniego bossa nie uruchamia³y siê 'End Credits'
+
+
+
 Projekt zakonczony. Jezeli podczas testow wyjda jakies bugi uniemozliwiajace gre, to one zostana usuniete. (do 10.06.2018)
-
-
 
 #0.6.9(#32)(31.05.2018)
 
